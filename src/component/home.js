@@ -7,7 +7,7 @@ function home() {
       <Container>
         <Row>
           <Col sm style={{ marginTop: "30px" }}>
-            <p className="display_4_link"><a className="link" href="/basics/">Basics </a></p>
+            <p className="display_4_link"><a className="link" href="/basics">Basics </a></p>
             <Nav>
               <Nav.Link href="/basics/powers">Powers</Nav.Link>
               <Nav.Link href="/basics/radicals">Radicals</Nav.Link>
@@ -35,7 +35,7 @@ function home() {
         </Row>
         <Row>
           <Col sm style={{ marginTop: "30px" }}>
-            <p className="display_4_link"><a className="link" href="/coordinate_geomery/">Coordinate Geomery </a></p>
+            <p className="display_4_link"><a className="link" href="/coordinate_geomery">Coordinate Geomery </a></p>
             <Nav>
               <Nav.Link href="/coordinate_geomery/coordinate_geomery_basics">Coordinate Geomery Basics</Nav.Link>
               <Nav.Link href="/coordinate_geomery/circle">Circle</Nav.Link>
@@ -47,7 +47,7 @@ function home() {
         </Row>
         <Row>
           <Col sm style={{ marginTop: "30px" }}>
-            <p className="display_4_link"><a className="link" href="/trignometry/">Trignometry </a></p>
+            <p className="display_4_link"><a className="link" href="/trignometry">Trignometry </a></p>
             <Nav>
               <Nav.Link href="/trignometry/trignometry_basics">Trignometry Basics</Nav.Link>
               <Nav.Link href="/trignometry/trignometry_graphs">Trignometry Graphs</Nav.Link>
@@ -60,7 +60,7 @@ function home() {
         </Row>
         <Row>
           <Col sm style={{ marginTop: "30px" }}>
-            <p className="display_4_link"><a className="link" href="/calculus/">Calculus </a></p>
+            <p className="display_4_link"><a className="link" href="/calculus">Calculus </a></p>
             <Nav>
               <Nav.Link href="/calculus/limits">Limits</Nav.Link>
               <Nav.Link href="/calculus/derivatives">Derivatives</Nav.Link>

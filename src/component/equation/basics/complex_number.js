@@ -26,7 +26,7 @@ function complex_number() {
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/basics/">Basics</Breadcrumb.Item>
+              <Breadcrumb.Item href="/basics">Basics</Breadcrumb.Item>
               <Breadcrumb.Item active>Complex Number</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

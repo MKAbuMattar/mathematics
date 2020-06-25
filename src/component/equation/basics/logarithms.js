@@ -28,7 +28,7 @@ function logarithms() {
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/basics/">Basics</Breadcrumb.Item>
+              <Breadcrumb.Item href="/basics">Basics</Breadcrumb.Item>
               <Breadcrumb.Item active>Logarithms</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

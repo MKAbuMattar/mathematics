@@ -36,8 +36,8 @@ function footer() {
                         <div className="col-xs-6 col-md-3">
                             <h6>Quick Links</h6>
                             <ul className="footer-links">
-                                <li><a href="/about/">About</a></li>
-                                <li><a href="/privacy_policy/">Privacy Policy</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/privacy_policy">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>

@@ -41,11 +41,13 @@ import differential_equations from "./equation/calculus/differential_equations";
 import about from "./about";
 import privacy_policy from "./privacy_policy";
 import Footer from "./footer";
+import page404 from "./404";
 import "./assets/css/style.css";
 
 function index() {
 
   var header;
+
   if ((window.location.pathname === '/')) {
     header = <Header />;
   }
@@ -53,7 +55,6 @@ function index() {
   return (
     <Router>
       <div id="top">
-
         {header}
         <Nav />
         <Switch>
@@ -95,6 +96,7 @@ function index() {
           <Route path="/calculus/differential_equations" exact component={differential_equations} />
           <Route path="/about" exact component={about} />
           <Route path="/privacy_policy" exact component={privacy_policy} />
+          <Route path="/*" component={page404} />
         </Switch>
         <Footer />
       </div>
