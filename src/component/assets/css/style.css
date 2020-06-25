@@ -186,6 +186,10 @@ header>div {
   .mouse_scroll {
     margin-top: 10px;
   }
+
+  .nav_hidden {
+    display: none;
+  }
 }
 
 .breadcrumb {

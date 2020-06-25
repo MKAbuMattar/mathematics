@@ -3,7 +3,7 @@ import { Nav } from "react-bootstrap";
 
 function BootstrapNavbar() {
     return (
-        <div>
+        <div className="nav_hidden">
             <Nav className="flex-column nav">
                 <Nav.Link href="/basics/powers">Powers</Nav.Link>
                 <Nav.Link href="/basics/radicals">Radicals</Nav.Link>

@@ -3,7 +3,7 @@ import { Nav } from "react-bootstrap";
 
 function BootstrapNavbar() {
     return (
-        <div>
+        <div className="nav_hidden">
             <Nav className="flex-column nav">
                 <Nav.Link href="/coordinate_geomery/coordinate_geomery_basics">Coordinate Geomery Basics</Nav.Link>
                 <Nav.Link href="/coordinate_geomery/circle">Circle</Nav.Link>
