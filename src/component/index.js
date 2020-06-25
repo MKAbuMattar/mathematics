@@ -47,9 +47,9 @@ function index() {
   console.log();
 
   var header;
-  if ((window.location.pathname == '/') ||
-    (window.location.pathname == '/about/') ||
-    (window.location.pathname == '/privacy_policy/')) {
+  if ((window.location.pathname === '/') ||
+    (window.location.pathname === '/about/') ||
+    (window.location.pathname === '/privacy_policy/')) {
     header = <Header />;
   }
 
