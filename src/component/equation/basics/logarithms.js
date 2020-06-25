@@ -19,7 +19,7 @@ function logarithms() {
     equation_12 = '\\log_{b}\\left({\\frac{b}{d}}\\right)=\\log_{b}{x}-\\log_{b}{y}';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

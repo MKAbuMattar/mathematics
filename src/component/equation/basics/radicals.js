@@ -12,7 +12,7 @@ function radicals() {
     equation_5 = '\\sqrt[n]{a^{n}}=a\\text{ }\\left(if\\text{ }n\\text{ }is\\text{ }odd\\right)',
     equation_6 = '\\sqrt[n]{a^{n}}=\\left|a\\right|\\text{ }\\left(if\\text{ }n\\text{ }is\\text{ }even\\right)';
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

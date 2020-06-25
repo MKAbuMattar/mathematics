@@ -31,7 +31,7 @@ function progression() {
     equation_24 = 'GM^{2}= AM \\times HM';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

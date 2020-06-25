@@ -16,7 +16,7 @@ function ellipse() {
     equation_9 = 'S\'=\\left|a+ex_{1}\\right|';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

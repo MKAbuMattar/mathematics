@@ -12,7 +12,7 @@ function surface_area() {
     equation_5 = 'SA=2\\pi r\\left(r+h\\right)';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

@@ -21,7 +21,7 @@ function hyperbola() {
     equation_14 = 'S\'P=\\left|ex_{1}-a\\right|';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

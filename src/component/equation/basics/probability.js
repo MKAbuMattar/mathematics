@@ -14,7 +14,7 @@ function probability() {
     equation_7 = 'P\\left(A\\mid B\\right)=P\\left(B\\mid A\\right).\\frac{P\\left(A\\right)}{P\\left(B\\right)}';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

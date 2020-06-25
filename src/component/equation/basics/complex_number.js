@@ -17,7 +17,7 @@ function complex_number() {
     equation_10 = '\\left(\\overline{a+ib}\\right)\\left(a+ib\\right)=\\left|a+ib\\right|^{2}';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

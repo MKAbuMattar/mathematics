@@ -50,7 +50,7 @@ function trignometry_basics() {
     equation_43 = '2.\\sin A.\\sin B = \\cos\\left(A-B\\right)-\\cos\\left(A+B\\right)';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

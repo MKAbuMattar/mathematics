@@ -12,7 +12,7 @@ function parabola() {
     equation_5 = '\\tan\\theta=\\left|\\frac{\\sqrt{\\left(y_{1}^{2}-4ax_{1}\\right)}}{\\left(x_{1}+a\\right)}\\right|';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

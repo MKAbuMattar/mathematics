@@ -19,7 +19,7 @@ function coordinate_geomery() {
     equation_12 = '\\frac{x}{a}+\\frac{y}{b}=1';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

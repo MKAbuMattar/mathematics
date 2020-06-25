@@ -15,7 +15,7 @@ function volume() {
     equation_8 = 'Volume=\\left(\\frac{4}{3}\\right)\\pi\\left(r1\\times r2\\times r3\\right)';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

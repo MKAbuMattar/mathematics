@@ -11,7 +11,7 @@ function lateral_area() {
     equation_4 = 'Lateral\\text{ }Area=\\pi rl';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

@@ -41,7 +41,7 @@ function vectors() {
     equation_34 = 'Note:\\text{ }\\text{ }a\\times\\left(b\\times c\\right)\\neq\\left(a\\times b\\right)\\times c';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

@@ -19,7 +19,7 @@ function polynomials() {
     equation_12 = 'x^{n}+a^{n}=\\left(x+a\\right)\\left(x^{n-1}-ax^{n-2}+a^{2}x^{n-2}+...+a^{n-1}\\right)';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

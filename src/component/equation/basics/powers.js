@@ -16,7 +16,7 @@ function powers() {
     equation_9 = 'a^{\\frac{a}{m}}=\\left(a^{\\frac{1}{m}}\\right)^{n}=\\left(a^{n}\\right)^{\\frac{1}{m}}';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

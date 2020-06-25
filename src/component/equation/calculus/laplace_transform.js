@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 
 function laplace_transform() {
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

@@ -46,17 +46,96 @@ import "./assets/css/style.css";
 
 function index() {
 
-  var header;
+  let header, nav, footer;
 
   if ((window.location.pathname === '/')) {
     header = <Header />;
+  }
+
+  if ((window.location.pathname === '/') ||
+    (window.location.pathname === '/basics') ||
+    (window.location.pathname === '/basics/') ||
+    (window.location.pathname === '/basics/powers') ||
+    (window.location.pathname === '/basics/powers/') ||
+    (window.location.pathname === '/basics/radicals') ||
+    (window.location.pathname === '/basics/radicals/') ||
+    (window.location.pathname === '/basics/logarithms') ||
+    (window.location.pathname === '/basics/logarithms/') ||
+    (window.location.pathname === '/basics/quadratic_equations') ||
+    (window.location.pathname === '/basics/quadratic_equations/') ||
+    (window.location.pathname === '/basics/polynomials') ||
+    (window.location.pathname === '/basics/polynomials/') ||
+    (window.location.pathname === '/basics/progression') ||
+    (window.location.pathname === '/basics/progression/') ||
+    (window.location.pathname === '/basics/complex_number') ||
+    (window.location.pathname === '/basics/complex_number/') ||
+    (window.location.pathname === '/basics/vectors') ||
+    (window.location.pathname === '/basics/vectors/') ||
+    (window.location.pathname === '/basics/probability') ||
+    (window.location.pathname === '/basics/probability/') ||
+    (window.location.pathname === '/geometry') ||
+    (window.location.pathname === '/geometry/') ||
+    (window.location.pathname === '/geometry/area') ||
+    (window.location.pathname === '/geometry/area/') ||
+    (window.location.pathname === '/geometry/perimeter') ||
+    (window.location.pathname === '/geometry/perimeter/') ||
+    (window.location.pathname === '/geometry/surface_area') ||
+    (window.location.pathname === '/geometry/surface_area/') ||
+    (window.location.pathname === '/geometry/volume') ||
+    (window.location.pathname === '/geometry/volume/') ||
+    (window.location.pathname === '/geometry/lateral_area') ||
+    (window.location.pathname === '/geometry/lateral_area/') ||
+    (window.location.pathname === '/coordinate_geomery') ||
+    (window.location.pathname === '/coordinate_geomery/') ||
+    (window.location.pathname === '/coordinate_geomery/coordinate_geomery_basics') ||
+    (window.location.pathname === '/coordinate_geomery/coordinate_geomery_basics/') ||
+    (window.location.pathname === '/coordinate_geomery/circle') ||
+    (window.location.pathname === '/coordinate_geomery/circle/') ||
+    (window.location.pathname === '/coordinate_geomery/parabola') ||
+    (window.location.pathname === '/coordinate_geomery/parabola/') ||
+    (window.location.pathname === '/coordinate_geomery/ellipse') ||
+    (window.location.pathname === '/coordinate_geomery/ellipse/') ||
+    (window.location.pathname === '/coordinate_geomery/hyperbola') ||
+    (window.location.pathname === '/coordinate_geomery/hyperbola/') ||
+    (window.location.pathname === '/trignometry') ||
+    (window.location.pathname === '/trignometry/') ||
+    (window.location.pathname === '/trignometry/trignometry_basics') ||
+    (window.location.pathname === '/trignometry/trignometry_basics/') ||
+    (window.location.pathname === '/trignometry/trignometry_graphs') ||
+    (window.location.pathname === '/trignometry/trignometry_graphs/') ||
+    (window.location.pathname === '/trignometry/higher_angles') ||
+    (window.location.pathname === '/trignometry/higher_angles/') ||
+    (window.location.pathname === '/trignometry/laws_of_yrigonometry') ||
+    (window.location.pathname === '/trignometry/laws_of_yrigonometry/') ||
+    (window.location.pathname === '/trignometry/inverse_trignometry') ||
+    (window.location.pathname === '/trignometry/inverse_trignometry/') ||
+    (window.location.pathname === '/trignometry/hyperbolic') ||
+    (window.location.pathname === '/trignometry/hyperbolic/') ||
+    (window.location.pathname === '/calculus') ||
+    (window.location.pathname === '/calculus/') ||
+    (window.location.pathname === '/calculus/limits') ||
+    (window.location.pathname === '/calculus/limits/') ||
+    (window.location.pathname === '/calculus/derivatives') ||
+    (window.location.pathname === '/calculus/derivatives/') ||
+    (window.location.pathname === '/calculus/intgration') ||
+    (window.location.pathname === '/calculus/intgration/') ||
+    (window.location.pathname === '/calculus/laplace_transform') ||
+    (window.location.pathname === '/calculus/laplace_transform/') ||
+    (window.location.pathname === '/calculus/differential_equations') ||
+    (window.location.pathname === '/calculus/differential_equations/') ||
+    (window.location.pathname === '/about') ||
+    (window.location.pathname === '/about/') ||
+    (window.location.pathname === '/privacy_policy') ||
+    (window.location.pathname === '/privacy_policy/')) {
+    nav = <Nav />;
+    footer = <Footer />;
   }
 
   return (
     <Router>
       <div id="top">
         {header}
-        <Nav />
+        {nav}
         <Switch>
           <Route path="/" exact component={home} />
           <Route path="/basics" exact component={basics} />
@@ -98,7 +177,7 @@ function index() {
           <Route path="/privacy_policy" exact component={privacy_policy} />
           <Route path="/*" component={page404} />
         </Switch>
-        <Footer />
+        {footer}
       </div>
     </Router >
   );

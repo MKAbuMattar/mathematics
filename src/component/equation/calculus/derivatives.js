@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 
 function derivatives() {
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

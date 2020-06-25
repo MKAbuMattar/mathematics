@@ -15,7 +15,7 @@ function area() {
     equation_8 = 'Area=\\left(\\frac{\\sqrt{3}}{4}\\right)a^{2}';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

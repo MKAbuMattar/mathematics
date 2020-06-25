@@ -12,7 +12,7 @@ function quadratic_equations() {
     equation_5 = 'if\text{ }b^{2}-4ac<0\text{ }then\text{ }two\text{ }complex\text{ }solution';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

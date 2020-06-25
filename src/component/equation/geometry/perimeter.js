@@ -13,7 +13,7 @@ function perimeter() {
     equation_6 = 'Perimeter=Sum\\text{ }of\\text{ }the\\text{ }sides';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

@@ -4,7 +4,7 @@ import Logo from "./equation/logo";
 
 function privacy_policy() {
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

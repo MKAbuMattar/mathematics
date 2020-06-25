@@ -26,7 +26,7 @@ function circle() {
     equation_19 = '\\frac{x}{\\cos\\theta}=\\frac{y}{\\sin\\theta}';
 
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>

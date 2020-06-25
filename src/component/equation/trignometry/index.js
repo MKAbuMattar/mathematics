@@ -4,7 +4,7 @@ import Logo from "../logo";
 
 function geometry() {
   return (
-    <div style={{ marginTop: "90px" }}>
+    <div>
       <Container fluid="md">
         <Row>
           <Col>
