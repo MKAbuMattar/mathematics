@@ -1,0 +1,244 @@
+html {
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+}
+
+header {
+  height: 100vh;
+  background-color: #252525;
+  color: #f5f5f5;
+}
+
+header>div {
+  max-width: 700px;
+  padding-top: 50vh;
+  margin: 0 auto;
+}
+
+.introduction {
+  font-family: "Source Code Pro", monospace;
+  font-size: 3.8rem;
+  line-height: 1.67;
+  letter-spacing: 0.7px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.mouse_scroll {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 100px;
+  margin-top: 125px;
+  cursor: pointer;
+}
+
+.m_scroll_arrows {
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 0 0 3px 4px;
+
+  width: 16px;
+  height: 16px;
+}
+
+.unu {
+  margin-top: 1px;
+}
+
+.unu,
+.doi,
+.trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
+}
+
+.unu {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.doi {
+  border-right-color: rgb(252, 41, 74) !important;
+  border-bottom-color: rgb(252, 41, 74) !important;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+
+  margin-top: -6px;
+}
+
+.trei {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+
+  margin-top: -6px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  transform: none;
+  border: 2px solid white;
+  top: 170px;
+}
+
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header>div {
+    padding-top: 35vh;
+  }
+
+  .mouse_scroll {
+    margin-top: 10px;
+  }
+}
+
+.breadcrumb {
+  background-color: transparent !important;
+}
+
+.display_4_link {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display_4_link :hover::after {
+  font-family: "FontAwesome";
+  content: "\f0c1";
+  font-size: 2.5rem;
+}
+
+.display_4_link a.link {
+  text-decoration: none;
+  color: #212529;
+}
+
+.display-5 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-6 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-5:hover::after {
+  font-family: "FontAwesome";
+  content: "\f0c1";
+  font-size: 1.5rem;
+}
+
+.display-5 a.link {
+  text-decoration: none;
+  color: #212529;
+}
+
+.lead__equation {
+  font-size: 2.25rem !important;
+  font-weight: 300;
+  overflow-x: auto;
+}
+
+.App__svg {
+  height: 25vmin;
+  pointer-events: none;
+}

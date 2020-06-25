@@ -1,0 +1,42 @@
+import React from "react";
+import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
+import Logo from "../logo";
+
+function calculus() {
+  return (
+    <div style={{ marginTop: "90px" }}>
+      <Container fluid="md">
+        <Row>
+          <Col>
+            <Breadcrumb>
+              <Breadcrumb.Item href="/">
+                <Logo />
+                Mathematics
+                </Breadcrumb.Item>
+              <Breadcrumb.Item active>Calculus</Breadcrumb.Item>
+            </Breadcrumb>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12}>
+            <div>
+              <p className="display-3" style={{ marginTop: "-22px" }}>Calculus</p>
+              <p className="display-5"><a className="link" href="/calculus/limits">Limits </a></p>
+              <p className="lead text-justify"></p>
+              <p className="display-5"><a className="link" href="/calculus/derivatives">Derivatives </a></p>
+              <p className="lead text-justify"></p>
+              <p className="display-5"><a className="link" href="/calculus/intgration">Intgration </a></p>
+              <p className="lead text-justify"></p>
+              <p className="display-5"><a className="link" href="/calculus/laplace_transform">Laplace Transform </a></p>
+              <p className="lead text-justify"></p>
+              <p className="display-5"><a className="link" href="/calculus/differential_equations">Differential Equations </a></p>
+              <p className="lead text-justify"></p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div >
+  );
+}
+
+export default calculus;
