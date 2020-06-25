@@ -44,7 +44,6 @@ import Footer from "./footer";
 import "./assets/css/style.css";
 
 function index() {
-  console.log();
 
   var header;
   if ((window.location.pathname === '/') ||
