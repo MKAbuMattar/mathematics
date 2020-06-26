@@ -246,3 +246,8 @@ header>div {
   height: 25vmin;
   pointer-events: none;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
