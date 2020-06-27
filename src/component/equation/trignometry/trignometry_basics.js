@@ -3,6 +3,8 @@ import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import MathJax from "react-mathjax2";
 import Logo from "../logo";
 import Navbar from "./navbar";
+//img
+import Trignometry_Basics from "../../assets/img/trignometry_basics.svg";
 
 function trignometry_basics() {
   const equation_1 = '\\sin\\theta=\\frac{Opposite}{hypotenuse}=\\frac{a}{c}',
@@ -72,6 +74,7 @@ function trignometry_basics() {
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Trignometry Basics</p>
               <p className="display-4 text-justify">Basics</p>
+              <img className="img__page" src={Trignometry_Basics} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_1}</MathJax.Node>

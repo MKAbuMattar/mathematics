@@ -178,20 +178,6 @@ header>div {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  header>div {
-    padding-top: 35vh;
-  }
-
-  .mouse_scroll {
-    margin-top: 10px;
-  }
-
-  .nav_hidden {
-    display: none;
-  }
-}
-
 .breadcrumb {
   background-color: transparent !important;
 }
@@ -250,4 +236,28 @@ header>div {
 img {
   width: 100%;
   height: auto;
+}
+
+.img__page {
+  width: 50%;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  header>div {
+    padding-top: 35vh;
+  }
+
+  .mouse_scroll {
+    margin-top: 10px;
+  }
+
+  .nav_hidden {
+    display: none;
+  }
+
+  .img__page {
+    width: 100%;
+  }
 }

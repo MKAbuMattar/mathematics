@@ -1,0 +1,20 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="502" width="502" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m57.499996,341.500001l0,-182.999998l427.000009,182.999998l-427.000009,0z" stroke-width="4.5" stroke="#000" fill="#fff"/>
+  <rect stroke="#000" id="svg_2" height="17" width="17" y="324.25" x="57.5" fill-opacity="null" stroke-opacity="null" stroke-width="4.5" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="72" id="svg_3" y="400.25" x="225.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">b</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="72" id="svg_4" y="243.25" x="262.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">c</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="72" id="svg_5" y="282.25" x="10.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">a</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_10" y="336.25" x="414.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">θ</text>
+  <text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_11" y="192.25" x="62.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">ɸ</text>
+ </g>
+</svg>

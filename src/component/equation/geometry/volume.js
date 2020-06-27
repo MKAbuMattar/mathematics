@@ -3,6 +3,15 @@ import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import MathJax from "react-mathjax2";
 import Logo from "../logo";
 import Navbar from "./navbar";
+//img
+import Cube from "../../assets/img/cube.svg";
+import Rectangular_Prism from "../../assets/img/rectangular_prism.svg";
+import Irregular_Prism from "../../assets/img/irregular_prism.svg";
+import Cylinder from "../../assets/img/cylinder.svg";
+import Pyramid from "../../assets/img/pyramid.svg";
+import Cone from "../../assets/img/cone.svg";
+import Sphere from "../../assets/img/circle.svg";
+import Ellipsoid from "../../assets/img/ellipsoid.svg";
 
 function volume() {
   const equation_1 = 'Volume=a^{3}',
@@ -37,30 +46,35 @@ function volume() {
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Volume</p>
               <p className="lead__equation text-justify">Cube</p>
+              <img className="img__page" src={Cube} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_1}</MathJax.Node>
                 </MathJax.Context>
               </p>
               <p className="lead__equation text-justify">Rectangular Prism</p>
+              <img className="img__page" src={Rectangular_Prism} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_2}</MathJax.Node>
                 </MathJax.Context>
               </p>
-              <p className="lead__equation text-justify">Irregual Prism</p>
+              <p className="lead__equation text-justify">Irregular Prism</p>
+              <img className="img__page" src={Irregular_Prism} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_3}</MathJax.Node>
                 </MathJax.Context>
               </p>
               <p className="lead__equation text-justify">Cylinder</p>
+              <img className="img__page" src={Cylinder} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_4}</MathJax.Node>
                 </MathJax.Context>
               </p>
-              <p className="lead__equation text-justify">Pyrmid</p>
+              <p className="lead__equation text-justify">Pyramid</p>
+              <img className="img__page" src={Pyramid} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_5}</MathJax.Node>
@@ -68,18 +82,21 @@ function volume() {
               </p>
               <p className="lead text-justify">whare b = area of square</p>
               <p className="lead__equation text-justify">Cone</p>
+              <img className="img__page" src={Cone} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_6}</MathJax.Node>
                 </MathJax.Context>
               </p>
               <p className="lead__equation text-justify">Sphere</p>
+              <img className="img__page" src={Sphere} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_7}</MathJax.Node>
                 </MathJax.Context>
               </p>
               <p className="lead__equation text-justify">Ellipsoid</p>
+              <img className="img__page" src={Ellipsoid} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_8}</MathJax.Node>

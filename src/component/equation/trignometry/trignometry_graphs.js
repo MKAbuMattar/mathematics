@@ -3,6 +3,13 @@ import { Container, Row, Col, Breadcrumb, Table } from "react-bootstrap";
 import MathJax from "react-mathjax2";
 import Logo from "../logo";
 import Navbar from "./navbar";
+//img
+import SIN from "../../assets/img/sin.svg"
+import COS from "../../assets/img/cos.svg"
+import TAN from "../../assets/img/tan.svg"
+import COT from "../../assets/img/cot.svg"
+import SEC from "../../assets/img/sec.svg"
+import CSC from "../../assets/img/csc.svg"
 import UnitCircle from "../../assets/img/unit-circle-chart.svg"
 
 function trignometry_graphs() {
@@ -15,7 +22,13 @@ function trignometry_graphs() {
     equation_6 = '\\tan\\theta',
     equation_7 = '\\frac{\\sqrt{3}}{3}',
     equation_8 = '\\sqrt{3}',
-    equation_9 = '\\theta';
+    equation_9 = '\\theta',
+    equation_10 = 'y=\\sin(x)',
+    equation_11 = 'y=\\cos(x)',
+    equation_12 = 'y=\\tan(x)',
+    equation_13 = 'y=\\cot(x)',
+    equation_14 = 'y=\\sec(x)',
+    equation_15 = 'y=\\csc(x)';
 
   return (
     <div>
@@ -27,7 +40,7 @@ function trignometry_graphs() {
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/trignometry/">Basics</Breadcrumb.Item>
+              <Breadcrumb.Item href="/trignometry/">Trignometry</Breadcrumb.Item>
               <Breadcrumb.Item active>Trignometry Graphs</Breadcrumb.Item>
             </Breadcrumb>
           </Col>
@@ -125,6 +138,43 @@ function trignometry_graphs() {
                   </tr>
                 </tbody>
               </Table>
+              <p className="lead__equation text-justify">
+                <MathJax.Context input='tex'>
+                  <MathJax.Node inline>{equation_10}</MathJax.Node>
+                </MathJax.Context>
+              </p>
+              <img className="img__page" src={SIN} alt="" />
+              <p className="lead__equation text-justify">
+                <MathJax.Context input='tex'>
+                  <MathJax.Node inline>{equation_11}</MathJax.Node>
+                </MathJax.Context>
+              </p>
+              <img className="img__page" src={COS} alt="" />
+              <p className="lead__equation text-justify">
+                <MathJax.Context input='tex'>
+                  <MathJax.Node inline>{equation_12}</MathJax.Node>
+                </MathJax.Context>
+              </p>
+              <img className="img__page" src={TAN} alt="" />
+              <p className="lead__equation text-justify">
+                <MathJax.Context input='tex'>
+                  <MathJax.Node inline>{equation_13}</MathJax.Node>
+                </MathJax.Context>
+              </p>
+              <img className="img__page" src={COT} alt="" />
+              <p className="lead__equation text-justify">
+                <MathJax.Context input='tex'>
+                  <MathJax.Node inline>{equation_14}</MathJax.Node>
+                </MathJax.Context>
+              </p>
+              <img className="img__page" src={SEC} alt="" />
+              <p className="lead__equation text-justify">
+                <MathJax.Context input='tex'>
+                  <MathJax.Node inline>{equation_15}</MathJax.Node>
+                </MathJax.Context>
+              </p>
+              <img className="img__page" src={CSC} alt="" />
+
               <p className="display-4 text-justify">Unit Circle</p>
               <img src={UnitCircle} alt="" />
             </div>

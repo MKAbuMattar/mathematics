@@ -3,6 +3,9 @@ import { Container, Row, Col, Breadcrumb, Table } from "react-bootstrap";
 import MathJax from "react-mathjax2";
 import Logo from "../logo";
 import Navbar from "./navbar";
+//img
+import Ellipse_1 from "../../assets/img/1_ellipse.svg";
+import Ellipse_2 from "../../assets/img/2_ellipse.svg";
 
 function ellipse() {
   const equation_1 = '\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1\\text{ }\\text{ }\\text{ }\\left(a^{2}>b^{2}\\right)',
@@ -43,11 +46,13 @@ function ellipse() {
                   <MathJax.Node inline>{equation_1}</MathJax.Node>
                 </MathJax.Context>
               </p>
+              <img className="img__page" src={Ellipse_1} alt="" />
               <p className="lead__equation text-justify">
                 <MathJax.Context input='tex'>
                   <MathJax.Node inline>{equation_2}</MathJax.Node>
                 </MathJax.Context>
               </p>
+              <img className="img__page" src={Ellipse_2} alt="" />
               <Table responsive>
                 <thead>
                   <tr>

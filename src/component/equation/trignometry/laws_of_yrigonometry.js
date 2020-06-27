@@ -3,6 +3,7 @@ import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import MathJax from "react-mathjax2";
 import Logo from "../logo";
 import Navbar from "./navbar";
+import laws_of_trig from "../../assets/img/lows_of_trigonometry.svg";
 
 function laws_of_Trigonometry() {
 
@@ -37,6 +38,7 @@ function laws_of_Trigonometry() {
           <Col sm={9}>
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Laws of Trigonometry</p>
+              <img className="img__page" src={laws_of_trig} alt="" />
               <p className="lead">Note<br />1. A, B and C are angles.<br /> a, b and c are the length of the sides opposite to A, B and C respectively.</p>
               <p className="display-4 text-justify">Law of Sines</p>
               <p className="lead__equation text-justify">
