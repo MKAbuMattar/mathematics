@@ -8,9 +8,9 @@ import laws_of_trig from "../../assets/img/lows_of_trigonometry.svg";
 function laws_of_Trigonometry() {
 
   const equation_1 = '\\frac{sin\\left(A\\right)}{a}=\\frac{sin\\left(B\\right)}{b}=\\frac{sin\\left(C\\right)}{c}',
-    equation_2 = 'a^{2}=b^{2}+c^{2}-2bc\\cos\\left(A\\right)',
-    equation_3 = 'b^{2}=a^{2}+c^{2}-2ac\\cos\\left(B\\right)',
-    equation_4 = 'c^{2}=a^{2}+b^{2}-2ab\\cos\\left(C\\right)',
+    equation_2 = 'a^{2}=b^{2}+c^{2}-2bc\\text{ }\\cos\\left(A\\right)',
+    equation_3 = 'b^{2}=a^{2}+c^{2}-2ac\\text{ }\\cos\\left(B\\right)',
+    equation_4 = 'c^{2}=a^{2}+b^{2}-2ab\\text{ }\\cos\\left(C\\right)',
     equation_5 = '\\frac{\\left(a-b\\right)}{\\left(a+b\\right)}=\\frac{\\tan\\left(\\frac{1}{2}\\right)\\left(A-B\\right)}{\\tan\\left(\\frac{1}{2}\\right)\\left(A+B\\right)}',
     equation_6 = '\\frac{\\left(b-c\\right)}{\\left(b+c\\right)}=\\frac{\\tan\\left(\\frac{1}{2}\\right)\\left(B-C\\right)}{\\tan\\left(\\frac{1}{2}\\right)\\left(B+C\\right)}',
     equation_7 = '\\frac{\\left(a-c\\right)}{\\left(a+c\\right)}=\\frac{\\tan\\left(\\frac{1}{2}\\right)\\left(A-C\\right)}{\\tan\\left(\\frac{1}{2}\\right)\\left(A+C\\right)}',

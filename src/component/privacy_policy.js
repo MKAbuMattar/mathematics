@@ -21,7 +21,7 @@ function privacy_policy() {
           <Col sm={12}>
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Privacy Policy</p>
-              <p className="lead text-justify"></p>
+              <p className="lead text-justify">In-process, coming soon</p>
             </div>
           </Col>
         </Row>

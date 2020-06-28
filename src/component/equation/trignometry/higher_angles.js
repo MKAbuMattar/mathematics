@@ -5,7 +5,7 @@ import Logo from "../logo";
 import Navbar from "./navbar";
 
 function higher_angles() {
-  const equation_1 = '\\sin\\left(2\\theta\\right)=2.\\sin\\theta.\\cos\\theta=\\frac{2\\tan\\theta}{\\left(1+\\tan^{2}\\theta\\right)}',
+  const equation_1 = '\\sin\\left(2\\theta\\right)=2\\sin\\text{ }\\theta\\text{ }\\cos\\text{ }\\theta=\\frac{2\\tan\\theta}{\\left(1+\\tan^{2}\\theta\\right)}',
     equation_2 = '\\cos\\left(2\\theta\\right)=\\cos^{2}\\theta-\\sin^{2}\\theta=1-2\\sin^{2}\\theta=2\\cos^{2}\\theta-1',
     equation_3 = '\\tan\\left(2\\theta\\right)=\\frac{2\\tan\\theta}{1-\\tan^{2}\\theta}',
     equation_4 = '\\sin\\left(3\\theta\\right)=3\\sin\\theta-4sin^{3}\\theta',
