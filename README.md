@@ -15,7 +15,7 @@ npx create-react-app mathematics
 2. reactJS React Router
 
 ```
-npm install --save react-router
+npm install react-router-dom
 ```
 
 3. reactJS mathJAX
