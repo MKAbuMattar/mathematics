@@ -12,7 +12,7 @@
 npx create-react-app mathematics
 ```
 
-2. reactJS React Router D
+2. reactJS React Router Dom
 
 ```
 npm install react-router-dom
