@@ -35,3 +35,10 @@ npm install react-bootstrap bootstrap
 ```
 npm i react-scroll
 ```
+
+# Start App
+Clone repo, install, cd into folder and run:
+```git
+npm install
+npm start
+```
