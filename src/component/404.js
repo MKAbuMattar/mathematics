@@ -8,7 +8,7 @@ function page404() {
                 <div className="fof">
                     <h1>Page Not Found 404</h1>
                     <br />
-                    <a href="/">back to home</a>
+                    <a href="/mathematics/">back to home</a>
                 </div>
             </div>
         </div >

@@ -29,11 +29,11 @@ function area() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/geometry/">Geometry</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mathematics/geometry/">Geometry</Breadcrumb.Item>
               <Breadcrumb.Item active>Area</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

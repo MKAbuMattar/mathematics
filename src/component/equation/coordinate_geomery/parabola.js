@@ -17,11 +17,11 @@ function parabola() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/coordinate_geomery/">Coordinate Geomery</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mathematics/coordinate_geomery/">Coordinate Geomery</Breadcrumb.Item>
               <Breadcrumb.Item active>Parabola</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

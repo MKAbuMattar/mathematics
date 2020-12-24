@@ -48,85 +48,87 @@ function index() {
 
   let header, nav, footer;
 
-  if ((window.location.pathname === '/')) {
+  if ((window.location.pathname === '/') || (window.location.pathname === '/mathematics')) {
     header = <Header />;
   }
 
   if ((window.location.pathname === '/') ||
-    (window.location.pathname === '/basics') ||
-    (window.location.pathname === '/basics/') ||
-    (window.location.pathname === '/basics/powers') ||
-    (window.location.pathname === '/basics/powers/') ||
-    (window.location.pathname === '/basics/radicals') ||
-    (window.location.pathname === '/basics/radicals/') ||
-    (window.location.pathname === '/basics/logarithms') ||
-    (window.location.pathname === '/basics/logarithms/') ||
-    (window.location.pathname === '/basics/quadratic_equations') ||
-    (window.location.pathname === '/basics/quadratic_equations/') ||
-    (window.location.pathname === '/basics/polynomials') ||
-    (window.location.pathname === '/basics/polynomials/') ||
-    (window.location.pathname === '/basics/progression') ||
-    (window.location.pathname === '/basics/progression/') ||
-    (window.location.pathname === '/basics/complex_number') ||
-    (window.location.pathname === '/basics/complex_number/') ||
-    (window.location.pathname === '/basics/vectors') ||
-    (window.location.pathname === '/basics/vectors/') ||
-    (window.location.pathname === '/basics/probability') ||
-    (window.location.pathname === '/basics/probability/') ||
-    (window.location.pathname === '/geometry') ||
-    (window.location.pathname === '/geometry/') ||
-    (window.location.pathname === '/geometry/area') ||
-    (window.location.pathname === '/geometry/area/') ||
-    (window.location.pathname === '/geometry/perimeter') ||
-    (window.location.pathname === '/geometry/perimeter/') ||
-    (window.location.pathname === '/geometry/surface_area') ||
-    (window.location.pathname === '/geometry/surface_area/') ||
-    (window.location.pathname === '/geometry/volume') ||
-    (window.location.pathname === '/geometry/volume/') ||
-    (window.location.pathname === '/geometry/lateral_area') ||
-    (window.location.pathname === '/geometry/lateral_area/') ||
-    (window.location.pathname === '/coordinate_geomery') ||
-    (window.location.pathname === '/coordinate_geomery/') ||
-    (window.location.pathname === '/coordinate_geomery/coordinate_geomery_basics') ||
-    (window.location.pathname === '/coordinate_geomery/coordinate_geomery_basics/') ||
-    (window.location.pathname === '/coordinate_geomery/circle') ||
-    (window.location.pathname === '/coordinate_geomery/circle/') ||
-    (window.location.pathname === '/coordinate_geomery/parabola') ||
-    (window.location.pathname === '/coordinate_geomery/parabola/') ||
-    (window.location.pathname === '/coordinate_geomery/ellipse') ||
-    (window.location.pathname === '/coordinate_geomery/ellipse/') ||
-    (window.location.pathname === '/coordinate_geomery/hyperbola') ||
-    (window.location.pathname === '/coordinate_geomery/hyperbola/') ||
-    (window.location.pathname === '/trignometry') ||
-    (window.location.pathname === '/trignometry/') ||
-    (window.location.pathname === '/trignometry/trignometry_basics') ||
-    (window.location.pathname === '/trignometry/trignometry_basics/') ||
-    (window.location.pathname === '/trignometry/trignometry_graphs') ||
-    (window.location.pathname === '/trignometry/trignometry_graphs/') ||
-    (window.location.pathname === '/trignometry/higher_angles') ||
-    (window.location.pathname === '/trignometry/higher_angles/') ||
-    (window.location.pathname === '/trignometry/laws_of_yrigonometry') ||
-    (window.location.pathname === '/trignometry/laws_of_yrigonometry/') ||
-    (window.location.pathname === '/trignometry/inverse_trignometry') ||
-    (window.location.pathname === '/trignometry/inverse_trignometry/') ||
-    (window.location.pathname === '/trignometry/hyperbolic') ||
-    (window.location.pathname === '/trignometry/hyperbolic/') ||
-    (window.location.pathname === '/calculus') ||
-    (window.location.pathname === '/calculus/') ||
-    (window.location.pathname === '/calculus/limits') ||
-    (window.location.pathname === '/calculus/limits/') ||
-    (window.location.pathname === '/calculus/derivatives') ||
-    (window.location.pathname === '/calculus/derivatives/') ||
-    (window.location.pathname === '/calculus/intgration') ||
-    (window.location.pathname === '/calculus/intgration/') ||
-    (window.location.pathname === '/calculus/laplace_transform') ||
-    (window.location.pathname === '/calculus/laplace_transform/') ||
-    (window.location.pathname === '/calculus/differential_equations') ||
-    (window.location.pathname === '/calculus/differential_equations/') ||
-    (window.location.pathname === '/about') ||
-    (window.location.pathname === '/about/') ||
-    (window.location.pathname === '/privacy_policy') ||
-    (window.location.pathname === '/privacy_policy/')) {
+    (window.location.pathname === '/mathematics') ||
+    (window.location.pathname === '/mathematics/') ||
+    (window.location.pathname === '/mathematics/basics') ||
+    (window.location.pathname === '/mathematics/basics/') ||
+    (window.location.pathname === '/mathematics/basics/powers') ||
+    (window.location.pathname === '/mathematics/basics/powers/') ||
+    (window.location.pathname === '/mathematics/basics/radicals') ||
+    (window.location.pathname === '/mathematics/basics/radicals/') ||
+    (window.location.pathname === '/mathematics/basics/logarithms') ||
+    (window.location.pathname === '/mathematics/basics/logarithms/') ||
+    (window.location.pathname === '/mathematics/basics/quadratic_equations') ||
+    (window.location.pathname === '/mathematics/basics/quadratic_equations/') ||
+    (window.location.pathname === '/mathematics/basics/polynomials') ||
+    (window.location.pathname === '/mathematics/basics/polynomials/') ||
+    (window.location.pathname === '/mathematics/basics/progression') ||
+    (window.location.pathname === '/mathematics/basics/progression/') ||
+    (window.location.pathname === '/mathematics/basics/complex_number') ||
+    (window.location.pathname === '/mathematics/basics/complex_number/') ||
+    (window.location.pathname === '/mathematics/basics/vectors') ||
+    (window.location.pathname === '/mathematics/basics/vectors/') ||
+    (window.location.pathname === '/mathematics/basics/probability') ||
+    (window.location.pathname === '/mathematics/basics/probability/') ||
+    (window.location.pathname === '/mathematics/geometry') ||
+    (window.location.pathname === '/mathematics/geometry/') ||
+    (window.location.pathname === '/mathematics/geometry/area') ||
+    (window.location.pathname === '/mathematics/geometry/area/') ||
+    (window.location.pathname === '/mathematics/geometry/perimeter') ||
+    (window.location.pathname === '/mathematics/geometry/perimeter/') ||
+    (window.location.pathname === '/mathematics/geometry/surface_area') ||
+    (window.location.pathname === '/mathematics/geometry/surface_area/') ||
+    (window.location.pathname === '/mathematics/geometry/volume') ||
+    (window.location.pathname === '/mathematics/geometry/volume/') ||
+    (window.location.pathname === '/mathematics/geometry/lateral_area') ||
+    (window.location.pathname === '/mathematics/geometry/lateral_area/') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/coordinate_geomery_basics') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/coordinate_geomery_basics/') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/circle') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/circle/') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/parabola') ||
+    (window.location.pathname === '/mathematics/mathematics/coordinate_geomery/parabola/') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/ellipse') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/ellipse/') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/hyperbola') ||
+    (window.location.pathname === '/mathematics/coordinate_geomery/hyperbola/') ||
+    (window.location.pathname === '/mathematics/trignometry') ||
+    (window.location.pathname === '/mathematics/trignometry/') ||
+    (window.location.pathname === '/mathematics/trignometry/trignometry_basics') ||
+    (window.location.pathname === '/mathematics/trignometry/trignometry_basics/') ||
+    (window.location.pathname === '/mathematics/trignometry/trignometry_graphs') ||
+    (window.location.pathname === '/mathematics/trignometry/trignometry_graphs/') ||
+    (window.location.pathname === '/mathematics/trignometry/higher_angles') ||
+    (window.location.pathname === '/mathematics/trignometry/higher_angles/') ||
+    (window.location.pathname === '/mathematics/trignometry/laws_of_yrigonometry') ||
+    (window.location.pathname === '/mathematics/trignometry/laws_of_yrigonometry/') ||
+    (window.location.pathname === '/mathematics/trignometry/inverse_trignometry') ||
+    (window.location.pathname === '/mathematics/trignometry/inverse_trignometry/') ||
+    (window.location.pathname === '/mathematics/trignometry/hyperbolic') ||
+    (window.location.pathname === '/mathematics/trignometry/hyperbolic/') ||
+    (window.location.pathname === '/mathematics/calculus') ||
+    (window.location.pathname === '/mathematics/calculus/') ||
+    (window.location.pathname === '/mathematics/calculus/limits') ||
+    (window.location.pathname === '/mathematics/calculus/limits/') ||
+    (window.location.pathname === '/mathematics/calculus/derivatives') ||
+    (window.location.pathname === '/mathematics/calculus/derivatives/') ||
+    (window.location.pathname === '/mathematics/calculus/intgration') ||
+    (window.location.pathname === '/mathematics/calculus/intgration/') ||
+    (window.location.pathname === '/mathematics/calculus/laplace_transform') ||
+    (window.location.pathname === '/mathematics/calculus/laplace_transform/') ||
+    (window.location.pathname === '/mathematics/calculus/differential_equations') ||
+    (window.location.pathname === '/mathematics/calculus/differential_equations/') ||
+    (window.location.pathname === '/mathematics/about') ||
+    (window.location.pathname === '/mathematics/about/') ||
+    (window.location.pathname === '/mathematics/privacy_policy') ||
+    (window.location.pathname === '/mathematics/privacy_policy/')) {
     nav = <Nav />;
     footer = <Footer />;
   }
@@ -137,45 +139,45 @@ function index() {
         {header}
         {nav}
         <Switch>
-          <Route path="/" exact component={home} />
-          <Route path="/basics" exact component={basics} />
-          <Route path="/basics/powers" exact component={powers} />
-          <Route path="/basics/radicals" exact component={radicals} />
-          <Route path="/basics/logarithms" exact component={logarithms} />
-          <Route path="/basics/quadratic_equations" exact component={quadratic_equations} />
-          <Route path="/basics/polynomials" exact component={polynomials} />
-          <Route path="/basics/progression" exact component={progression} />
-          <Route path="/basics/complex_number" exact component={complex_number} />
-          <Route path="/basics/vectors" exact component={vectors} />
-          <Route path="/basics/probability" exact component={probability} />
-          <Route path="/geometry" exact component={geometry} />
-          <Route path="/geometry/area" exact component={area} />
-          <Route path="/geometry/perimeter" exact component={perimeter} />
-          <Route path="/geometry/surface_area" exact component={surface_area} />
-          <Route path="/geometry/volume" exact component={volume} />
-          <Route path="/geometry/lateral_area" exact component={lateral_area} />
-          <Route path="/coordinate_geomery" exact component={coordinate_geomery} />
-          <Route path="/coordinate_geomery/coordinate_geomery_basics" exact component={coordinate_geomery_basics} />
-          <Route path="/coordinate_geomery/circle" exact component={circle} />
-          <Route path="/coordinate_geomery/parabola" exact component={parabola} />
-          <Route path="/coordinate_geomery/ellipse" exact component={ellipse} />
-          <Route path="/coordinate_geomery/hyperbola" exact component={hyperbola} />
-          <Route path="/trignometry" exact component={trignometry} />
-          <Route path="/trignometry/trignometry_basics" exact component={trignometry_basics} />
-          <Route path="/trignometry/trignometry_graphs" exact component={trignometry_graphs} />
-          <Route path="/trignometry/higher_angles" exact component={higher_angles} />
-          <Route path="/trignometry/laws_of_yrigonometry" exact component={laws_of_yrigonometry} />
-          <Route path="/trignometry/inverse_trignometry" exact component={inverse_trignometry} />
-          <Route path="/trignometry/hyperbolic" exact component={hyperbolic} />
-          <Route path="/calculus" exact component={calculus} />
-          <Route path="/calculus/limits" exact component={limits} />
-          <Route path="/calculus/derivatives" exact component={derivatives} />
-          <Route path="/calculus/intgration" exact component={intgration} />
-          <Route path="/calculus/laplace_transform" exact component={laplace_transform} />
-          <Route path="/calculus/differential_equations" exact component={differential_equations} />
-          <Route path="/about" exact component={about} />
-          <Route path="/privacy_policy" exact component={privacy_policy} />
-          <Route path="/*" component={page404} />
+          <Route path="/mathematics" exact component={home} />
+          <Route path="/mathematics/basics" exact component={basics} />
+          <Route path="/mathematics/basics/powers" exact component={powers} />
+          <Route path="/mathematics/basics/radicals" exact component={radicals} />
+          <Route path="/mathematics/basics/logarithms" exact component={logarithms} />
+          <Route path="/mathematics/basics/quadratic_equations" exact component={quadratic_equations} />
+          <Route path="/mathematics/basics/polynomials" exact component={polynomials} />
+          <Route path="/mathematics/basics/progression" exact component={progression} />
+          <Route path="/mathematics/basics/complex_number" exact component={complex_number} />
+          <Route path="/mathematics/basics/vectors" exact component={vectors} />
+          <Route path="/mathematics/basics/probability" exact component={probability} />
+          <Route path="/mathematics/geometry" exact component={geometry} />
+          <Route path="/mathematics/geometry/area" exact component={area} />
+          <Route path="/mathematics/geometry/perimeter" exact component={perimeter} />
+          <Route path="/mathematics/geometry/surface_area" exact component={surface_area} />
+          <Route path="/mathematics/geometry/volume" exact component={volume} />
+          <Route path="/mathematics/geometry/lateral_area" exact component={lateral_area} />
+          <Route path="/mathematics/coordinate_geomery" exact component={coordinate_geomery} />
+          <Route path="/mathematics/coordinate_geomery/coordinate_geomery_basics" exact component={coordinate_geomery_basics} />
+          <Route path="/mathematics/coordinate_geomery/circle" exact component={circle} />
+          <Route path="/mathematics/coordinate_geomery/parabola" exact component={parabola} />
+          <Route path="/mathematics/coordinate_geomery/ellipse" exact component={ellipse} />
+          <Route path="/mathematics/coordinate_geomery/hyperbola" exact component={hyperbola} />
+          <Route path="/mathematics/trignometry" exact component={trignometry} />
+          <Route path="/mathematics/trignometry/trignometry_basics" exact component={trignometry_basics} />
+          <Route path="/mathematics/trignometry/trignometry_graphs" exact component={trignometry_graphs} />
+          <Route path="/mathematics/trignometry/higher_angles" exact component={higher_angles} />
+          <Route path="/mathematics/trignometry/laws_of_yrigonometry" exact component={laws_of_yrigonometry} />
+          <Route path="/mathematics/trignometry/inverse_trignometry" exact component={inverse_trignometry} />
+          <Route path="/mathematics/trignometry/hyperbolic" exact component={hyperbolic} />
+          <Route path="/mathematics/calculus" exact component={calculus} />
+          <Route path="/mathematics/calculus/limits" exact component={limits} />
+          <Route path="/mathematics/calculus/derivatives" exact component={derivatives} />
+          <Route path="/mathematics/calculus/intgration" exact component={intgration} />
+          <Route path="/mathematics/calculus/laplace_transform" exact component={laplace_transform} />
+          <Route path="/mathematics/calculus/differential_equations" exact component={differential_equations} />
+          <Route path="/mathematics/about" exact component={about} />
+          <Route path="/mathematics/privacy_policy" exact component={privacy_policy} />
+          <Route path="/mathematics/*" component={page404} />
         </Switch>
         {footer}
       </div>

@@ -5,11 +5,11 @@ function BootstrapNavbar() {
     return (
         <div className="nav_hidden">
             <Nav className="flex-column nav">
-                <Nav.Link href="/calculus/limits">Limits</Nav.Link>
-                <Nav.Link href="/calculus/derivatives">Derivatives</Nav.Link>
-                <Nav.Link href="/calculus/intgration">Intgration</Nav.Link>
-                <Nav.Link href="/calculus/laplace_transform">Laplace Transform</Nav.Link>
-                <Nav.Link href="/calculus/differential_equations">Differential Equations</Nav.Link>
+                <Nav.Link href="/mathematics/calculus/limits">Limits</Nav.Link>
+                <Nav.Link href="/mathematics/calculus/derivatives">Derivatives</Nav.Link>
+                <Nav.Link href="/mathematics/calculus/intgration">Intgration</Nav.Link>
+                <Nav.Link href="/mathematics/calculus/laplace_transform">Laplace Transform</Nav.Link>
+                <Nav.Link href="/mathematics/calculus/differential_equations">Differential Equations</Nav.Link>
             </Nav>
         </div>
     );

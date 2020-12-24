@@ -9,7 +9,7 @@ function calculus() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
@@ -21,15 +21,15 @@ function calculus() {
           <Col sm={12}>
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Calculus</p>
-              <p className="display-5"><a className="link" href="/calculus/limits">Limits </a></p>
+              <p className="display-5"><a className="link" href="/mathematics/calculus/limits">Limits </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/calculus/derivatives">Derivatives </a></p>
+              <p className="display-5"><a className="link" href="/mathematics/calculus/derivatives">Derivatives </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/calculus/intgration">Intgration </a></p>
+              <p className="display-5"><a className="link" href="/mathematics/calculus/intgration">Intgration </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/calculus/laplace_transform">Laplace Transform </a></p>
+              <p className="display-5"><a className="link" href="/mathematics/calculus/laplace_transform">Laplace Transform </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/calculus/differential_equations">Differential Equations </a></p>
+              <p className="display-5"><a className="link" href="/mathematics/calculus/differential_equations">Differential Equations </a></p>
               <p className="lead text-justify"></p>
             </div>
           </Col>

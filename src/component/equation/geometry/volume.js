@@ -29,11 +29,11 @@ function volume() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/geometry/">Geometry</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mathematics/geometry/">Geometry</Breadcrumb.Item>
               <Breadcrumb.Item active>Volume</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

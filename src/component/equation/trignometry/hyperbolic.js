@@ -33,11 +33,11 @@ function hyperbolic() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/trignometry/">Trignometry</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mathematics/trignometry/">Trignometry</Breadcrumb.Item>
               <Breadcrumb.Item active>Hyperbolic</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

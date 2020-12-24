@@ -19,11 +19,11 @@ function probability() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/basics/">Basics</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mathematics/basics/">Basics</Breadcrumb.Item>
               <Breadcrumb.Item active>Probability</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

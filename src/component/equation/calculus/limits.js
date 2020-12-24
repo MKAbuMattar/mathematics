@@ -47,11 +47,11 @@ function limits() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/">
+              <Breadcrumb.Item href="/mathematics/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/calculus/">Calculus</Breadcrumb.Item>
+              <Breadcrumb.Item href="/mathematics/calculus/">Calculus</Breadcrumb.Item>
               <Breadcrumb.Item active>Limits</Breadcrumb.Item>
             </Breadcrumb>
           </Col>
