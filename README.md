@@ -2,6 +2,8 @@
 
 [Mathematics](https://more-math.netlify.app/) is the source of all math formulas you may need, covering a large number of important topics. It displays data in a beautiful interface, making it easier to access and read.
 
+
+[![pas](https://img.shields.io/static/v1?&message=ProgressiveApp.Store&color=74b9ff&style=flat&label=Follow%20Mathematics%20at)](https://progressiveapp.store/pwa/Mathematics)
 ---
 
 ## Library & Package
