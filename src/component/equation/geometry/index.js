@@ -9,7 +9,7 @@ function geometry() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
@@ -21,15 +21,15 @@ function geometry() {
           <Col sm={12}>
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Geometry</p>
-              <p className="display-5"><a className="link" href="/mathematics/geometry/area">Area </a></p>
+              <p className="display-5"><a className="link" href="/geometry/area">Area </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/geometry/perimeter">Perimeter </a></p>
+              <p className="display-5"><a className="link" href="/geometry/perimeter">Perimeter </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/geometry/surface_area">Surface Area </a></p>
+              <p className="display-5"><a className="link" href="/geometry/surface_area">Surface Area </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/geometry/volume">Volume </a></p>
+              <p className="display-5"><a className="link" href="/geometry/volume">Volume </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/geometry/lateral_area">Lateral Area</a></p>
+              <p className="display-5"><a className="link" href="/geometry/lateral_area">Lateral Area</a></p>
               <p className="lead text-justify"></p>
             </div>
           </Col>

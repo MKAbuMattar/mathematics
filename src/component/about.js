@@ -9,7 +9,7 @@ function about() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>

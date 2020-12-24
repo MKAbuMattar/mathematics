@@ -9,7 +9,7 @@ function privacy_policy() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>

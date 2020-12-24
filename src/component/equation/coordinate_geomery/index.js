@@ -9,7 +9,7 @@ function coordinate_geomery() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
@@ -21,15 +21,15 @@ function coordinate_geomery() {
           <Col sm={9}>
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Coordinate Geomery</p>
-              <p className="display-5"><a className="link" href="/mathematics/coordinate_geomery/coordinate_geomery_basics">Coordinate Geomery Basics </a></p>
+              <p className="display-5"><a className="link" href="/coordinate_geomery/coordinate_geomery_basics">Coordinate Geomery Basics </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/coordinate_geomery/circle">Circle </a></p>
+              <p className="display-5"><a className="link" href="/coordinate_geomery/circle">Circle </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/coordinate_geomery/parabola">Parabola </a></p>
+              <p className="display-5"><a className="link" href="/coordinate_geomery/parabola">Parabola </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/coordinate_geomery/ellipse">Ellipse </a></p>
+              <p className="display-5"><a className="link" href="/coordinate_geomery/ellipse">Ellipse </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/coordinate_geomery/hyperbola">Hyperbola</a></p>
+              <p className="display-5"><a className="link" href="/coordinate_geomery/hyperbola">Hyperbola</a></p>
               <p className="lead text-justify"></p>
             </div>
           </Col>

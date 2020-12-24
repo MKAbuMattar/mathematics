@@ -42,11 +42,11 @@ function derivatives() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/mathematics/calculus/">Calculus</Breadcrumb.Item>
+              <Breadcrumb.Item href="/calculus/">Calculus</Breadcrumb.Item>
               <Breadcrumb.Item active>Derivatives</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

@@ -21,11 +21,11 @@ function powers() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
               </Breadcrumb.Item>
-              <Breadcrumb.Item href="/mathematics/basics/">Basics</Breadcrumb.Item>
+              <Breadcrumb.Item href="/basics/">Basics</Breadcrumb.Item>
               <Breadcrumb.Item active>Powers</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

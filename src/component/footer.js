@@ -27,19 +27,19 @@ function footer() {
                         <div className="col-xs-6 col-md-3">
                             <h6>Categories</h6>
                             <ul className="footer-links">
-                                <li><a href="/mathematics/basics">Basics</a></li>
-                                <li><a href="/mathematics/geometry">Geometry</a></li>
-                                <li><a href="/mathematics/coordinate_geomery">Coordinate Geomery</a></li>
-                                <li><a href="/mathematics/trignometry">Trignometry</a></li>
-                                <li><a href="/mathematics/calculus">Calculus</a></li>
+                                <li><a href="/basics">Basics</a></li>
+                                <li><a href="/geometry">Geometry</a></li>
+                                <li><a href="/coordinate_geomery">Coordinate Geomery</a></li>
+                                <li><a href="/trignometry">Trignometry</a></li>
+                                <li><a href="/calculus">Calculus</a></li>
                             </ul>
                         </div>
 
                         <div className="col-xs-6 col-md-3">
                             <h6>Quick Links</h6>
                             <ul className="footer-links">
-                                <li><a href="/mathematics/about">About</a></li>
-                                <li><a href="/mathematics/privacy_policy">Privacy Policy</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/privacy_policy">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>

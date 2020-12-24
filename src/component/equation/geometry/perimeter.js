@@ -24,11 +24,11 @@ function perimeter() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
-              <Breadcrumb.Item href="/mathematics/geometry/">Geometry</Breadcrumb.Item>
+              <Breadcrumb.Item href="/geometry/">Geometry</Breadcrumb.Item>
               <Breadcrumb.Item active>Perimeter</Breadcrumb.Item>
             </Breadcrumb>
           </Col>

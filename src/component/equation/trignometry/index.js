@@ -9,7 +9,7 @@ function geometry() {
         <Row>
           <Col>
             <Breadcrumb>
-              <Breadcrumb.Item href="/mathematics/">
+              <Breadcrumb.Item href="/">
                 <Logo />
                 Mathematics
                 </Breadcrumb.Item>
@@ -21,17 +21,17 @@ function geometry() {
           <Col sm={12}>
             <div>
               <p className="display-3" style={{ marginTop: "-22px" }}>Trignometry</p>
-              <p className="display-5"><a className="link" href="/mathematics/trignometry/trignometry_basics">Trignometry Basics </a></p>
+              <p className="display-5"><a className="link" href="/trignometry/trignometry_basics">Trignometry Basics </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/trignometry/trignometry_graphs">Trignometry Graphs </a></p>
+              <p className="display-5"><a className="link" href="/trignometry/trignometry_graphs">Trignometry Graphs </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/trignometry/higher_angles">Higher Angles </a></p>
+              <p className="display-5"><a className="link" href="/trignometry/higher_angles">Higher Angles </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/trignometry/laws_of_yrigonometry">Laws of Trigonometry </a></p>
+              <p className="display-5"><a className="link" href="/trignometry/laws_of_yrigonometry">Laws of Trigonometry </a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/trignometry/inverse_trignometry">Inverse Trignometry</a></p>
+              <p className="display-5"><a className="link" href="/trignometry/inverse_trignometry">Inverse Trignometry</a></p>
               <p className="lead text-justify"></p>
-              <p className="display-5"><a className="link" href="/mathematics/trignometry/hyperbolic">Hyperbolic</a></p>
+              <p className="display-5"><a className="link" href="/trignometry/hyperbolic">Hyperbolic</a></p>
               <p className="lead text-justify"></p>
             </div>
           </Col>
