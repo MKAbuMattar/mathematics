@@ -1,6 +1,6 @@
-# [Mathematics](https://mkabumattar.github.io/mathematics/)
+# [Mathematics](https://more-math.netlify.app/)
 
-[Mathematics](https://mkabumattar.github.io/mathematics/) is the source of all math formulas you may need, covering a large number of important topics. It displays data in a beautiful interface, making it easier to access and read.
+[Mathematics](https://more-math.netlify.app/) is the source of all math formulas you may need, covering a large number of important topics. It displays data in a beautiful interface, making it easier to access and read.
 
 ---
 
