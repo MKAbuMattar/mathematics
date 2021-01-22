@@ -6,7 +6,7 @@ import Navbar from "./navbar";
 
 function quadratic_equations() {
   const equation_1 = 'ax^{2}+bx+c=0 \\text{ }\\left(and\\text{ }a\\neq 0\\right)\\text{ }then',
-    equation_2 = 'x=\\frac{-b\\pm\\sqrt{b^{2}-4ac}}{24}',
+    equation_2 = 'x=\\frac{-b\\pm\\sqrt{b^{2}-4ac}}{2a}',
     equation_3 = 'if\\text{ }b^{2}-4ac>0\\text{ }then\\text{ }two\\text{ }real\\text{ }solution',
     equation_4 = 'if\\text{ }b^{2}-4ac=0\\text{ }then\\text{ }reqeated\\text{ }real\\text{ }solution',
     equation_5 = 'if\\text{ }b^{2}-4ac<0\\text{ }then\\text{ }two\\text{ }complex\\text{ }solution';
