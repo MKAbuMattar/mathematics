@@ -1,0 +1,200 @@
+# robots.txt for mathematics.mkabumattar.com
+User-agent: *
+Allow: /
+Disallow: /api/*
+
+# ---------------------------------------------------------------------------
+# Search engine crawlers
+# ---------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Terracotta Bot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Anthropic
+# ---------------------------------------------------------------------------
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ---------------------------------------------------------------------------
+# OpenAI
+# ---------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Google AI
+# ---------------------------------------------------------------------------
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Apple AI
+# ---------------------------------------------------------------------------
+User-agent: Applebot-Extended
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Meta
+# ---------------------------------------------------------------------------
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Perplexity
+# ---------------------------------------------------------------------------
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ---------------------------------------------------------------------------
+# DuckDuckGo
+# ---------------------------------------------------------------------------
+User-agent: DuckAssistBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Mistral
+# ---------------------------------------------------------------------------
+User-agent: MistralAI-User
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Cohere
+# ---------------------------------------------------------------------------
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# ---------------------------------------------------------------------------
+# ByteDance / TikTok
+# ---------------------------------------------------------------------------
+User-agent: Bytespider
+Allow: /
+
+User-agent: TikTok Spider
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Amazon
+# ---------------------------------------------------------------------------
+User-agent: Amazonbot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Huawei
+# ---------------------------------------------------------------------------
+User-agent: PetalBot
+Allow: /
+
+User-agent: PanguBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Manus / Anchor / Novellum / ProRata / Cloudflare AI agents
+# ---------------------------------------------------------------------------
+User-agent: Manus Bot
+Allow: /
+
+User-agent: Anchor Browser
+Allow: /
+
+User-agent: Novellum AI Crawl
+Allow: /
+
+User-agent: ProRataInc
+Allow: /
+
+User-agent: Cloudflare Crawler
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Common Crawl & general AI training crawlers
+# ---------------------------------------------------------------------------
+User-agent: CCBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Webzio-Extended
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
+User-agent: omgilibot
+Allow: /
+
+User-agent: Kangaroo Bot
+Allow: /
+
+User-agent: Sidetrade indexer bot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Archivers
+# ---------------------------------------------------------------------------
+User-agent: archive.org_bot
+Allow: /
+
+User-agent: Arquivo Web Crawler
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------------------
+Sitemap: https://mathematics.mkabumattar.com/sitemap-index.xml
+LLM-Content: https://mathematics.mkabumattar.com/llms.txt
+LLM-FULL-Content: https://mathematics.mkabumattar.com/llms-full.txt

@@ -31,6 +31,8 @@ const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site).toStr
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt" />
+    <link rel="alternate" type="text/markdown" title="llms-full.txt" href="/llms-full.txt" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />

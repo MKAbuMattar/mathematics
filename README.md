@@ -16,6 +16,7 @@ A searchable reference for the math formulas you actually use. Algebra, geometry
 - **Live site:** <http://math.mkabumattar.com>
 - **Repo (active):** <https://github.com/MKAbuMattar/mathematics>
 - **Archived original (CRA build):** <https://github.com/MKAbuMattar/archive-mathematics>
+- **LLM index:** <http://math.mkabumattar.com/llms.txt> · [full content](http://math.mkabumattar.com/llms-full.txt) ([llmstxt.org](https://llmstxt.org/) spec)
 
 > This is a full rewrite of the original Create-React-App + MathJax site. The archived repo above stays read-only as a historical record. New issues and PRs go here.
 
