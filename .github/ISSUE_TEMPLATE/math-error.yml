@@ -1,0 +1,54 @@
+name: Math error
+description: A formula renders wrong, has a typo, or is mathematically incorrect.
+title: "Math error on /<category>/<topic>"
+labels: ["bug:math"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: The page where the error appears.
+      placeholder: "/calculus/derivatives"
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Source file (optional)
+      description: Path of the MDX file in the repo, if known.
+      placeholder: "src/content/formulas/calculus/derivatives.mdx"
+
+  - type: textarea
+    id: incorrect
+    attributes:
+      label: What's wrong
+      description: Paste the incorrect LaTeX or describe the issue.
+      placeholder: "The modulus formula uses b^4 instead of b^2"
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should be
+      description: Correct LaTeX or wording.
+      placeholder: "|a + bi| = sqrt(a^2 + b^2)"
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source / reference (optional)
+      description: Textbook, Wikipedia article, paper, or other reference.
+      placeholder: "https://en.wikipedia.org/wiki/Complex_number"
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Want to fix it?
+      options:
+        - label: I'd like to open a pull request with the fix.

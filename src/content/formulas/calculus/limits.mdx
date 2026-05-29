@@ -1,0 +1,197 @@
+---
+title: "Limits"
+description: "Limit properties, basic evaluations at infinity, evaluation techniques, L'Hospital's rule, and one-sided limits."
+category: "calculus"
+topic: "limits"
+order: 1
+---
+
+A limit is the value a function approaches as the input approaches a target, finite or *±∞*. Limits formalise "arbitrarily close" and underlie continuity, derivatives, and integrals. The algebraic properties below cover routine direct substitution. The asymptotic facts cover behaviour at infinity. The evaluation techniques (factoring, conjugates, L'Hospital's rule) handle indeterminate forms. One-sided limits cover piecewise definitions and discontinuities.
+
+<Diagram alt="A curve f(x) approaching a value L as x approaches c from both sides" viewBox="0 0 240 180" caption="lim x→c f(x) = L when f approaches L from both sides as x nears c.">
+  <path d="M 20 150 L 220 150" />
+  <path d="M 30 20 L 30 165" />
+  <path d="M 20 130 Q 80 60 130 70 Q 180 80 220 30" />
+  <path d="M 130 70 L 130 150" stroke-dasharray="3 3" />
+  <path d="M 30 70 L 130 70" stroke-dasharray="3 3" />
+  <circle cx="130" cy="70" r="2.5" fill="currentColor" />
+  <text x="128" y="163" font-size="10" fill="currentColor" stroke="none">c</text>
+  <text x="14" y="74" font-size="10" fill="currentColor" stroke="none">L</text>
+  <text x="222" y="148" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="34" y="22" font-size="10" fill="currentColor" stroke="none">y</text>
+  <text x="200" y="40" font-size="10" fill="currentColor" stroke="none">f(x)</text>
+</Diagram>
+
+## Properties
+
+Limits respect algebraic operations when the individual limits exist (denominator non-zero for quotients).
+
+Constant multiple. Constants pass through:
+
+<Math math="\lim_{x \rightarrow a}\left[cf\left(x\right)\right]=c\lim_{x \rightarrow a}f\left(x\right)" display />
+
+Sum and difference distribute:
+
+<Math math="\lim_{x \rightarrow a}\left[f\left(x\right)\pm g\left(x\right)\right]=\lim_{x \rightarrow a}f\left(x\right)\pm\lim_{x \rightarrow a}g\left(x\right)" display />
+
+Product of limits:
+
+<Math math="\lim_{x \rightarrow a}\left[f\left(x\right) g\left(x\right)\right]=\lim_{x \rightarrow a}f\left(x\right) \lim_{x \rightarrow a}g\left(x\right)" display />
+
+Quotient, denominator limit non-zero:
+
+<Math math="\lim_{x \rightarrow a}\left[\frac{f\left(x\right)}{g\left(x\right)}\right]=\frac{\lim_{x \rightarrow a}f\left(x\right)}{\lim_{x \rightarrow a}g\left(x\right)}\text{ }\text{ }\text{ }provided\text{ }\lim_{x \rightarrow a}g\left(x\right)\neq0" display />
+
+Power:
+
+<Math math="\lim_{x \rightarrow a}\left[f\left(x\right)\right]^{2}=\left[\lim_{x \rightarrow a}f\left(x\right)\right]^{2}" display />
+
+*n*-th root commutes with the limit:
+
+<Math math="\lim_{x \rightarrow a}\left[\sqrt[n]{f\left(x\right)}\right]=\sqrt[n]{\left[\lim_{x \rightarrow a}f\left(x\right)\right]}" display />
+
+## Basic Limit Evalution at ±∞
+
+Asymptotic facts for *±∞*.
+
+Exponential at the extremes:
+
+<Math math="\lim_{x \rightarrow \infty}e^{x}=\infty\text{ and }\lim_{x \rightarrow-\infty}e^{x}=0" display />
+
+Logarithm grows without bound and diverges to *-∞* at zero:
+
+<Math math="\lim_{x \rightarrow \infty}\ln^{x}=\infty\text{ and }\lim_{x \rightarrow 0^{+}}\ln^{x}=-\infty" display />
+
+Reciprocal powers vanish at infinity:
+
+<Math math="if\text{ }r>0\text{ }then\text{ }\lim_{a \rightarrow \infty}\frac{b}{x^{r}}=0" display />
+
+Extended to negative *x* when *x<sup>r</sup>* is real-valued:
+
+<Math math="if\text{ }r>0\text{ }and\text{ }x^{r}\text{ }is\text{ }real\text{ }for\text{ }negative\text{ }x\text{ }then\text{ }\lim_{a \rightarrow \infty}\frac{b}{x^{r}}=0" display />
+
+Even powers go to *+∞* in both directions:
+
+<Math math="n\text{ }even:\lim_{a\rightarrow\pm\infty}x^{n}=\infty" display />
+
+Odd powers keep their sign:
+
+<Math math="n\text{ }odd:\lim_{a\rightarrow\infty}x^{n}=\infty\text{ and }\lim_{a\rightarrow-\infty}x^{n}=-\infty" display />
+
+Even-degree polynomial:
+
+<Math math="n\text{ }even:\lim_{a\rightarrow\pm\infty}ax^{n}+...+bx+c=sgn\left(a\right)\infty" display />
+
+Odd-degree polynomial at *+∞*:
+
+<Math math="n\text{ }odd:\lim_{a\rightarrow\infty}ax^{n}+...+bx+c=sgn\left(a\right)\infty" display />
+
+Odd-degree polynomial at *-∞*:
+
+<Math math="n\text{ }odd:\lim_{a\rightarrow-\infty}ax^{n}+...+xx+d=sgn\left(a\right)\infty" display />
+
+## Evalution Techniques
+
+Tactics for evaluating limits, ordered from simplest to most general.
+
+Continuous Function
+
+If *f* is continuous at *a*, the limit is *f(a)*:
+
+<Math math="if\text{ }f\left(x\right)\text{ }is\text{ }continuous\text{ }at\text{ }a\text{ }then\text{ }\lim_{x \rightarrow a}f\left(x\right)=f\left(a\right)" display />
+
+Continuous Functions and Composition
+
+If the outer function is continuous at the inner function's limit, push the limit through:
+
+<Math math="if\text{ }f\left(x\right)\text{ }is\text{ }continuous\text{ }at\text{ }b\text{ }and\text{ }\lim_{x \rightarrow a}g\left(x\right)=b\left(a\right) then" display />
+
+<Math math="\lim_{x \rightarrow a}f\left(g\left(x\right)\right)=f\left(\lim_{x \rightarrow a}g\left(x\right)\right)=f\left(b\right)" display />
+
+Factor and Cancel
+
+When direct substitution gives *0/0*, factor and cancel:
+
+<Math math="\lim_{x \rightarrow 2}\frac{x^{2}+4x-12}{x^{2}-2x}=\lim_{x \rightarrow 2}\frac{\left(x-2\right)\left(x+6\right)}{x\left(x-2\right)}" display />
+
+After cancellation, substitute:
+
+<Math math="=\lim_{x \rightarrow 2}\frac{x+6}{x}=\frac{8}{2}=4" display />
+
+Rationalize Numberator/Denominator
+
+For radicals, multiply by the conjugate to turn *0/0* into a cancellable form:
+
+<Math math="\lim_{x \rightarrow 9}\frac{3-\sqrt{x}}{x^{2}-81}=\lim_{x \rightarrow 9}\frac{3-\sqrt{x}}{x^{2}-81}\frac{3+\sqrt{x}}{3+\sqrt{x}}" display />
+
+Expand and cancel:
+
+<Math math="=\lim_{x \rightarrow 9}\frac{9-x}{\left(x^{2}-81\right)\left(3+\sqrt{x}\right)}=\lim_{x \rightarrow 9}\frac{-1}{\left(x-9\right)\left(3+\sqrt{x}\right)}" display />
+
+Substitute:
+
+<Math math="=\frac{-1}{\left(18\right)\left(16\right)}=-\frac{1}{108}" display />
+
+Combine Ratinal Expressions
+
+Combine nested fractions over a common denominator to resolve *0/0*:
+
+<Math math="\lim_{h \rightarrow 0}\frac{1}{h}\left(\frac{1}{x+h}-\frac{1}{x}\right)=\lim_{h \rightarrow 0}\frac{1}{h}\left(\frac{x-\left(x+h\right)}{x\left(x+h\right)}\right)" display />
+
+Simplify and cancel *h*:
+
+<Math math="=\lim_{h \rightarrow 0}\frac{1}{h}\left(\frac{-h}{x\left(x+h\right)}\right)=\lim_{h \rightarrow 0}\frac{-1}{x\left(x+h\right)}=\frac{1}{x^{2}}" display />
+
+L'Hospital's Rule
+
+L'Hospital's rule applies to *0/0* and *±∞/±∞*. Replace the quotient of functions by the quotient of derivatives. Reapply if the new quotient is still indeterminate. Other forms (*0·∞*, *∞-∞*, *1<sup>∞</sup>*, *0<sup>0</sup>*, *∞<sup>0</sup>*) can be rewritten algebraically to fit. If the derivative quotient has no limit, the rule fails and the original limit must be evaluated another way.
+
+<Math math="if\text{ }\lim_{x \rightarrow a}\frac{f\left(x\right)}{g\left(x\right)}=\frac{0}{0}\text{ }or\text{ }\lim_{x \rightarrow a}\frac{x\left(x\right)}{g\left(x\right)}=\frac{\pm\infty}{\pm\infty}\text{ }then," display />
+
+The replacement holds whether the target is finite or infinite:
+
+<Math math="\lim_{x \rightarrow a}\frac{f\left(x\right)}{g\left(x\right)}=\lim_{x \rightarrow a}\frac{f'\left(x\right)}{g'\left(x\right)}\text{ }a\text{ }is\text{ }a\text{ }number,\text{ }\infty\text{ }or\text{ }-\infty" display />
+
+Polynomials at Infinity
+
+For rational functions at infinity, factor the largest power out of numerator and denominator before evaluating.
+
+p(x) and q(x) are polynomials. TO compute
+
+<Math math="\text{ }\lim_{x \rightarrow \pm\infty}\frac{p\left(x\right)}{q\left(x\right)}\text{ }" display />
+
+factor largest power of x q(x) out of both p(x) and q(x) then compute limit.
+
+Low-order terms vanish and the limit reduces to a ratio of leading coefficients (with a sign factor):
+
+<Math math="\lim_{x \rightarrow-\infty}\left(\frac{3x^{2}-4}{5x-2x^{2}}\right)=\lim_{x \rightarrow-\infty}\left(\frac{3-\frac{4}{x^{2}}}{x^{2}\left(\frac{5}{x}-2\right)}\right)=\lim_{x \rightarrow-\infty}\left(\frac{3-\frac{4}{x^{2}}}{\frac{5}{x}-2}\right)=-\frac{3}{2}" display />
+
+Piecewise Function
+
+The two-sided limit exists iff the one-sided limits agree.
+
+A piecewise function split at *x = -2*:
+
+<Math math="\lim_{x \rightarrow-2}g\left(x\right)\text{ }where\text{ }g\left(x\right)=\begin{cases}x^{2}+5 & if\text{ }x < -2\\ 1-3x & if\text{ }x\geq-2\end{cases}" display />
+
+Compute two one side limits,
+
+Left-hand limit, *x < -2* branch:
+
+<Math math="\lim_{x \rightarrow -2^{-}}g\left(x\right)=\lim_{x \rightarrow -2^{-}}\left(x^{2}+5\right)=9" display />
+
+Right-hand limit, *x ≥ -2* branch:
+
+<Math math="\lim_{x \rightarrow -2^{+}}g\left(x\right)=\lim_{x \rightarrow -2^{+}}\left(1-3x\right)=7" display />
+
+One side limts are differnt so
+
+The one-sided limits differ, so the two-sided limit does not exist:
+
+<Math math="\text{ }\lim_{x \rightarrow -2}g\left(x\right)\text{ }" display />
+
+doesn't exist. if the two one sided limits had beet equal then
+
+<Math math="\text{ }\lim_{x \rightarrow -2}g\left(x\right)\text{ }" display />
+
+would have existed and had the same value.

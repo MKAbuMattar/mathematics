@@ -1,0 +1,35 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/partials/Breadcrumbs.astro';
+import { site } from '@/lib/site';
+---
+
+<BaseLayout title="About" description={`About ${site.name}.`}>
+  <div class="container-prose py-10 md:py-14">
+    <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+    <article class="prose-formula mt-8">
+      <h1>About {site.name}</h1>
+      <p class="lead">
+        A reference for the math formulas you use day to day: algebra, geometry,
+        trigonometry, and calculus.
+      </p>
+      <h2>Why it exists</h2>
+      <p>
+        Most formula sites bury what you need under context you don't. This one
+        organizes the common identities into topic pages and renders them with KaTeX.
+      </p>
+      <h2>Stack</h2>
+      <ul>
+        <li>Astro 6 with MDX content collections</li>
+        <li>React 19 for interactive shortcodes</li>
+        <li>Tailwind CSS v4 for the design system</li>
+        <li>KaTeX for math rendering</li>
+      </ul>
+      <h2>Author</h2>
+      <p>
+        Built by <a href={site.author.site} target="_blank" rel="noopener">{site.author.name}</a>.
+        Source on <a href={site.author.github} target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

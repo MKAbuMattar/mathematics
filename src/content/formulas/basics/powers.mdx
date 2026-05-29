@@ -1,0 +1,49 @@
+---
+title: "Powers"
+description: "Exponent rules: products, quotients, powers of powers, negative and fractional exponents, and identities."
+category: "basics"
+topic: "powers"
+order: 1
+---
+
+Powers record how many times a base multiplies by itself. The laws below combine, split, and rewrite exponential expressions without expanding them, and extend the operation consistently to negative and fractional exponents. The same rules underpin polynomial, radical, and logarithmic manipulation.
+
+Multiplying two powers of the same base adds the exponents. Writing *a<sup>n</sup>* as *n* factors of *a* and *a<sup>m</sup>* as *m* factors and concatenating gives *n + m* factors. The rule extends to any real exponents once the operation is defined consistently for them.
+
+<Math math="a^{n}\times a^{m}=a^{n+m}" display />
+
+Raising a power to another power multiplies the exponents. Apply the product rule *m* times to *a<sup>n</sup>* to get *a<sup>n</sup>* repeated *m* times, which collapses to *a<sup>n·m</sup>*. Use this to flatten nested exponentials.
+
+<Math math="\left(a^{n}\right)^{m}=a^{n\times m}" display />
+
+A negative exponent inverts the base. The product rule forces this: *a<sup>n</sup>·a<sup>-n</sup> = a<sup>0</sup> = 1*, so *a<sup>-n</sup> = 1/a<sup>n</sup>*. With this definition the laws extend from natural numbers to all integers.
+
+<Math math="a^{-n}=\frac{1}{a^{n}}" display />
+
+The exponent distributes over a product of bases. Each factor in *(ab)<sup>n</sup>* contributes *n* copies of *a* and *n* copies of *b*, which regroup as *a<sup>n</sup>b<sup>n</sup>*. Distribution fails over sums: *(a + b)<sup>n</sup>* is not *a<sup>n</sup> + b<sup>n</sup>*. That case needs the binomial theorem.
+
+<Math math="\left(a\times b\right)^{n} = \left(a\right)^{n}\times\left( b\right)^{n}" display />
+
+A negative exponent on a fraction flips the fraction and removes the sign. This is a corollary of the negative-exponent rule combined with quotient distribution. The flipped form gives cleaner arithmetic when the original numerator is larger than the denominator.
+
+<Math math="\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^{n}=\frac{b^{n}}{a^{n}}" display />
+
+Dividing two powers of the same base subtracts the exponents. Cancelling common factors removes *min(n, m)* copies of *a* and leaves the difference. The second equality keeps the exponent positive when *n - m* is negative.
+
+<Math math="\frac{a^{n}}{a^{m}}=a^{n-m}=\frac{{1}}{{a^{m-n}}}" display />
+
+The exponent also distributes over a quotient. Combine the product-distribution rule with the negative-exponent rule applied to *b*. The identity collapses ratios of powers into a single fraction with separately-exponentiated parts.
+
+<Math math="\left(\frac{a}{b}\right)^{n}=\frac{a^{n}}{b^{n}}" display />
+
+Any non-zero base raised to the zero power equals one. The quotient rule forces this: *a<sup>n</sup>/a<sup>n</sup> = a<sup>0</sup>* and the left side equals 1. The base zero is excluded; *0<sup>0</sup>* is treated separately.
+
+<Math math="a^{0}=1 \text{ }\left(if\text{ }a\neq 0\right)" display />
+
+A fractional exponent denotes a root combined with a power. The denominator selects the root and the numerator the power. The power-of-a-power rule guarantees the two orderings agree, so you can pick whichever keeps intermediate values smaller or radical-free.
+
+<Math math="a^{\frac{a}{m}}=\left(a^{\frac{1}{m}}\right)^{n}=\left(a^{n}\right)^{\frac{1}{m}}" display />
+
+<Notice type="warning">
+`0^{0}` is an indeterminate form in analytic contexts, not 1. Combinatorics often defines it as 1 for convenience, but the choice is conventional, not algebraic.
+</Notice>

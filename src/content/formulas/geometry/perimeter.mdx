@@ -1,0 +1,69 @@
+---
+title: "Perimeter"
+description: "Perimeter formulas for common 2D shapes: squares, rectangles, parallelograms, circles, triangles, and regular polygons."
+category: "geometry"
+topic: "perimeter"
+order: 2
+---
+
+Perimeter is the total length of a planar shape's boundary, measured in linear units (metres, inches, and so on). For polygons it is the sum of side lengths. For a circle the analogous quantity is the circumference, *2πr*. The formulas below cover squares, rectangles, parallelograms, circles, triangles, and regular polygons.
+
+<Diagram alt="Polygon traced with arrows along edges showing direction of travel" viewBox="0 0 220 140" caption="Perimeter is the total length of a closed boundary.">
+  <polygon points="50,30 170,30 200,80 130,120 40,110" fill="currentColor" opacity="0.08" stroke="none" />
+  <defs>
+    <marker id="peri-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" stroke="none" />
+    </marker>
+  </defs>
+  <line x1="50" y1="30" x2="170" y2="30" marker-end="url(#peri-arrow)" />
+  <line x1="170" y1="30" x2="200" y2="80" marker-end="url(#peri-arrow)" />
+  <line x1="200" y1="80" x2="130" y2="120" marker-end="url(#peri-arrow)" />
+  <line x1="130" y1="120" x2="40" y2="110" marker-end="url(#peri-arrow)" />
+  <line x1="40" y1="110" x2="50" y2="30" marker-end="url(#peri-arrow)" />
+</Diagram>
+
+**Square**
+
+<Diagram src="square.svg" alt="Square" />
+
+Four equal sides of length *a*. Perimeter is four times the side:
+
+<Math math="Perimeter=4a" display />
+
+**Rectangle**
+
+<Diagram src="rectangle.svg" alt="Rectangle" />
+
+Sides *a* and *b*. Opposite sides are equal, so the perimeter is twice the sum of one of each:
+
+<Math math="Perimeter=2\left(a+b\right)" display />
+
+**Parallelgram**
+
+<Diagram src="parallelgram.svg" alt="Parallelgram" />
+
+Adjacent sides *a* and *b*. Opposite sides are equal, so the perimeter takes the same form as a rectangle. The slant angle does not enter:
+
+<Math math="Perimeter=2a+2b" display />
+
+**Circle**
+
+<Diagram src="circle.svg" alt="Circle" />
+
+Radius *r*. The circumference is *2π* times the radius, the limiting case of a regular polygon as the number of sides grows without bound:
+
+<Math math="Perimeter=2\pi r" display />
+
+**Triangle**
+
+<Diagram src="triangle.svg" alt="Triangle" />
+
+Sides *a*, *b*, and *c*. Perimeter is their sum. No angle information is required:
+
+<Math math="Perimeter=a+b+c" display />
+
+**Any Regular Pilygon**
+
+*n* equal sides of length *s* give a perimeter of *ns*, the sum of all sides. The general statement below covers irregular polygons as well:
+
+<Math math="Perimeter=Sum\text{ }of\text{ }the\text{ }sides" display />

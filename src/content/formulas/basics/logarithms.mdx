@@ -1,0 +1,75 @@
+---
+title: "Logarithms"
+description: "Logarithm definition, natural and common logs, and key properties."
+category: "basics"
+topic: "logarithms"
+order: 3
+---
+
+Logarithms are the inverses of exponentials: *log<sub>b</sub>(x)* is the power to which *b* must be raised to produce *x*. They turn products into sums and powers into products, which is why they are the standard tool for solving exponential equations. They also rescale multiplicative phenomena into additive ones, producing the log scales used in decibels, magnitudes, pH, and information theory.
+
+## Definition
+
+A logarithm is the inverse of an exponential with the same base. Left to right, the equivalence extracts the exponent that produced a known value. Right to left, it recovers the value from a known exponent. The base *b* must be positive and not equal to one for the inverse to be a single-valued real function.
+
+The defining equivalence between log and exponential form, used freely in both directions:
+
+<Math math="y=\log_{b}{x}\rightarrow x=b^{y}" display />
+
+## Example
+
+A concrete instance, read in both directions. The exponential form is usually the easier check when verifying a logarithm by hand.
+
+<Math math="\log_{5}{125}=3\rightarrow 5^{3}=125" display />
+
+## Special Logarithms
+
+Two bases get dedicated notation: the natural log (base *e*) and the common log (base 10). The natural log is the calculus default because its derivative is *1/x*. The common log dominates engineering because it matches the decimal place-value system.
+
+The natural logarithm uses Euler's number as its base. Its derivative is the reciprocal function *1/x*. It is the standard log in analysis, probability, and any setting built on continuous growth.
+
+<Math math="\ln\left(x\right)=\log_{e}{x}\text{ }\left(Natural \text{ }log\right)" display />
+
+The common logarithm uses base 10 and is standard for engineering and pH-style scales. Its integer part counts the digits before the decimal point in the input, which is why it underlies decibels, Richter magnitudes, and significant-figure scaling.
+
+<Math math="\log\left(x\right)=\log_{10}{x}\text{ }\left(Common \text{ }log\right)" display />
+
+The constant *e* is the irrational base for which the exponential function is its own derivative. It equals the limit *(1 + 1/n)<sup>n</sup>* as *n* tends to infinity, which is why it surfaces in every continuous growth or decay model.
+
+<Math math="Whare \text{ }e=2.7182818..." display />
+
+## Logarithms Properties
+
+These identities simplify and expand logarithmic expressions algebraically. Each translates an exponent rule under the log-exp inverse pairing. Products become sums, powers become products, quotients become differences.
+
+The log of the base itself is one, since *b<sup>1</sup> = b*. This is the smallest non-trivial value any logarithm takes and is a useful reference point in change-of-base computations.
+
+<Math math="\log_{b}{b}=1" display />
+
+The log of one is zero for every base, since *b<sup>0</sup> = 1*. Every logarithm curve crosses the *x*-axis at this single point.
+
+<Math math="\log_{b}{1}=0" display />
+
+Log and exponential of the same base cancel when the exponential is inside the log. This is the inverse-function identity read left to right. It collapses any *log<sub>b</sub>(b<sup>x</sup>)* to *x* directly.
+
+<Math math="\log_{b}{b^{x}}=x" display />
+
+Inverse property with the exponent outside: the same cancellation in the opposite order. Together the two identities say *log<sub>b</sub>* and *b<sup>x</sup>* compose to the identity in both directions.
+
+<Math math="b^{\log_{b}{x}}=x" display />
+
+The power rule brings an exponent out as a coefficient. It is the most-used logarithm identity for solving exponential equations: take the log of both sides of *b<sup>x</sup> = c* and apply this rule to get *x = log c / log b*. The rule holds for any real exponent.
+
+<Math math="\log_{b}{x^{r}}=r\times\log_{b}{x}" display />
+
+The product rule turns multiplication inside the log into addition. Logarithm tables once reduced tedious multiplications to lookups and additions using this identity.
+
+<Math math="\log_{b}\left({x\times y}\right)=\log_{b}{x}+\log_{b}{y}" display />
+
+The quotient rule turns division inside the log into subtraction. Read in reverse, it consolidates a difference of two same-base logs into a single log of a ratio.
+
+<Math math="\log_{b}\left({\frac{b}{d}}\right)=\log_{b}{x}-\log_{b}{y}" display />
+
+<Notice type="warning">
+The real-valued logarithm is defined only for positive arguments. `log_b(0)` diverges to negative infinity, and `log_b(x)` for `x < 0` has no real value; it requires the complex logarithm.
+</Notice>

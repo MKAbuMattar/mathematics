@@ -2,9 +2,6 @@
   "name": "math",
   "type": "module",
   "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -12,6 +9,28 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.4.1"
+    "@astrojs/mdx": "6.0.1",
+    "@astrojs/react": "5.0.6",
+    "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.3.0",
+    "astro": "6.4.1",
+    "astro-auto-import": "0.5.1",
+    "clsx": "2.1.1",
+    "katex": "0.17.0",
+    "lucide-react": "1.17.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "tailwind-merge": "3.6.0",
+    "tailwindcss": "4.3.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.9",
+    "@types/katex": "0.16.8",
+    "@types/react": "19.2.15",
+    "@types/react-dom": "19.2.3",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

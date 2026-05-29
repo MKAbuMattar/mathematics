@@ -1,0 +1,61 @@
+---
+import { getCollection, render } from 'astro:content';
+import CategoryLayout from '@/layouts/CategoryLayout.astro';
+import PageActions from '@/components/partials/PageActions.astro';
+import { categories } from '@/lib/categories';
+import { site } from '@/lib/site';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('formulas');
+  return entries.map((entry) => {
+    const [categorySlug, topicSlug] = entry.id.split('/');
+    return {
+      params: { category: categorySlug, topic: topicSlug },
+      props: { entry, categorySlug, topicSlug },
+    };
+  });
+}
+
+const { entry, categorySlug, topicSlug } = Astro.props;
+const category = categories.find((c) => c.slug === categorySlug);
+if (!category) throw new Error(`Unknown category: ${categorySlug}`);
+const topic = category.topics.find((t) => t.slug === topicSlug);
+if (!topic) throw new Error(`Unknown topic: ${categorySlug}/${topicSlug}`);
+
+const { Content } = await render(entry);
+
+const filePath = `${site.contentRoot}/${entry.id}.mdx`;
+const pagePath = `/${category.slug}/${topic.slug}`;
+---
+
+<CategoryLayout
+  category={category}
+  activeTopic={topic.title}
+  title={`${topic.title} — ${category.title}`}
+  description={entry.data.description}
+>
+  <header class="mb-6">
+    <p
+      class="text-xs font-medium uppercase tracking-wider text-text-subtle dark:text-text-subtle-dark"
+    >
+      {category.title}
+    </p>
+    <h1 class="mt-1 text-3xl font-semibold tracking-tight md:text-4xl">
+      {entry.data.title}
+    </h1>
+    <p class="mt-2 text-text-muted dark:text-text-muted-dark">
+      {entry.data.description}
+    </p>
+  </header>
+
+  <div class="prose-formula">
+    <Content />
+  </div>
+
+  <PageActions
+    filePath={filePath}
+    pagePath={pagePath}
+    topicTitle={topic.title}
+    categoryTitle={category.title}
+  />
+</CategoryLayout>

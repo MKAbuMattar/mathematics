@@ -1,0 +1,93 @@
+---
+title: "Laplace Transform"
+description: "A table of common Laplace transforms with the Gamma function and notes on hyperbolic trigonometric forms."
+category: "calculus"
+topic: "laplace-transform"
+order: 4
+---
+
+The Laplace transform maps a time-domain function *f(t)* to a complex-frequency-domain function *F(s)* by an exponential-weighted integral, converting differential equations into algebraic ones. It turns differentiation into multiplication by *s* (with initial-value terms), so linear ODEs with constant coefficients become rational equations in *s*. The solution is recovered by inverse-transforming back to the *t* domain via the table or partial fractions. The transform is linear. Entries 24-26 give the scaling and shifting rules: frequency-shift by an exponential factor in *t*, time-shift by multiplication by *e<sup>-cs</sup>* in *s*. The table pairs each *f(t)* with its *F(s)*. Reading right-to-left gives the inverse transform.
+
+<Diagram alt="Block diagram with f(t) in time domain mapped via Laplace transform to F(s) in frequency domain" viewBox="0 0 240 180" caption="The Laplace transform maps a time-domain function to a frequency-domain function.">
+  <rect x="15" y="65" width="80" height="50" rx="4" />
+  <rect x="145" y="65" width="80" height="50" rx="4" />
+  <text x="55" y="88" font-size="11" fill="currentColor" stroke="none" text-anchor="middle">f(t)</text>
+  <text x="55" y="105" font-size="9" fill="currentColor" stroke="none" text-anchor="middle">time domain</text>
+  <text x="185" y="88" font-size="11" fill="currentColor" stroke="none" text-anchor="middle">F(s)</text>
+  <text x="185" y="105" font-size="9" fill="currentColor" stroke="none" text-anchor="middle">frequency domain</text>
+  <path d="M 95 80 L 145 80" />
+  <path d="M 140 76 L 145 80 L 140 84" />
+  <path d="M 145 100 L 95 100" />
+  <path d="M 100 96 L 95 100 L 100 104" />
+  <text x="120" y="72" font-size="11" fill="currentColor" stroke="none" text-anchor="middle">ℒ</text>
+  <text x="120" y="118" font-size="11" fill="currentColor" stroke="none" text-anchor="middle">ℒ⁻¹</text>
+</Diagram>
+
+| # | <Math math="f\left(t\right)=L^{-1}\left\{F\left(s\right)\right\}" /> | <Math math="F\left(s\right)=L\left\{f\left(t\right)\right\}" /> |
+|---|---|---|
+| 1 | 1 | <Math math="\frac{1}{s}" /> |
+| 2 | <Math math="e^{at}" /> | <Math math="\frac{1}{s-a}" /> |
+| 3 | <Math math="t^{n}\text{ }\text{ }\text{ }\text{ }\left(n=1,2,3...\right)" /> | <Math math="\frac{n!}{s^{\left(n+1\right)}}" /> |
+| 4 | <Math math="t^{p}\left(p>-1\right)" /> | <Math math="\frac{\ulcorner\left(p+1\right)}{s^{\left(p+1\right)}}" /> |
+| 5 | <Math math="\sqrt{t}" /> | <Math math="\frac{\sqrt{\pi}}{2\text{ }s^{\frac{3}{2}}}" /> |
+| 6 | <Math math="t^{\frac{n-1}{2}}\text{ }\text{ }\text{ }\left(n=1,2,3...\right)" /> | <Math math="\frac{1\times3\times5...\left(2n-1\right)\sqrt{\pi}}{2^{n}s^{\frac{n+1}{2}}}" /> |
+| 7 | <Math math="\sin\left(at\right)" /> | <Math math="\frac{a}{s^{2}+a^{2}}" /> |
+| 8 | <Math math="\cos\left(at\right)" /> | <Math math="\frac{s}{s^{2}+a^{2}}" /> |
+| 9 | <Math math="t\text{ }\sin\left(at\right)" /> | <Math math="\frac{2as}{\left(s^{2}+a^{2}\right)^{2}}" /> |
+| 10 | <Math math="t\text{ }\cos\left(at\right)" /> | <Math math="\frac{s^{2}-a^{2}}{\left(s^{2}+a^{2}\right)^{2}}" /> |
+| 11 | <Math math="\sin\left(at\right)-at\text{ }\cos\left(at\right)" /> | <Math math="\frac{2a^{3}}{\left(s^{2}+a^{2}\right)^{2}}" /> |
+| 12 | <Math math="\sin\left(at\right)+at\text{ }\cos\left(at\right)" /> | <Math math="\frac{2as^{2}}{\left(s^{2}+a^{2}\right)^{2}}" /> |
+| 13 | <Math math="\cos\left(at\right)-at\text{ }sin\left(at\right)" /> | <Math math="\frac{s\left(s^{2}-a^{2}\right)}{\left(s^{2}+a^{2}\right)^{2}}" /> |
+| 14 | <Math math="\cos\left(at\right)+at\text{ }sin\left(at\right)" /> | <Math math="\frac{s\left(s^{2}+3a^{2}\right)}{\left(s^{2}+a^{2}\right)^{2}}" /> |
+| 15 | <Math math="\sin\left(at+b\right)" /> | <Math math="\frac{s\text{ }\sin\left(b\right)+a\text{ }\cos\left(b\right)}{s^{2}+a^{2}}" /> |
+| 16 | <Math math="\cos\left(at+b\right)" /> | <Math math="\frac{s\text{ }\cos\left(b\right)-a\text{ }\sin\left(b\right)}{s^{2}+a^{2}}" /> |
+| 17 | <Math math="\sinh\left(at\right)" /> | <Math math="\frac{a}{s^{2}-a^{2}}" /> |
+| 18 | <Math math="\cosh\left(at\right)" /> | <Math math="\frac{s}{s^{2}-a^{2}}" /> |
+| 19 | <Math math="e^{at}\sin\left(bt\right)" /> | <Math math="\frac{b}{\left(s-a\right)^{2}+b}" /> |
+| 20 | <Math math="e^{at}\cos\left(bt\right)" /> | <Math math="\frac{s-a}{\left(s-a\right)^{2}+b}" /> |
+| 21 | <Math math="e^{at}\sinh\left(bt\right)" /> | <Math math="\frac{b}{\left(s-a\right)^{2}-b}" /> |
+| 22 | <Math math="e^{at}\cosh\left(bt\right)" /> | <Math math="\frac{s-a}{\left(s-a\right)^{2}-b}" /> |
+| 23 | <Math math="t^{n}e^{at}\text{ }\text{ }\text{ }\text{ }\left(n=1,2,3...\right)" /> | <Math math="\frac{n!}{\left(s-a\right)^{\left(n+1\right)}}" /> |
+| 24 | <Math math="f\left(ct\right)" /> | <Math math="\left(\frac{1}{c}\right)F\left(\frac{s}{c}\right)" /> |
+| 25 | <Math math="u_{c}\left(t\right)=u\left(t-c\right)" /> | <Math math="\frac{e^{-cs}}{s}" /> |
+| 26 | <Math math="\wp\left(t-c\right)" /> | <Math math="e^{-cs}" /> |
+
+## Notes:
+
+1. The list is not inclusive and only contauin some of the most commonly used Laplace transforms and Formulase.
+
+2. deffinition of hyperbolic functions
+
+The hyperbolic functions in entries 17-22:
+
+<Math math="\text{ }\cosh\left(t\right)=\frac{e^{t}+e^{-t}}{2}\text{ }\text{, }" display />
+
+<Math math="\text{ }\sinh\left(t\right)=\frac{e^{t}+e^{-t}}{2}\text{ }" display />
+
+3. Be coreful while using "normal" trigonometric function vs hyperbolic trigonometric function. The only difference in the formaulas is "+a<sup>2</sup>" forthe "normal" trigonometric functions becomes "+a<sup>2</sup>" for the hyperbolic trigonometric functions.
+
+4. Formula #4 uses Gamma Function which is defined as
+
+The Gamma function extends the factorial to non-integer arguments:
+
+<Math math="\text{ }\ulcorner\left(t\right)=\int_{O}^{\infty} e^{-t}x^{t-1}dx\text{ }" display />
+
+if n is a positive intrger then,
+
+At positive integers it reduces to the factorial:
+
+<Math math="\text{ }\ulcorner\left(n+1\right)=n!\text{ }" display />
+
+The Gamma function extends the normal factorial. Two quick facts.
+
+Recurrence relation:
+
+<Math math="\ulcorner\left(p+1\right)=p\ulcorner\left(p\right)p\left(p+1\right)\left(p+1\right)...\left(p+n-1\right)=\frac{\ulcorner\left(p+2\right)}{\ulcorner\left(p\right)}" display />
+
+Half-integer value:
+
+<Math math="\ulcorner\left(\frac{1}{2}\right)=\sqrt{\pi}" display />
+
+<Notice type="note">
+The Laplace transform is defined only for *s* with a sufficiently large real part, the *region of convergence*. The algebraic forms in the table assume that condition. Outside the region, the integral defining the transform diverges.
+</Notice>

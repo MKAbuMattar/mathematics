@@ -1,0 +1,72 @@
+---
+title: "Laws of Trigonometry"
+description: "Law of sines, cosines, tangents, and Mollweide's formula."
+category: "trigonometry"
+topic: "laws-of-trigonometry"
+order: 4
+---
+
+The laws of trigonometry generalise right-triangle relations to arbitrary triangles. They solve any triangle given enough sides and angles; the appropriate law depends on which combination (ASA, AAS, SSA, SAS, SSS) is given. The Law of Sines handles cases pairing an angle with its opposite side. The Law of Cosines covers SAS and SSS by generalising Pythagoras. Mollweide's formula and the Law of Tangents are mostly consistency checks or historical alternatives.
+
+<Diagram src="lows_of_trigonometry.svg" alt="Laws of Trigonometry" />
+
+<Diagram alt="Generic triangle with vertices A, B, C and opposite sides a, b, c" viewBox="0 0 240 180" caption="Law of Sines and Law of Cosines apply to any triangle, not just right triangles.">
+  <polygon points="40,150 210,140 90,40" fill="currentColor" opacity="0.08" />
+  <polygon points="40,150 210,140 90,40" />
+  <text x="28" y="160" font-size="11" fill="currentColor" stroke="none">A</text>
+  <text x="216" y="138" font-size="11" fill="currentColor" stroke="none">B</text>
+  <text x="84" y="34" font-size="11" fill="currentColor" stroke="none">C</text>
+  <text x="146" y="100" font-size="10" fill="currentColor" stroke="none">a</text>
+  <text x="55" y="100" font-size="10" fill="currentColor" stroke="none">b</text>
+  <text x="120" y="158" font-size="10" fill="currentColor" stroke="none">c</text>
+</Diagram>
+
+Note
+
+1. A, B and C are angles.
+
+a, b and c are the length of the sides opposite to A, B and C respectively.
+
+## Law of Sines
+
+Each side over the sine of its opposite angle is constant. Applies when an angle-side pair plus one more angle or side is known (ASA, AAS, SSA).
+
+<Math math="\frac{sin\left(A\right)}{a}=\frac{sin\left(B\right)}{b}=\frac{sin\left(C\right)}{c}" display />
+
+## Low of Cosines
+
+Generalises Pythagoras to non-right triangles. Applies for SAS (two sides and the included angle) or SSS (all three sides).
+
+Side *a* given *b*, *c*, angle *A*.
+
+<Math math="a^{2}=b^{2}+c^{2}-2bc\text{ }\cos\left(A\right)" display />
+
+Side *b*.
+
+<Math math="b^{2}=a^{2}+c^{2}-2ac\text{ }\cos\left(B\right)" display />
+
+Side *c*.
+
+<Math math="c^{2}=a^{2}+b^{2}-2ab\text{ }\cos\left(C\right)" display />
+
+## Low of Tangents
+
+Relates a ratio of side lengths to a ratio of tangents of half-sum and half-difference of the opposite angles. Useful for SAS problems before calculators made the cosine law cheap.
+
+Sides *a*, *b* with angles *A*, *B*.
+
+<Math math="\frac{\left(a-b\right)}{\left(a+b\right)}=\frac{\tan\left(\frac{1}{2}\right)\left(A-B\right)}{\tan\left(\frac{1}{2}\right)\left(A+B\right)}" display />
+
+Sides *b*, *c* with angles *B*, *C*.
+
+<Math math="\frac{\left(b-c\right)}{\left(b+c\right)}=\frac{\tan\left(\frac{1}{2}\right)\left(B-C\right)}{\tan\left(\frac{1}{2}\right)\left(B+C\right)}" display />
+
+Sides *a*, *c* with angles *A*, *C*.
+
+<Math math="\frac{\left(a-c\right)}{\left(a+c\right)}=\frac{\tan\left(\frac{1}{2}\right)\left(A-C\right)}{\tan\left(\frac{1}{2}\right)\left(A+C\right)}" display />
+
+## MollWeid's Formula
+
+Relates all three sides and all three angles in one equation, used as a check on a solved triangle.
+
+<Math math="\frac{a+b}{c}=\frac{\cos\left(\frac{1}{2}\right)\left(A-C\right)}{\sin\left(\frac{1}{2}\right)\left(C\right)}" display />

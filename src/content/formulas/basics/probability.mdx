@@ -1,0 +1,80 @@
+---
+title: "Probability"
+description: "Probability rules including complementary events, addition, independent events, conditional probability, and Bayes' formula."
+category: "basics"
+topic: "probability"
+order: 9
+---
+
+Probability quantifies how likely an event is on a scale from 0 (impossible) to 1 (certain). The rules below combine probabilities of related events (unions, intersections, conditional events) and end with Bayes' formula, which inverts a conditional probability to update beliefs from evidence. Two-event relations are easiest to read off a Venn diagram, where set operations map directly to probability operations.
+
+<Diagram alt="Venn diagram of two overlapping events A and B with shaded intersection" viewBox="0 0 220 160" caption="Two-event Venn diagram: the shaded lens is A ∩ B, the full union A ∪ B covers both circles.">
+  <rect x="10" y="20" width="200" height="120" />
+  <circle cx="90" cy="80" r="45" />
+  <circle cx="135" cy="80" r="45" />
+  <path d="M 112.5 41 A 45 45 0 0 1 112.5 119 A 45 45 0 0 1 112.5 41 Z" fill="currentColor" opacity="0.15" stroke="none" />
+  <text x="60" y="84" font-size="11" fill="currentColor" stroke="none">A</text>
+  <text x="160" y="84" font-size="11" fill="currentColor" stroke="none">B</text>
+  <text x="103" y="84" font-size="9" fill="currentColor" stroke="none">A∩B</text>
+  <text x="14" y="33" font-size="9" fill="currentColor" stroke="none">S</text>
+</Diagram>
+
+## Basics
+
+The classical definition counts favourable outcomes against equally likely total outcomes. It applies cleanly only when the sample space partitions into equally likely cases. For general spaces, probability is defined axiomatically as a measure.
+
+Probability of an event A is
+
+P(A)=(number of favourable outcomes)
+
+(total number of all outcomes)
+
+## Probability Range
+
+Probability is bounded between zero and one, with the endpoints reserved for impossible and certain events. The bounds are the first Kolmogorov axiom and the source of every sanity check: any computed value outside this range signals an error in setup.
+
+<Math math="0\leq P\left(A\right)\leq 1" display />
+
+## Rule of Complementary Events
+
+An event and its complement (everything *not A*) exhaust the sample space, so their probabilities sum to one. Use this when *P(A<sup>C</sup>)* is easier to compute than *P(A)* directly. "At least one" events are usually easiest as *1 - P(none)*.
+
+<Math math="P\left(A^{C}\right)+P\left(A\right)=1" display />
+
+## Rule of Addition
+
+The inclusion-exclusion identity for two events: add the individual probabilities, then subtract the overlap so it is not counted twice. The Venn diagram shows why: the lens *A ∩ B* lies inside both *A* and *B*, so summing the circles counts it twice. The identity generalises to *n* events with alternating inclusion-exclusion terms.
+
+<Math math="P\left(A\cup B\right)=P\left(\right)+P\left(B\right)-P\left(A\cap B\right)" display />
+
+## Disjoint Events
+
+Two events are disjoint (mutually exclusive) when they cannot both occur in the same trial. In the Venn diagram the two circles do not overlap, so the inclusion-exclusion correction drops out and the addition rule reduces to *P(A ∪ B) = P(A) + P(B)*.
+
+Events A and B are disjoint if their intersection has zero probability:
+
+<Math math="P\left(A\cap B\right)=0" display />
+
+## Independent Events
+
+Independence means the occurrence of one event leaves the probability of the other unchanged; the joint probability is the product of the marginals. Independence is a statement about probabilities, not about the events themselves. Two events with overlapping outcomes can still be independent if the overlap matches the product condition exactly.
+
+Events A and B are independent if their joint probability factors as the product of the marginals:
+
+<Math math="P\left(A\cap B\right)=P\left(A\right).P\left(B\right)" display />
+
+## Conditional Probability
+
+Conditional probability re-normalises by restricting the sample space to outcomes in which the conditioning event has occurred. The fraction below counts the overlap *A ∩ B* against the new total *B*, which is what "given *B*" reduces the universe to. This definition underlies Bayes' formula and the theory of stochastic processes built on conditioning.
+
+<Math math="P\left(A\mid B\right)=\frac{P\left(A\cap B\right)}{P\left(B\right)}" display />
+
+## Bayes Formuala
+
+Bayes' formula inverts a conditional probability, switching what is given and what is being asked, by re-weighting with the ratio of marginals. It is the central tool for inference: from a prior *P(A)* and a likelihood *P(B|A)*, it returns the posterior *P(A|B)* after observing *B*. The denominator *P(B)* is often expanded by the law of total probability into a sum over disjoint hypotheses.
+
+<Math math="P\left(A\mid B\right)=P\left(B\mid A\right).\frac{P\left(A\right)}{P\left(B\right)}" display />
+
+<Notice type="warning">
+Disjoint events are not independent. If *A* and *B* are disjoint with positive probabilities, knowing one occurred makes the other impossible, so they are maximally *dependent*. Confusing the two concepts is a common error.
+</Notice>

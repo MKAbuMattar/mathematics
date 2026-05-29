@@ -1,0 +1,110 @@
+---
+import { categories } from '@/lib/categories';
+import { site } from '@/lib/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border bg-surface-2 dark:border-border-dark dark:bg-surface-2-dark">
+  <div class="container-page py-12">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <p class="font-semibold tracking-tight">{site.name}</p>
+        <p class="mt-2 max-w-md text-sm text-text-muted dark:text-text-muted-dark">
+          {site.description}
+        </p>
+      </div>
+
+      <div>
+        <p class="text-sm font-semibold">Topics</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          {
+            categories.map((cat) => (
+              <li>
+                <a
+                  href={`/${cat.slug}`}
+                  class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+                >
+                  {cat.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-sm font-semibold">Links</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <a
+              href="/about"
+              class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/privacy-policy"
+              class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a
+              href={site.repo}
+              target="_blank"
+              rel="noopener"
+              class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+              >Source on GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href={`${site.repo}/issues/new?labels=bug%3Amath&title=Math+error+on+%2F`}
+              target="_blank"
+              rel="noopener"
+              class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+              >Report an error</a
+            >
+          </li>
+          <li>
+            <a
+              href={site.author.github}
+              target="_blank"
+              rel="noopener"
+              class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+              >Author's GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href={site.author.linkedin}
+              target="_blank"
+              rel="noopener"
+              class="text-text-muted hover:text-primary dark:text-text-muted-dark dark:hover:text-primary-soft transition-colors"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="mt-10 flex flex-col gap-3 border-t border-border pt-6 text-sm text-text-muted dark:border-border-dark dark:text-text-muted-dark md:flex-row md:items-center md:justify-between"
+    >
+      <p>© {year} {site.name}. Rendered with KaTeX.</p>
+      <p>
+        Built by
+        <a
+          href={site.author.site}
+          target="_blank"
+          rel="noopener"
+          class="font-medium text-primary hover:underline"
+        >
+          {site.author.name}
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

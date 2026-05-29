@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #0891b2;
+  --color-primary-hover: #0e7490;
+  --color-primary-soft: #ecfeff;
+  --color-primary-soft-dark: #083344;
+
+  --color-accent: #22c55e;
+
+  --color-surface: #ffffff;
+  --color-surface-2: #f8fafc;
+  --color-surface-3: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748b;
+
+  --color-surface-dark: #020617;
+  --color-surface-2-dark: #0f172a;
+  --color-surface-3-dark: #1e293b;
+  --color-border-dark: #1e293b;
+  --color-text-dark: #f1f5f9;
+  --color-text-muted-dark: #cbd5e1;
+  --color-text-subtle-dark: #94a3b8;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  body {
+    @apply bg-surface text-text font-sans antialiased;
+    @apply dark:bg-surface-dark dark:text-text-dark;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary dark:text-primary-soft;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary rounded-sm;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-prose {
+    @apply mx-auto w-full max-w-3xl px-4 sm:px-6;
+  }
+
+  .link {
+    @apply text-primary underline-offset-4 hover:underline transition-colors;
+  }
+
+  .formula-card {
+    @apply rounded-xl border border-border bg-surface-2 p-5 md:p-6;
+    @apply dark:border-border-dark dark:bg-surface-2-dark;
+  }
+
+  .badge-base {
+    @apply inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-medium;
+  }
+}
+
+/* KaTeX display tuning */
+.katex-display {
+  @apply my-4 overflow-x-auto overflow-y-hidden py-1;
+}
+
+.katex-display > .katex {
+  @apply text-left;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+@media (max-width: 640px) {
+  .katex {
+    font-size: 1em;
+  }
+}
+
+/* Prose tweaks for MDX content */
+.prose-formula {
+  @apply prose prose-slate dark:prose-invert max-w-none;
+  @apply prose-headings:font-semibold prose-headings:tracking-tight;
+  @apply prose-h1:text-3xl prose-h1:mb-2 md:prose-h1:text-4xl;
+  @apply prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-3 md:prose-h2:text-2xl;
+  @apply prose-h2:border-b prose-h2:border-border dark:prose-h2:border-border-dark prose-h2:pb-2;
+  @apply prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-2;
+  @apply prose-p:leading-relaxed;
+  @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
+  @apply prose-code:font-mono prose-code:text-[0.95em] prose-code:font-medium;
+  @apply prose-code:before:content-none prose-code:after:content-none;
+  @apply prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded;
+  @apply prose-code:bg-surface-3 dark:prose-code:bg-surface-3-dark;
+  @apply prose-strong:font-semibold;
+  @apply prose-li:my-1;
+  @apply prose-blockquote:border-l-primary prose-blockquote:font-normal;
+  @apply prose-blockquote:not-italic prose-blockquote:bg-surface-2 dark:prose-blockquote:bg-surface-2-dark;
+  @apply prose-blockquote:rounded-r-lg prose-blockquote:py-3 prose-blockquote:px-4;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

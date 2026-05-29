@@ -1,0 +1,67 @@
+---
+title: "Complex Numbers"
+description: "The imaginary unit, arithmetic operations, modulus, and complex conjugate."
+category: "basics"
+topic: "complex-numbers"
+order: 7
+---
+
+A complex number has the form *a + ib*, where *a* and *b* are real and *i* is the imaginary unit. Treating *i* as an algebraic symbol with *i<sup>2</sup> = -1* lets arithmetic proceed like ordinary polynomial arithmetic, with the modulus and conjugate adding extra structure. Geometrically, every complex number is a point in the Argand plane: real part on the horizontal axis, imaginary part on the vertical.
+
+<Diagram alt="Argand diagram showing point z equals a plus i b with projections" viewBox="0 0 220 160" caption="A complex number z = a + ib plotted on the Argand plane; the real and imaginary parts are the horizontal and vertical projections from the origin.">
+  <line x1="10" y1="120" x2="210" y2="120" />
+  <line x1="40" y1="10" x2="40" y2="150" />
+  <line x1="40" y1="120" x2="150" y2="50" />
+  <line x1="150" y1="120" x2="150" y2="50" stroke-dasharray="3 3" />
+  <line x1="40" y1="50" x2="150" y2="50" stroke-dasharray="3 3" />
+  <circle cx="150" cy="50" r="2.5" fill="currentColor" />
+  <text x="156" y="46" font-size="10" fill="currentColor" stroke="none">z = a + ib</text>
+  <text x="200" y="116" font-size="10" fill="currentColor" stroke="none">Re</text>
+  <text x="46" y="18" font-size="10" fill="currentColor" stroke="none">Im</text>
+  <text x="92" y="134" font-size="10" fill="currentColor" stroke="none">a</text>
+  <text x="26" y="88" font-size="10" fill="currentColor" stroke="none">b</text>
+</Diagram>
+
+The imaginary unit is defined as a square root of negative one. This single symbol extends the reals into an algebraically closed field in which every non-constant polynomial has a root (the fundamental theorem of algebra). The choice of *i* over *-i* is conventional; both satisfy the defining relation below.
+
+<Math math="i=\sqrt{-1}" display />
+
+Squaring the imaginary unit returns the defining relation. This rule is what distinguishes complex arithmetic from polynomial arithmetic in *i*: every *i<sup>2</sup>* is replaced by *-1*. Higher powers of *i* cycle through *i, -1, -i, 1* with period four.
+
+<Math math="i^{2}=-1" display />
+
+Square roots of negative real numbers factor out *i*. The non-negative *a* under the inner radical keeps that operation real-valued; the *i* outside carries the sign. The rule blocks the common false step *√(-a)·√(-b) = √(ab)* when both operands are negative.
+
+<Math math="\sqrt{-a}=i\sqrt{a}\text{ }\text{ }\text{ }\left(if\text{ }a\geq 0\right)" display />
+
+Addition combines real and imaginary parts component-wise, like vector addition in *R<sup>2</sup>*. On the Argand diagram, two complex numbers add as the parallelogram-rule sum of their position vectors.
+
+<Math math="\left(a+ib\right)+\left(c+id\right)=\left(a+c\right)+\left(b+d\right)i" display />
+
+Subtraction is also component-wise. Reversing the sign of the second operand reflects it through the origin before the vector addition.
+
+<Math math="\left(a+ib\right)-\left(c+id\right)=\left(a-c\right)+\left(b-d\right)i" display />
+
+Multiplication uses the distributive law with *i<sup>2</sup> = -1*. The cross terms *iad* and *ibc* sit in the imaginary part; *i<sup>2</sup>bd = -bd* moves into the real part. Geometrically, multiplication rotates and scales: moduli multiply and arguments add.
+
+<Math math="\left(a+ib\right)\left(c+id\right)=\left(ac+bd\right)+\left(ab+bc\right)i" display />
+
+Multiplying a complex number by its conjugate gives a real result, which is how complex denominators are rationalised. The cross terms *iab* and *-iab* cancel, leaving the sum of squares *a<sup>2</sup> + b<sup>2</sup>*, the squared distance from the origin in the Argand plane.
+
+<Math math="\left(a+ib\right)\left(c-ib\right)=a^{2}+b^{2}" display />
+
+The modulus is the distance from the origin in the complex plane. By the Pythagorean theorem applied to the horizontal and vertical projections in the diagram, the length of the vector from 0 to *a + ib* is *√(a<sup>2</sup> + b<sup>2</sup>)*.
+
+<Math math="\left|a+ib\right|=\sqrt{a^{2}+b^{4}}\text{ }\text{ }\text{ }\left(Complex\text{ }Modulus\right)" display />
+
+The conjugate flips the sign of the imaginary part, reflecting the number across the real axis. Conjugation is an involution: applying it twice recovers the original. It also commutes with addition and multiplication, making it a field automorphism of the complex numbers.
+
+<Math math="\overline{a+ib}=a+ib\text{ }\text{ }\text{ }\left(Complex\text{ }Conjugate\right)" display />
+
+A number times its conjugate equals the modulus squared. This expresses *|z|<sup>2</sup>* without taking a square root, which is the cleaner quantity to work with whenever the modulus appears under a power.
+
+<Math math="\left(\overline{a+ib}\right)\left(a+ib\right)=\left|a+ib\right|^{2}" display />
+
+<Notice type="note">
+To divide complex numbers, multiply numerator and denominator by the denominator's conjugate. The denominator becomes the modulus squared (a real number), and the quotient sits in standard *a + ib* form.
+</Notice>

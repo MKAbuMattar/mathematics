@@ -1,0 +1,193 @@
+---
+title: "Vectors"
+description: "Dot and cross products, position and unit vectors, scalar and vector triple products."
+category: "basics"
+topic: "vectors"
+order: 8
+---
+
+A vector in three-space carries magnitude and direction, written in the standard *i*, *j*, *k* basis. The dot and cross products give a scalar and a vector respectively, and combine into triple products that encode signed volumes and orthogonality relations. Vector addition obeys the parallelogram rule: the sum of two vectors is the diagonal of the parallelogram they span.
+
+<Diagram alt="Two vectors u and v with their sum as the parallelogram diagonal" viewBox="0 0 220 160" caption="Vector addition by the parallelogram rule: u + v is the diagonal from the common origin to the opposite corner.">
+  <path d="M 30 130 L 130 100" />
+  <path d="M 130 100 L 124 96" />
+  <path d="M 130 100 L 124 104" />
+  <text x="74" y="108" font-size="10" fill="currentColor" stroke="none">u</text>
+  <path d="M 30 130 L 70 50" />
+  <path d="M 70 50 L 66 56" />
+  <path d="M 70 50 L 74 56" />
+  <text x="36" y="86" font-size="10" fill="currentColor" stroke="none">v</text>
+  <path d="M 130 100 L 170 20" stroke-dasharray="3 3" />
+  <path d="M 70 50 L 170 20" stroke-dasharray="3 3" />
+  <path d="M 30 130 L 170 20" />
+  <path d="M 170 20 L 163 22" />
+  <path d="M 170 20 L 167 27" />
+  <text x="106" y="64" font-size="10" fill="currentColor" stroke="none">u + v</text>
+  <circle cx="30" cy="130" r="2.5" fill="currentColor" />
+</Diagram>
+
+## Dot Product
+
+The dot product multiplies corresponding components and sums them, returning a scalar that measures projected length and angular alignment. Geometrically *a · b = |a||b|cos θ*, so it vanishes for orthogonal vectors and is maximal when the vectors are parallel.
+
+The first vector in component form, its coordinates with respect to the *i, j, k* basis:
+
+<Math math="Let\text{ }\overline{a}=a_{1}i+a_{2}j+a_{3}k" display />
+
+The second:
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\overline{b}=b_{1}i+b_{2}j+b_{3}k" display />
+
+Expanded form before basis cancellations. Distributing gives nine terms; six vanish because the basis vectors are mutually orthogonal.
+
+<Math math="Then\text{ }\overline{a}.\overline{b}=\left(a_{1}i+a_{2}j+a_{3}k\right)\left(b_{1}i+b_{2}j+b_{3}k\right)" display />
+
+After applying orthogonality of the basis, the dot product reduces to a sum of products. The diagonal terms *i·i = j·j = k·k = 1* survive; off-diagonal terms vanish. This component formula is the standard tool for angles, projections, and orthogonality checks.
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}\text{ }\text{ }\left(Scalar\text{ }Quantity\right)" display />
+
+The dot product is commutative (*a · b = b · a*) because real-number multiplication of components is commutative:
+
+<Math math="Note:\text{ }\overline{a}.\overline{b}=\overline{b}.\overline{a}" display />
+
+## Cross Product
+
+The cross product returns a vector perpendicular to both inputs, whose magnitude equals the area of the parallelogram they span. It is anti-commutative and direction-sensitive, with orientation fixed by the right-hand rule. Unlike the dot product, it has a clean form only in three dimensions.
+
+The first vector:
+
+<Math math="Let\text{ }\overline{a}=a_{1}i+a_{2}j+a_{3}k" display />
+
+The second:
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\overline{b}=b_{1}i+b_{2}j+b_{3}k" display />
+
+The cross product is a 3×3 determinant expanded along the basis row. The first row carries the basis vectors and the remaining two rows the components, so cofactor expansion along the top row gives the standard component formula.
+
+<Math math="Then\text{ }\overline{\mathbf{a}} \times \overline{\mathbf{b}} =  \begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_{1} &  a_{2} & a_{3} \\ b_{1} &  b_{2} & b_{3} \end{vmatrix}" display />
+
+Swapping the operands does not preserve the product. Unlike the dot product, the cross product is direction-sensitive; swapping reverses orientation by the right-hand rule.
+
+<Math math="Note: \text{ }\overline{a}\times\overline{b}\neq\overline{b}\times\overline{a}" display />
+
+Swapping the operands reverses the sign: the cross product is anti-commutative. This follows from the determinant view, since exchanging two rows of a matrix negates its determinant.
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\overline{a}\times\overline{b}=-\overline{b}\times\overline{a}" display />
+
+## Position Vector
+
+A position vector locates a point relative to the origin and packages its Cartesian coordinates as a vector. It is the bridge between point-set geometry and vector algebra: every geometric question about points becomes an algebraic question about their position vectors.
+
+For point *P(x, y, z)*, the position vector is the arrow from the origin to the point.
+
+The arrow from the origin to a point is the vector with the point's coordinates as components, written as differences from the origin:
+
+<Math math="\overline{OP}=\left(x-0\right)i+\left(y-0\right)j+\left(z-0\right)k" display />
+
+After the zero subtractions vanish:
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }=xo+yj+zk" display />
+
+The magnitude (length) of the position vector by the Pythagorean theorem in three dimensions. The squared length is the sum of squared components; the square root gives the Euclidean distance from the origin to the point.
+
+<Math math="\left|\overline{r}\right|=\sqrt{x^{2}+y^{2}+z^{2}}" display />
+
+## Unit Vector
+
+A unit vector preserves direction while normalising magnitude to one. Divide any non-zero vector by its magnitude to get its unit vector. Unit vectors isolate direction from magnitude, which is what you want whenever the question is "in which direction" rather than "how far".
+
+A unit vector is the vector divided by its own magnitude. The hat notation marks the result as normalised; the construction works for any non-zero vector.
+
+<Math math="\widehat{a} = \frac{\overline{a}}{\left|\overline{a}\right|}" display />
+
+An arbitrary vector in component form:
+
+<Math math="Let\text{ }\overline{a}=a_{1}i+a_{2}j+a_{3}k" display />
+
+Its magnitude:
+
+<Math math="\text{ }\text{ }\text{ }\left|\overline{a}\right|=\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}" display />
+
+The unit vector in component form, each component divided by the magnitude. The squared components sum to one, confirming unit length.
+
+<Math math="\therefore\text{ }\widehat{a}=\frac{a_{1}i+a_{2}j+a_{3}k}{\sqrt{a_{1}^{2}+a_{2}^{2}+a_{3}^{2}}}" display />
+
+## Scalar Triple Product
+
+The scalar triple product *a · (b × c)* returns the signed volume of the parallelepiped spanned by the three vectors. It vanishes when they are coplanar. The sign records orientation (positive for right-handed, negative for left-handed); the absolute value is the geometric volume.
+
+Three vectors in component form, used in the determinant below:
+
+<Math math="Lat\text{ }\text{ }\overline{a}=a_{1}^{i}+a_{2}^{j}+a_{3}^{k}" display />
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\overline{b}=b_{1}^{i}+b_{2}^{j}+b_{3}^{k}" display />
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\overline{c}=c_{1}^{i}+c_{2}^{j}+c_{3}^{k}" display />
+
+The scalar triple product is the determinant of the matrix whose rows are the three vectors. The 3×3 determinant and the signed volume are the same object, so the parallelepiped volume formula comes straight from linear algebra.
+
+<Math math="\mathbf{\overline{a}}.\left(\mathbf{\overline{b}}\times\mathbf{\overline{c}}\right)=\begin{vmatrix}a_{1}&a_{2}&a_{3} \\ b_{1}&b_{2}&b_{3} \\ c_{1}& c_{2}&c_{3} \end{vmatrix}" display />
+
+Compact bracket notation, the standard shorthand whenever the triple product appears in identities:
+
+<Math math="\overline{a}.\left(\overline{b}\times\overline{c}\right)=\left[\overline{a}\text{ }\text{ }\overline{b}\text{ }\text{ }\overline{c}\right]" display />
+
+**Propertes**
+
+Cyclic permutation of the three vectors leaves the scalar triple product unchanged. Rotating rows is an even permutation, so the determinant's sign is preserved.
+
+<Math math="\left[a\text{ }b\text{ }c\right]=\left[b\text{ }c\text{ }a\right]=\left[c\text{ }a\text{ }b\right]" display />
+
+Swapping two adjacent vectors reverses the sign, by the row-swap rule for determinants:
+
+<Math math="\left[a\text{ }b\text{ }c\right]=-\left[a\text{ }b\text{ }c\right]" display />
+
+If any vector is repeated, the triple product vanishes. The three vectors collapse onto a plane and the spanned volume drops to zero. The determinant view says the same: a matrix with two equal rows is singular.
+
+<Math math="\left[a\text{ }a\text{ }b\right]=\left[b\text{ }a\text{ }a\right]=\left[a\text{ }b\text{ }a\right]=0" display />
+
+The dot and cross can be interchanged within the triple product. This is what justifies the bracket notation: the value depends on the three vectors, not on where the dot or cross sits.
+
+<Math math="a.\left(b\times c\right)=\left(a\times b\right).c" display />
+
+Coplanar vectors give a zero triple product, since the spanned volume is zero. Conversely, a non-zero triple product is a quick test that three vectors form a linearly independent set in three-space.
+
+<Math math="if\text{ }a,b,c\text{ }are\text{ }coplanar\text{ }then\text{ }\left[a\text{ }b\text{ }c\right]=0" display />
+
+The absolute value gives the parallelepiped volume:
+
+<Math math="Voulme\text{ }of\text{ }parallelopoped=\left[a\text{ }b\text{ }c\right]" display />
+
+A tetrahedron has one-sixth that volume. Three of its triangular faces partition the parallelepiped into six congruent tetrahedra:
+
+<Math math="Voulme\text{ }of\text{ }tetrahedron=\frac{1}{6}\text{ }\left[a\text{ }b\text{ }c\right]" display />
+
+## Vector Triple Product
+
+The vector triple product *a × (b × c)* gives a vector in the plane of *b* and *c*, expanded by the BAC-CAB identity. The result is perpendicular to the inner *b × c*, which is itself perpendicular to that plane, so the outer cross brings the answer back into the *b*-*c* plane.
+
+The three vectors in component form:
+
+<Math math="Let\text{ }\text{ }\overline{a}=a_{1}^{i}+a_{2}^{j}+a_{3}^{k}" display />
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\overline{b}=b_{1}^{i}+b_{2}^{j}+b_{3}^{k}" display />
+
+<Math math="\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }\overline{c}=c_{1}^{i}+c_{2}^{j}+c_{3}^{k}" display />
+
+Then,
+
+The BAC-CAB expansion shows the result is a linear combination of the inner two vectors. The mnemonic "back cab" gives the order: outer vector dotted with the *far* inner vector multiplies the *near* one, minus the symmetric term.
+
+<Math math="a\times\left(b\times c\right)=\left(a.c\right)b-\left(a.b\right)c" display />
+
+Cyclic permutation of the BAC-CAB identity by relabelling *a → b → c → a*:
+
+<Math math="b\times\left(c\times a\right)=\left(b.a\right)c-\left(b.c\right)a" display />
+
+Another cyclic version. Summing the three cyclic forms gives zero (the Jacobi identity), which is what makes the cross product into a Lie bracket.
+
+<Math math="c\times\left(a\times b\right)=\left(c.b\right)a-\left(c.a\right)b" display />
+
+The cross product is not associative. Parentheses change the result. The groupings *a × (b × c)* and *(a × b) × c* lie in different planes (the *b-c* plane and the *a-b* plane), so the parentheses are not optional.
+
+<Math math="Note:\text{ }\text{ }a\times\left(b\times c\right)\neq\left(a\times b\right)\times c" display />

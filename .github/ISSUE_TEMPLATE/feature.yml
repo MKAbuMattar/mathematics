@@ -1,0 +1,38 @@
+name: Feature or new topic
+description: Suggest a new formula, topic, category, or site feature.
+title: "Feature: <short summary>"
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - New formula on an existing page
+        - New topic page in an existing category
+        - New category
+        - Site feature (search, TOC, print, etc.)
+        - Component or shortcode
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+      description: One paragraph on the suggestion.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Who benefits and how often the formula or feature gets used.
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Want to build it?
+      options:
+        - label: I'd like to open a pull request.

@@ -1,0 +1,91 @@
+---
+title: "Ellipse"
+description: "Types of ellipses, eccentricity, tangents, normals, and focal distances."
+category: "coordinate-geometry"
+topic: "ellipse"
+order: 4
+---
+
+An ellipse is the locus of points whose distances to two fixed foci sum to a constant. The two foci lie on the major axis, equidistant from the centre; the constant sum equals the major-axis length *2a*. The semi-major axis *a* and semi-minor axis *b* set the size and shape; the eccentricity *e ∈ [0, 1)* measures elongation: *e = 0* is a circle, *e → 1* a near-degenerate slit. The two standard orientations place the centre at the origin and align the major axis with either coordinate axis.
+
+<Diagram alt="Ellipse with two foci on the x-axis and labeled semi-axes" viewBox="0 0 220 180" caption="Sum of distances from any point on the ellipse to the two foci equals 2a.">
+  <line x1="10" y1="90" x2="210" y2="90" />
+  <line x1="110" y1="10" x2="110" y2="170" />
+  <text x="205" y="86" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="114" y="18" font-size="10" fill="currentColor" stroke="none">y</text>
+  <ellipse cx="110" cy="90" rx="80" ry="45" />
+  <circle cx="80" cy="90" r="2.5" fill="currentColor" />
+  <circle cx="140" cy="90" r="2.5" fill="currentColor" />
+  <text x="68" y="104" font-size="10" fill="currentColor" stroke="none">F₁</text>
+  <text x="142" y="104" font-size="10" fill="currentColor" stroke="none">F₂</text>
+  <line x1="110" y1="90" x2="190" y2="90" stroke-dasharray="3 3" />
+  <line x1="110" y1="90" x2="110" y2="45" stroke-dasharray="3 3" />
+  <text x="150" y="86" font-size="10" fill="currentColor" stroke="none">a</text>
+  <text x="114" y="68" font-size="10" fill="currentColor" stroke="none">b</text>
+</Diagram>
+
+### Types of Ellipse
+
+The two standard orientations swap which axis carries the longer semi-axis; the behaviour is symmetric under that swap.
+
+Type 1 has the major axis along *x*, so *a > b*. The vertices on the major axis are *(±a, 0)*; the co-vertices on the minor axis are *(0, ±b)*. The foci lie on the *x*-axis at *(±ae, 0)*. The curve is symmetric in both axes and in the origin.
+
+<Math math="\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\text{ }\text{ }\text{ }\left(a^{2}>b^{2}\right)" display />
+
+<Diagram src="1_ellipse.svg" alt="Ellipse Type 1" />
+
+Type 2 has the major axis along *y*, so *b > a*. The denominators keep their positions, but *b* is now the semi-major axis and *a* the semi-minor. The foci move onto the *y*-axis at *(0, ±be)*; the vertices on the major axis become *(0, ±b)*.
+
+<Math math="\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\text{ }\text{ }\text{ }\left(b^{2}>a^{2}\right)" display />
+
+<Diagram src="2_ellipse.svg" alt="Ellipse Type 2" />
+
+| Ellipse | Type 1 (a&gt;b) | Type 2 (b&gt;a) |
+|---|---|---|
+| **Center** | (0,0) | (0,0) |
+| **Vertices** | A(a,0) A'(-a,0) B(0,b) B'(0,-b) | B(0,b) B'(0,-b) A(a,0) A'(-a,0) |
+| **Foci** | S=(ae,0) S"(-ae,0) | S=(be,0) S"(-be,0) |
+| **Distance Between Foci** | 2ea | 2be |
+| **Length of Axis** | Major = 2a, Minor = 2b | Major = 2b, Minor = 2a |
+| **Equation of Axis** | Major: y=0, Minor: x=0 | Major: x=0, Minor: y=0 |
+| **Relation Between a,b,c** | b<sup>2</sup> = a<sup>2</sup>(1-e<sup>2</sup>) | a<sup>2</sup> = b<sup>2</sup>(1-e<sup>2</sup>) |
+
+**Eccentericity (Type 1)**
+
+For Type 1 the eccentricity comes from the two semi-axes: *e = √(a<sup>2</sup> − b<sup>2</sup>) / a*. Since *a > b* the radicand is positive and *e* lies strictly between 0 and 1. The quantity *ae* is the centre-to-focus distance, so *e* measures focal offset as a fraction of the semi-major axis.
+
+<Math math="e=\frac{\sqrt{\left(a^{2}-b^{2}\right)}}{a}" display />
+
+**Eccentericity (Type 2)**
+
+For Type 2 the major axis is *b*, so the eccentricity formula swaps the roles of *a* and *b* under the radical. The radicand *b<sup>2</sup> − a<sup>2</sup>* is positive because *b > a*. The result lies in [0, 1), with the lower bound (a circle) reached when *a = b*.
+
+<Math math="e=\frac{\sqrt{\left(b^{2}-a^{2}\right)}}{a}" display />
+
+### Tangent to Ellipse
+
+Tangent lines come in point-based and slope-based forms, as for the circle and parabola. The point form applies T = 0 to the ellipse equation: *x<sup>2</sup>* becomes *x x<sub>1</sub>* and *y<sup>2</sup>* becomes *y y<sub>1</sub>*. The contact point (x<sub>1</sub>, y<sub>1</sub>) must satisfy the original ellipse equation, otherwise the resulting line is a polar rather than a tangent.
+
+<Math math="\left(i\right)\text{ }\frac{\left(xx_{1}\right)}{a^{2}}+\frac{\left(yy_{1}\right)}{b^{2}}=1\text{ }\text{ }\text{ }\left[at\text{ }P\left(x_{1},y_{1}\right)\right]" display />
+
+The slope form gives the two parallel tangents of slope *m*. Substituting *y = mx + c* into the ellipse equation and demanding a double root yields *c<sup>2</sup> = a<sup>2</sup> m<sup>2</sup> + b<sup>2</sup>*. The radicand is always positive, so a tangent of every slope exists (unlike the hyperbola).
+
+<Math math="\left(ii\right)\text{ }y=mx\pm\sqrt{a^{2}m^{2}+b^{2}}\text{ }\text{ }\left[Having\text{ }slope\text{ }m\right]" display />
+
+### Normal to Ellipse
+
+The normal at (x<sub>1</sub>, y<sub>1</sub>) is perpendicular to the tangent and passes through the contact point. Unlike the circle, the ellipse normal does not generally pass through the centre; it does so at the four vertices, and elsewhere reflects rays from one focus to the other. The form below is undefined when *x<sub>1</sub>* or *y<sub>1</sub>* is zero (at a vertex or co-vertex), where the normal is a coordinate axis.
+
+<Math math="\frac{\left(a^{2}x\right)}{x_{1}}-\frac{\left(b^{2}y\right)}{y_{1}}=a^{2}-b^{2}\text{ }\text{ }\text{ }\left[at\text{ }P\left(x_{1},y_{1}\right)\right]" display />
+
+### Focal Distance
+
+Each point on the ellipse has two focal distances, one to each focus, summing to *2a* (the defining locus property). For Type 1 the distance to the focus at *(ae, 0)* is *|a − e x<sub>1</sub>|* and the distance to *(−ae, 0)* is *|a + e x<sub>1</sub>|*. Both reduce to *a* at the centre (x<sub>1</sub> = 0). The form below assumes Type 1; swap *x<sub>1</sub>* for *y<sub>1</sub>* and *a* for *b* in Type 2.
+
+<Math math="S=\left|a-ex_{1}\right|" display />
+
+<Math math="S'=\left|a+ex_{1}\right|" display />
+
+<Notice type="tip">
+A circle is the special case of an ellipse with *a = b* and *e = 0*. As *e* approaches 1, the ellipse degenerates toward a segment between the two foci.
+</Notice>

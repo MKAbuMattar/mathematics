@@ -1,0 +1,122 @@
+---
+title: "Circle"
+description: "Equations of a circle including standard, center-radius, general, diameter, parametric, tangent, and normal forms."
+category: "coordinate-geometry"
+topic: "circle"
+order: 2
+---
+
+A circle is the locus of points equidistant from a fixed centre. The fixed distance is the radius *r*; the centre is the unique point from which every point on the curve is *r* away. The equations below give the same object in several algebraic forms (standard, centre-radius, general, diameter, parametric), each suited to a different kind of given data. The page also covers tangent and normal lines at a chosen point of contact, in both standard and general settings.
+
+<Diagram alt="Circle with center (h, k) and radius arrow r" viewBox="0 0 220 180" caption="Standard form: centered at (h, k) with radius r.">
+  <line x1="10" y1="120" x2="210" y2="120" />
+  <line x1="60" y1="10" x2="60" y2="170" />
+  <text x="205" y="116" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="64" y="18" font-size="10" fill="currentColor" stroke="none">y</text>
+  <circle cx="130" cy="85" r="45" />
+  <circle cx="130" cy="85" r="2" fill="currentColor" />
+  <line x1="130" y1="85" x2="162" y2="53" />
+  <circle cx="162" cy="53" r="2.5" fill="currentColor" />
+  <text x="108" y="100" font-size="10" fill="currentColor" stroke="none">(h, k)</text>
+  <text x="142" y="68" font-size="10" fill="currentColor" stroke="none">r</text>
+</Diagram>
+
+### Standerd Equation
+
+The standard equation places the centre at the origin. Every point (x, y) on the circle satisfies *x<sup>2</sup> + y<sup>2</sup> = a<sup>2</sup>*: the squared distance from the origin equals the squared radius. The parameter *a* must be positive; *a = 0* collapses the circle to a single point and *a<sup>2</sup> < 0* has no real solutions. Use this form for problems with rotational symmetry about the origin.
+
+<Math math="x^{2}+y^{2}=a^{2}\text{ }\left(a=radius\right)" display />
+
+### Center-Radius Form
+
+Translating the centre to (h, k) shifts each variable by the corresponding centre coordinate. The equation states that the squared distance from (x, y) to (h, k) equals *r<sup>2</sup>*. Setting *h = k = 0* recovers the standard form. The radius must be non-negative for the equation to describe a real curve.
+
+<Math math="\left(x-h\right)^{2}+\left(y-k\right)^{2}=r^{}\text{ }\left(r=radius,\text{ }\left(h,k\right)=center\right)" display />
+
+### General Equation of a Circle
+
+Expanding *(x − h)<sup>2</sup> + (y − k)<sup>2</sup> = r<sup>2</sup>* and renaming constants gives the general quadratic form. Any second-degree equation in *x* and *y* with equal coefficients on *x<sup>2</sup>* and *y<sup>2</sup>* and no *xy* term reduces to this shape. The general form is the natural output of intersection or locus computations, where centre and radius are not yet known.
+
+<Math math="x^{2}+y^{2}+2gx+2fy+c=0" display />
+
+Comparing with the expanded centre-radius form, the centre is read off the linear coefficients as *(−g, −f)*.
+
+<Math math="Center = \left(-g,-f\right)" display />
+
+The radius comes from completing the square. The curve is a real circle only when the radicand *g<sup>2</sup> + f<sup>2</sup> − c* is positive (a point if zero, imaginary if negative).
+
+<Math math="Radius = \sqrt{g^{2}+f^{2}-c}" display />
+
+### Diameter Form
+
+Given two diametrically opposite endpoints (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>, y<sub>2</sub>), the circle is the locus of points P such that ∠(x<sub>1</sub>P x<sub>2</sub>) is a right angle (Thales' theorem). The dot product of the vectors from P to each endpoint is zero, giving the diameter form. The centre is the midpoint of the diameter; the radius is half its length.
+
+<Math math="\left(y-y_{1}\right)\left(y-y_{2}\right)+\left(x-x_{1}\right)\left(x-x_{2}\right)=0" display />
+
+### Tangent at P(x<sub>1</sub>,y<sub>1</sub>) of a Standard Circle
+
+The tangent line at (x<sub>1</sub>, y<sub>1</sub>) on the circle *x<sup>2</sup> + y<sup>2</sup> = a<sup>2</sup>* is perpendicular to the radius at that point. Apply the "T = 0" rule: replace *x<sup>2</sup>* by *x x<sub>1</sub>* and *y<sup>2</sup>* by *y y<sub>1</sub>*. The contact point must satisfy the original equation; otherwise the resulting line is the polar of an external point, not a tangent.
+
+<Math math="xx_{1}+yy_{1}=a^{2}" display />
+
+### Normal at P(x<sub>1</sub>,y<sub>1</sub>) of a Standard Circle
+
+The normal at any point on a circle passes through that point and the centre. For the standard circle the centre is the origin. The equation *y / y<sub>1</sub> = x / x<sub>1</sub>* says that (x, y) is a scalar multiple of (x<sub>1</sub>, y<sub>1</sub>), i.e. lies on the line through the origin and the contact point. The form breaks down when either *x<sub>1</sub>* or *y<sub>1</sub>* is zero; in those cases the normal is a coordinate axis.
+
+<Math math="\frac{y}{y_{1}}=\frac{x}{x_{1}}" display />
+
+### Tangent at P(x<sub>1</sub>,y<sub>1</sub>) of a General Circle
+
+For the general-form circle, the T = 0 rule extends to the linear terms: replace *x* by *(x + x<sub>1</sub>) / 2* and *y* by *(y + y<sub>1</sub>) / 2*, then clear the halves. The contact point must lie on the circle for the result to be a true tangent. Setting *g = f = 0* recovers the standard-form tangent.
+
+<Math math="xx_{1}+yy_{1}+g\left(x+x_{1}\right)+f\left(y+y_{1}\right)+c=0" display />
+
+### Normal at P(x<sub>1</sub>,y<sub>1</sub>) of a General Circle
+
+The normal at (x<sub>1</sub>, y<sub>1</sub>) on the general circle is the line joining the contact point to the centre *(−g, −f)*. The two-point form, with the centre as the second point, yields the equation below. The line is well defined whenever the contact point and centre are distinct, which holds for any point on the circle.
+
+<Math math="\left(\frac{y-y_{1}}{x-x_{1}}\right)=\left(\frac{y_{1}-f}{x_{1}-g}\right)" display />
+
+### Condition For a Line To Be a Tangent
+
+For the line *y = mx + c* to be tangent to the standard circle *x<sup>2</sup> + y<sup>2</sup> = a<sup>2</sup>*, the perpendicular distance from the origin to the line must equal *a*. Substituting *y = mx + c* into the circle equation and demanding a double root gives *c<sup>2</sup> = a<sup>2</sup>(m<sup>2</sup> + 1)*. Two values of *c* (one positive, one negative) satisfy this, giving the two parallel tangents of slope *m*.
+
+<Math math="c^{2}=a^{2}\left(m^{2}+1\right)" display />
+
+When the tangency condition holds, the line touches the circle at a single point, obtained by solving the substituted equation as a perfect square. The contact point depends on the sign of *c*, so the two parallel tangents of slope *m* touch opposite points.
+
+<Math math="Point\text{ }of\text{ }contact = \left(\frac{-a^{2}m}{c},\frac{a^{2}}{c}\right)" display />
+
+### Parametic Equation of Standard Circle
+
+A single angular parameter *θ* traces the standard circle: the angle measured at the centre from the positive *x*-axis to the radius at (x, y). As *θ* sweeps from 0 to *2π*, the point (a cos θ, a sin θ) traces the circle once counter-clockwise. Use this form for integrating around the circle or parameterising motion along it.
+
+<Math math="x=a.\cos\theta" display />
+
+<Math math="u=a.\sin\theta" display />
+
+### Parametic Equation of General Circle
+
+For a circle centred at (h, k) with radius *r*, the parametric form adds the centre coordinates as offsets to the standard parameterisation. Each point on the circle is the centre plus a radius-vector of length *r* at angle *θ*. In animation and physics *θ* often plays the role of time.
+
+<Math math="x=h+r.\cos\theta" display />
+
+<Math math="x=h+r.\sin\theta" display />
+
+<Math math="\left[Center=(h,k)\text{ }and\text{ }radius=r\right]" display />
+
+### Tangent To a Standard Circle at Point P(a.cosθ, a.sinθ)
+
+Substituting the parametric coordinates into *x x<sub>1</sub> + y y<sub>1</sub> = a<sup>2</sup>* and dividing by *a* gives the tangent in angular form. Use this when the contact point is identified by angle rather than Cartesian coordinates. The coefficients (cos θ, sin θ) are the unit normal direction from the centre to the contact point.
+
+<Math math="y.\sin\theta+x.\cos\theta=a" display />
+
+### Normal To a Standard Circle at Point P(a.cosθ, a.sinθ)
+
+The normal at a parametric point is the line through the origin and the contact point, in the direction (cos θ, sin θ). The equation *x / cos θ = y / sin θ* says (x, y) is proportional to (cos θ, sin θ). The form is undefined when *cos θ* or *sin θ* is zero, where the normal coincides with an axis.
+
+<Math math="\frac{x}{\cos\theta}=\frac{y}{\sin\theta}" display />
+
+<Notice type="note">
+The "T = 0" pattern (replacing *x<sup>2</sup>* by *xx<sub>1</sub>*, *y<sup>2</sup>* by *yy<sub>1</sub>*, and *x* by *(x + x<sub>1</sub>)/2*) is the standard shortcut for writing the tangent to any conic at a known point, not just the circle.
+</Notice>

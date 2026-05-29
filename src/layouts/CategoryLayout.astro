@@ -1,0 +1,47 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '@/components/partials/Sidebar.astro';
+import Breadcrumbs from '@/components/partials/Breadcrumbs.astro';
+import type { Category } from '@/lib/categories';
+
+interface Props {
+  category: Category;
+  activeTopic?: string;
+  title: string;
+  description?: string;
+  showSidebar?: boolean;
+}
+
+const {
+  category,
+  activeTopic,
+  title,
+  description,
+  showSidebar = true,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container-page py-6 md:py-10">
+    <Breadcrumbs
+      items={[
+        { label: 'Home', href: '/' },
+        { label: category.title, href: `/${category.slug}` },
+        ...(activeTopic ? [{ label: activeTopic }] : []),
+      ]}
+    />
+    <div
+      class:list={[
+        'mt-6 grid gap-8',
+        showSidebar
+          ? 'lg:grid-cols-[260px_minmax(0,1fr)]'
+          : 'grid-cols-1',
+      ]}
+    >
+      {showSidebar && <Sidebar category={category} activeTopicSlug={Astro.url.pathname.split('/').pop()} />}
+      <article class="min-w-0">
+        <slot />
+      </article>
+    </div>
+  </div>
+</BaseLayout>

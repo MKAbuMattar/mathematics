@@ -1,0 +1,73 @@
+---
+title: "Surface Area"
+description: "Surface area formulas for 3D solids: cubes, prisms, spheres, and cylinders."
+category: "geometry"
+topic: "surface-area"
+order: 3
+---
+
+Surface area is the total area of all faces of a 3D solid, in square units. For prismatic solids it splits into a lateral component (the side walls) plus the area of the two bases. The formulas below cover cubes, rectangular and irregular prisms, spheres, and cylinders.
+
+<Diagram alt="Unfolded cube net showing six square faces laid flat" viewBox="0 0 220 180" caption="Surface area is the sum of all outer face areas.">
+  <rect x="80" y="10" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="80" y="10" width="40" height="40" fill="none" />
+  <rect x="40" y="50" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="40" y="50" width="40" height="40" fill="none" />
+  <rect x="80" y="50" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="80" y="50" width="40" height="40" fill="none" />
+  <rect x="120" y="50" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="120" y="50" width="40" height="40" fill="none" />
+  <rect x="160" y="50" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="160" y="50" width="40" height="40" fill="none" />
+  <rect x="80" y="90" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="80" y="90" width="40" height="40" fill="none" />
+  <rect x="80" y="130" width="40" height="40" fill="currentColor" opacity="0.15" />
+  <rect x="80" y="130" width="40" height="40" fill="none" />
+  <text x="100" y="34" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">top</text>
+  <text x="60" y="74" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">side</text>
+  <text x="100" y="74" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">front</text>
+  <text x="140" y="74" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">side</text>
+  <text x="180" y="74" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">back</text>
+  <text x="100" y="114" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">bottom</text>
+  <text x="100" y="154" font-size="9" text-anchor="middle" fill="currentColor" stroke="none">face</text>
+</Diagram>
+
+**Cube**
+
+<Diagram src="cube.svg" alt="Cube" />
+
+Six congruent square faces of edge *a*, each of area *a²*. Surface area is six times that:
+
+<Math math="SA=6a^{2}" display />
+
+**Rectangular Prism**
+
+<Diagram src="rectangular_prism.svg" alt="Rectangular Prism" />
+
+Edges *a*, *b*, *c*. Three pairs of congruent faces: two of area *ab*, two of *bc*, two of *ac*. Sum the three pairs:
+
+<Math math="SA=2ab+2bc+2ac" display />
+
+**Irregular Prism**
+
+<Diagram src="irregular_prism.svg" alt="Irregular Prism" />
+
+*B* is the base polygon and *L* is the prism's height along the axis. The lateral surface is the base perimeter times *L*. Add twice the base area for the two ends:
+
+<Math math="SA=\left(Perimeter\text{ }of\text{ }B\right)\times L+2\times\left(Area\text{ }of\text{ }B\right)" display />
+
+**Sphere**
+
+<Diagram src="circle.svg" alt="Sphere" />
+
+Radius *r*. Surface area is four times the area of a great-circle cross-section (*πr²*):
+
+<Math math="SA=4\pi r^{2}" display />
+
+**Cylinder**
+
+<Diagram src="cylinder.svg" alt="Cylinder" />
+
+Base radius *r* and height *h*. Two circular ends of area *πr²* plus a wrapped rectangle of height *h* and width *2πr* (the base circumference) factor into:
+
+<Math math="SA=2\pi r\left(r+h\right)" display />

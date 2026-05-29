@@ -1,0 +1,236 @@
+---
+title: "Integration"
+description: "Definite and indefinite integrals, properties, common integrals, integration by parts, and trigonometric integrals."
+category: "calculus"
+topic: "integration"
+order: 3
+---
+
+Integration is the inverse of differentiation and the way to sum infinitesimal contributions: area under a curve for the definite integral, the antiderivative family for the indefinite one. The Fundamental Theorem of Calculus links the two: a definite integral is evaluated by finding any antiderivative and taking the difference at the endpoints. The rules and tables below cover the standard integrals plus two techniques (integration by parts, case-based reduction for trigonometric integrands) for forms not in the table. Integration is linear and monotone. Unlike differentiation, it has no general product, quotient, or chain rule, so a working table of common forms is needed.
+
+<Diagram alt="A curve f(x) with the region between the curve and the x-axis from a to b shaded" viewBox="0 0 240 180" caption="The definite integral of f(x) dx from a to b is the signed area between the curve and the x-axis.">
+  <path d="M 20 150 L 220 150" />
+  <path d="M 30 20 L 30 165" />
+  <path d="M 20 130 Q 70 50 130 70 Q 180 85 220 40" />
+  <path d="M 60 150 L 60 113 Q 95 75 130 70 Q 165 67 190 60 L 190 150 Z" fill="currentColor" opacity="0.15" stroke="none" />
+  <path d="M 60 150 L 60 113" />
+  <path d="M 190 150 L 190 60" />
+  <text x="56" y="163" font-size="10" fill="currentColor" stroke="none">a</text>
+  <text x="186" y="163" font-size="10" fill="currentColor" stroke="none">b</text>
+  <text x="105" y="115" font-size="10" fill="currentColor" stroke="none">∫ f(x) dx</text>
+  <text x="222" y="148" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="34" y="22" font-size="10" fill="currentColor" stroke="none">y</text>
+  <text x="200" y="55" font-size="10" fill="currentColor" stroke="none">f(x)</text>
+</Diagram>
+
+## Definition
+
+A definite integral is a Riemann limit of rectangle sums. An indefinite integral is the family of antiderivatives, differing by a constant.
+
+**Definite Integral:** Suppose *f*(x) is continuous on [a,b]. Divide [a,b] into *n* subintervals of width
+
+<Math math="\text{ }\text{ }\triangle\text{ }x\text{ }\text{ }" display />
+
+and choose
+
+<Math math="\text{ }\text{ }x_{i}^{*}\text{ }\text{ }" display />
+
+from each interval.
+
+The definite integral is the limit of Riemann sums:
+
+<Math math="\text{ }then\text{ }\int_{a}^{b} f\left(x\right)dx=\lim_{n \rightarrow \infty}f\left(x_{i}^{*}\right)\triangle\text{ }x." display />
+
+**Anti-Derivative:** An anti-derivative of *f*(x) is a function, *F*(x), such that *F'*(x)=*f*(x).
+
+**Indefinite Integral:**
+
+The indefinite integral, with constant *c*:
+
+<Math math="\text{ }\text{ }\text{ }\int f\left(x\right)dx=F\left(x\right)+c\text{ }\text{ }" display />
+
+where *F*(x) is anti-derivative of *f*(x).
+
+## Peroprtes
+
+Integration is linear (sums, constants, order) and monotone.
+
+Linearity of indefinite integrals:
+
+<Math math="\int f\left(x\right)\pm g\left(x\right)dx=\int f\left(x\right)dx\pm\int g\left(x\right)dx" display />
+
+Same for definite integrals:
+
+<Math math="\int_{a}^{b}f\left(x\right)\pm g\left(x\right)dx=\int_{a}^{b}f\left(x\right)dx\pm\int_{a}^{b}g\left(x\right)dx" display />
+
+Zero-width interval:
+
+<Math math="\int_{a}^{a}f\left(x\right)dx=0" display />
+
+Reversed limits flip the sign:
+
+<Math math="\int_{a}^{b}f\left(x\right)dx=-\int_{b}^{a}f\left(x\right)dx" display />
+
+Constants pull out:
+
+<Math math="\int cf\left(x\right)dx=c\int f\left(x\right)dx \text{ }\text{ }\text{ },c\text{ }is\text{ }a\text{ }constant" display />
+
+Definite version:
+
+<Math math="\int_{a}^{b} cf\left(x\right)dx=c\int_{a}^{b} f\left(x\right)dx \text{ }\text{ }\text{ },c\text{ }is\text{ }a\text{ }constant" display />
+
+The integration variable is a dummy:
+
+<Math math="\int_{a}^{b}f\left(x\right)dx=\int_{a}^{b}f\left(t\right)dt" display />
+
+Absolute value bound:
+
+<Math math="\left|\int_{a}^{b}f\left(x\right)dx\right|=\int_{a}^{b}\left|f\left(x\right)\right|dx" display />
+
+Monotonicity. Pointwise inequality between integrands transfers to integrals:
+
+<Math math="if\text{ }f\left(x\right)\geq g\left(x\right)\text{ on }a\leq x\leq b\text{ }then\text{ }\text{ }\int_{a}^{b}f\left(x\right)dx\geq\int_{a}^{b}g\left(x\right)dx" display />
+
+Non-negative integrand:
+
+<Math math="if\text{ }f\left(x\right)\geq0\text{ }on\text{ }a\leq x\leq b\text{ }then\text{ }\int_{a}^{b}f\left(x\right)dx\geq0" display />
+
+Bounds on the integrand transfer to bounds on the integral, scaled by *b - a*:
+
+<Math math="if\text{ }m\leq f\left(x\right)\leq M\text{ }on\text{ }a\leq x\leq b\text{ }m\left(b-a\right)\leq\int_{a}^{b}f\left(x\right)dx\leq M\left(b-a\right)" display />
+
+## Common Integrals
+
+Standard antiderivatives, with integration constant *c*.
+
+Constant:
+
+<Math math="\int k\text{ }dx=k\text{ }x+c" display />
+
+Power rule, *n ≠ -1*:
+
+<Math math="\int x^{n}\text{ }dx=\frac{1}{1+n}x^{n+1}+c\text{ }\text{ }\text{ },n\neq-1" display />
+
+The case *n = -1* gives the natural log:
+
+<Math math="\int x^{-1}\text{ }dx=\int\frac{1}{x}dx=\ln\left|x\right|+c" display />
+
+Linear-substitution form:
+
+<Math math="\int \frac{1}{ax+b}\text{ }dx=\frac{1}{a}\ln\left|ax+b\right|+c" display />
+
+Natural log, via integration by parts:
+
+<Math math="\int \ln\text{ }u\text{ }du=u\text{ }\ln\left(u\right)-u+c" display />
+
+Exponential:
+
+<Math math="\int e^{u}\text{ }du=e^{u}+c" display />
+
+Cosine:
+
+<Math math="\int\cos\text{ }u\text{ }du=\sin\text{ }u+c" display />
+
+Sine:
+
+<Math math="\int\sin\text{ }u\text{ }du=-\cos\text{ }u+c" display />
+
+Secant squared:
+
+<Math math="\int\sec^{2}\text{ }u\text{ }du=\tan\text{ }u+c" display />
+
+Secant-tangent product:
+
+<Math math="\int\sec\text{ }u\text{ }\tan\text{ }u\text{ }du=\sec\text{ }u+c" display />
+
+Cosecant-cotangent product:
+
+<Math math="\int\csc\text{ }u\text{ }\cot\text{ }u\text{ }du=-\csc\text{ }u+c" display />
+
+Cosecant squared:
+
+<Math math="\int\csc^{2}\text{ }u\text{ }du=-\cot\text{ }u+c" display />
+
+Tangent:
+
+<Math math="\int\tan\text{ }u\text{ }du=\ln\left|\sec\text{ }u\right|+c" display />
+
+Secant:
+
+<Math math="\int\sec\text{ }u\text{ }du=\ln\left|\sec\text{ }u\text{ }\tan\text{ }u\right|+c" display />
+
+Arctangent form:
+
+<Math math="\int\frac{1}{a^{2}+u^{2}}\text{ }du=\frac{1}{a}\tan^{-1}\left(\frac{u}{a}\right)+a" display />
+
+Arcsine form:
+
+<Math math="\int\frac{1}{\sqrt{a^{2}+u^{2}}}\text{ }du=\sin^{-1}\left(\frac{u}{a}\right)+a" display />
+
+## Integration by Parts
+
+Integration by parts is the integral analogue of the product rule. Use it when the integrand factors into a product whose pieces simplify under differentiation or integration. The *LIATE* heuristic picks *u* in the order Logarithmic, Inverse trig, Algebraic, Trigonometric, Exponential, so that *u'* is simpler than *u* while *v* is still tractable to integrate. Applying parts twice often produces a self-referential equation solvable algebraically for the original integral.
+
+<Math math="\int u\text{ }v\text{ }dx=u\int v\text{ }dx-\int u'\left(\int v\text{ }dx\right)dx" display />
+
+Where,
+
+u is the function u(x)
+
+v is the function v(x)
+
+## Trigonometic Integrals
+
+Integrals of products of powers of sine, cosine, tangent, and secant reduce case by case: strip off one factor and convert the rest with a Pythagorean identity, then *u*-substitute.
+
+For
+
+<Math math="\text{ }\text{ }\int \sin''\text{ }x\text{ }\cos'''x\text{ }dx\text{ }\text{ }" display />
+
+we have the following:
+
+**1. *n* odd.** Strip 1 since out and convert rest to cosines using
+
+<Math math="\text{ }\text{ }\sin^{2}\text{ }x=1-\cos^{2}\text{ }x\text{ }\text{ }" display />
+
+, then use the substitution
+
+<Math math="\text{ }\text{ }u=\cos\text{ }x\text{ }\text{ .}" display />
+
+**2. *m* odd.** Strip 1 cosine out and convert rest to sines using
+
+<Math math="\text{ }\text{ }\cos^{2}\text{ }x=1-\sin^{2}\text{ }x\text{ }\text{ }" display />
+
+, then use the substitution
+
+<Math math="\text{ }\text{ }u=\sin\text{ }x\text{ }\text{ .}" display />
+
+**3. *n* and *m* both odd.** Use either 1. or 2.
+
+**4. *n* and *m* both even.** Use double angle and/or half angle formulas to reduce the integral formulas to reduce the integral into a foram tht can be integrated.
+
+For
+
+<Math math="\text{ }\text{ }\int\tan''\text{ }x\text{ }\sec'''\text{ }x\text { }dx\text{ }\text{ }" display />
+
+we have the following:
+
+**1. *n* odd.** Strip 1 tangent and 1 secant out and convert the rest to secants using
+
+<Math math="\text{ }\text{ }\tan^{2}x=\sec^{2}x-1\text{ }\text{ }" display />
+
+, then use the substitution
+
+<Math math="\text{ }\text{ }u=\sec\text{ }x\text{ }\text{ .}" display />
+
+**2. *m* even.** Strip 2 secants out and convert rest to tangents using
+
+<Math math="\text{ }\text{ }\sec^{2}x=1+\tan^{2}x\text{ }\text{ }" display />
+
+, then use the substitution
+
+<Math math="\text{ }\text{ }u=\tan\text{ }x\text{ }\text{ .}" display />
+
+**3. *n* odd and *m* even.** Use either 1. or 2.
+
+**4. *n* even and *m* odd.** Each integral will be dealt with differently.

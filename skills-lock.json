@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "humanizer": {
+      "source": "MKAbuMattar/skills",
+      "sourceType": "github",
+      "skillPath": "humanizer/SKILL.md",
+      "computedHash": "84255c357a662103d651deec91b0df9ffab1eddce8faca1ad9ab2122ecb22198"
+    }
+  }
+}

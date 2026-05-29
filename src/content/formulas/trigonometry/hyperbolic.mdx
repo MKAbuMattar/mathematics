@@ -1,0 +1,126 @@
+---
+title: "Hyperbolic"
+description: "Definitions of hyperbolic functions, fundamental identities, inverses, and relations to trigonometric functions."
+category: "trigonometry"
+topic: "hyperbolic"
+order: 6
+---
+
+Hyperbolic functions are exponential analogues of the trigonometric functions, parameterising the unit hyperbola the way sine and cosine parameterise the unit circle. Their identities mirror trigonometric ones with sign changes, notably *cosh<sup>2</sup> - sinh<sup>2</sup> = 1* in place of *cos<sup>2</sup> + sin<sup>2</sup> = 1*. Inverse hyperbolic functions have closed-form logarithmic expressions, useful in calculus, special-relativity rapidity, and the catenary. Imaginary arguments link the two families: *cosh(ix) = cos(x)* and *sinh(ix) = i sin(x)*. They are a single function viewed from two axes of the complex plane.
+
+<Diagram alt="Unit circle next to unit hyperbola showing parametrisation by trig and hyperbolic functions" viewBox="0 0 360 200" caption="Trig functions parameterize the unit circle; hyperbolic functions parameterize the unit hyperbola.">
+  <line x1="20" y1="100" x2="160" y2="100" />
+  <line x1="90" y1="25" x2="90" y2="175" />
+  <circle cx="90" cy="100" r="55" fill="currentColor" opacity="0.08" />
+  <circle cx="90" cy="100" r="55" />
+  <line x1="90" y1="100" x2="129" y2="61" />
+  <circle cx="129" cy="61" r="2.5" fill="currentColor" />
+  <text x="95" y="55" font-size="9" fill="currentColor" stroke="none">(cos t, sin t)</text>
+  <text x="50" y="22" font-size="10" fill="currentColor" stroke="none">x² + y² = 1</text>
+  <line x1="200" y1="100" x2="340" y2="100" />
+  <line x1="270" y1="25" x2="270" y2="175" />
+  <path d="M 305 35 Q 282 70 282 100 Q 282 130 305 165" fill="currentColor" opacity="0.08" />
+  <path d="M 305 35 Q 282 70 282 100 Q 282 130 305 165" />
+  <path d="M 235 35 Q 258 70 258 100 Q 258 130 235 165" fill="currentColor" opacity="0.08" />
+  <path d="M 235 35 Q 258 70 258 100 Q 258 130 235 165" />
+  <line x1="270" y1="100" x2="300" y2="55" />
+  <circle cx="300" cy="55" r="2.5" fill="currentColor" />
+  <text x="275" y="48" font-size="9" fill="currentColor" stroke="none">(cosh t, sinh t)</text>
+  <text x="230" y="22" font-size="10" fill="currentColor" stroke="none">x² - y² = 1</text>
+</Diagram>
+
+## Hyperbolic Definitions
+
+The hyperbolic functions are built from the exponential, each one corresponding to a trigonometric counterpart.
+
+Hyperbolic sine, the odd part of *e<sup>x</sup>*.
+
+<Math math="\sinh\left(x\right)=\frac{\left(e^{x}-e^{-x}\right)}{2}" display />
+
+Hyperbolic cosecant, reciprocal of sinh.
+
+<Math math="csch\left(x\right)=\frac{1}{\sinh\left(x\right)}=\frac{2}{\left(e^{x}-e^{-x}\right)}" display />
+
+Hyperbolic cosine, the even part of *e<sup>x</sup>*.
+
+<Math math="\cosh\left(x\right)=\frac{\left(e^{x}-e^{-x}\right)}{2}" display />
+
+Hyperbolic secant, reciprocal of cosh.
+
+<Math math="sech\left(x\right)=\frac{1}{\cosh\left(x\right)}=\frac{2}{\left(e^{x}-e^{-x}\right)}" display />
+
+Hyperbolic tangent, bounded in (-1, 1).
+
+<Math math="\tanh\left(x\right)=\frac{\sinh\left(x\right)}{\cosh\left(x\right)}=\frac{\left(e^{x}-e^{-x}\right)}{\left(e^{x}+e^{-x}\right)}" display />
+
+Hyperbolic cotangent, reciprocal of tanh.
+
+<Math math="\coth\left(x\right)=\frac{1}{\tanh\left(x\right)}=\frac{\left(e^{x}+e^{-x}\right)}{\left(e^{x}-e^{-x}\right)}" display />
+
+## Sum and Difference
+
+The hyperbolic Pythagorean identity *cosh<sup>2</sup> - sinh<sup>2</sup> = 1* corresponds to the unit hyperbola. The other identities follow by dividing through.
+
+Hyperbolic identity for the unit hyperbola *x<sup>2</sup> - y<sup>2</sup> = 1*.
+
+<Math math="\cosh^{2}\left(x\right)-\sinh^{2}\left(x\right)=1" display />
+
+Divide by *cosh<sup>2</sup>*.
+
+<Math math="\tanh^{2}\left(x\right)-sech^{2}\left(x\right)=1" display />
+
+Divide by *sinh<sup>2</sup>*.
+
+<Math math="\coth^{2}\left(x\right)-csch^{2}\left(x\right)=1" display />
+
+## Inverse Hyperbolic Definitions
+
+Each inverse hyperbolic function has a closed form in natural logarithms, a property the trigonometric inverses lack on the reals.
+
+Inverse hyperbolic sine.
+
+<Math math="arcsinh\left(z\right)=\ln\left(z+\sqrt{z^{2}+1}\right)" display />
+
+Inverse hyperbolic cosine (*±* gives two branches).
+
+<Math math="arccosh\left(z\right)=\ln\left(z\pm\sqrt{z^{2}-1}\right)" display />
+
+Inverse hyperbolic tangent, for *|z| < 1*.
+
+<Math math="arctanh\left(z\right)=\frac{1}{2\ln\left(\frac{1+z}{1-z}\right)}" display />
+
+Inverse hyperbolic cosecant.
+
+<Math math="arccsch\left(z\right)=\ln\left(\frac{\left(1+\left(\sqrt{1+z^{2}}\right)\right)}{z}\right)" display />
+
+Inverse hyperbolic secant.
+
+<Math math="arcsech\left(z\right)=\ln\left(\frac{\left(1\pm\left(\sqrt{1-z^{2}}\right)\right)}{z}\right)" display />
+
+Inverse hyperbolic cotangent, for *|z| > 1*.
+
+<Math math="arccoth\left(z\right)=\frac{1}{2\ln\left(\frac{z+1}{z-1}\right)}" display />
+
+## Relations to Trig Functions
+
+Imaginary arguments connect the hyperbolic and circular families. They are the same function in different orientations of the complex plane.
+
+Sinh as sine of an imaginary argument.
+
+<Math math="\sinh\left(z\right)=-i\text{ }\sin\left(iz\right)" display />
+
+Cosecant counterpart.
+
+<Math math="csch\left(z\right)=i\text{ }\csc\left(iz\right)" display />
+
+Cosh in terms of cosine (no factor of *i*, since cosine is even).
+
+<Math math="\cosh\left(z\right)=\cos\left(iz\right)" display />
+
+Sech in terms of sec.
+
+<Math math="sech\left(z\right)=\sec\left(iz\right)" display />
+
+Tanh in terms of tangent.
+
+<Math math="\tanh\left(z\right)=-i\text{ }\tan\left(iz\right)" display />

@@ -1,0 +1,61 @@
+---
+title: "Polynomials"
+description: "Common polynomial identities and factorizations including squares, cubes, and difference of powers."
+category: "basics"
+topic: "polynomials"
+order: 5
+---
+
+Polynomial identities are the standard expansions and factorisations of sums, differences, and powers of two terms. Recognising them on sight replaces a lot of multiplying out or trial factoring with template matching. The cube and higher-power identities all share one shape: a linear factor *(x ± a)* times a longer polynomial whose coefficients alternate or stay constant based on the sign.
+
+Difference of squares factors into conjugate binomials. The cross terms cancel because the *+y* and *-y* contributions to the *x* coefficient annihilate, leaving only the difference of pure squares. This is the standard identity for rationalising denominators and spotting hidden factorisations.
+
+<Math math="x^{2}-y^{2}=\left(x+y\right)\left(x-y\right)" display />
+
+Product of two linear binomials sharing a leading variable (the FOIL pattern). The middle coefficient is the sum of the constants and the trailing coefficient is their product. This is how you factor quadratics by inspecting sum-product pairs of the constant term.
+
+<Math math="\left(x+a\right)\left(x+b\right)=x^{2}+\left(a+b\right)x+ab" display />
+
+Square of a sum. The cross term *2xy* appears because the product is counted twice (once as *xy* and once as *yx*). It is the most commonly dropped piece when squaring a binomial by hand.
+
+<Math math="\left(a+y\right)^{2}=x^{2}+2xy+y^{2}" display />
+
+Square of a difference. Identical to the sum case except the cross term picks up a negative sign from the negative second term. Squaring kills the sign on the *y<sup>2</sup>* term but not on the cross term.
+
+<Math math="\left(a-y\right)^{2}=x^{2}-2xy+y^{2}" display />
+
+Cube of a sum. The coefficients 1, 3, 3, 1 are the fourth row of Pascal's triangle, generalised by the binomial theorem to *(x + y)<sup>n</sup>*. Memorise the cube directly; re-deriving it each time is slower.
+
+<Math math="\left(a+y\right)^{3}=x^{3}+3xy^{2}+3x^{2}y+y{3}" display />
+
+Cube of a difference. Signs alternate because each occurrence of the negative term flips the sign. The *x<sup>3</sup>* term stays positive because *(-y)<sup>0</sup>* is positive; the *y<sup>3</sup>* term is negative because *(-y)<sup>3</sup>* is negative.
+
+<Math math="\left(a-y\right)^{3}=x^{3}-3xy^{2}-3x^{2}y-y{3}" display />
+
+Sum of cubes factors into a linear and a quadratic factor. The quadratic *x<sup>2</sup> - xy + y<sup>2</sup>* is irreducible over the reals (its discriminant is *-3y<sup>2</sup>*), so this is as far as the factorisation goes without complex numbers.
+
+<Math math="x^{3}+y^{3}=\left(x+y\right)\left(x^{2}-xy+y^{2}\right)" display />
+
+Difference of cubes factors the same way, with the sign of the middle term of the quadratic reversed. Together with the sum-of-cubes formula, this is the *n = 3* case of the general *x<sup>n</sup> ± a<sup>n</sup>* identities below.
+
+<Math math="x^{3}-y^{3}=\left(x-y\right)\left(x^{2}+xy+y^{2}\right)" display />
+
+Difference of even powers factors by treating *x<sup>n</sup>* and *y<sup>n</sup>* as a difference of squares. Iterate this halving until the exponent is odd or one to get a complete real factorisation, alternating sum and difference factors at each level.
+
+<Math math="x^{2x}-y^{2x}=\left(x^{n}-y^{n}\right)\left(x^{n}+y^{n}\right)" display />
+
+For odd *n*, both the difference and the sum of *n*-th powers factor cleanly. The difference identity holds for all *n*. The sum identity is restricted to odd *n* because *x<sup>n</sup> + a<sup>n</sup>* has *x = -a* as a root only when raising *-a* to *n* recovers *-a<sup>n</sup>*.
+
+<Math math="if\text{ }n \text{ }is \text{ }odd \text{ }then" display />
+
+Difference of *n*-th powers (any positive integer *n*). The long factor is a geometric sum *Σ x<sup>n-1-k</sup>a<sup>k</sup>* and reduces to *(x<sup>n</sup> - a<sup>n</sup>)/(x - a)* when *x ≠ a*. The geometric series sum follows from this identity.
+
+<Math math="x^{n}-a^{n}=\left(x-a\right)\left(x^{n-1}+ax^{n-2}+...+a^{n-1}\right)" display />
+
+Sum of *n*-th powers, for odd *n*, factors with alternating signs in the long factor. Substituting *-a* for *a* in the difference formula flips the sign on every other term, producing the alternation.
+
+<Math math="x^{n}+a^{n}=\left(x+a\right)\left(x^{n-1}-ax^{n-2}+a^{2}x^{n-2}+...+a^{n-1}\right)" display />
+
+<Notice type="tip">
+For sum of *n*-th powers the linear factor *(x + a)* only exists when *n* is odd. When *n* is even, *x<sup>n</sup> + a<sup>n</sup>* has no real linear factors and is irreducible over the reals (for *n = 2*) or factors only into quadratics.
+</Notice>

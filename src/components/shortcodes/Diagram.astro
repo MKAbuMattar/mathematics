@@ -1,0 +1,71 @@
+---
+interface Props {
+  src?: string;
+  alt?: string;
+  caption?: string;
+  width?: string | number;
+  /** When using inline SVG via the default slot, sets the viewBox. */
+  viewBox?: string;
+  /** Override max width of inline SVG. */
+  maxWidth?: string;
+}
+
+const {
+  src,
+  alt = '',
+  caption,
+  width = '320',
+  viewBox,
+  maxWidth = '320px',
+} = Astro.props;
+
+const resolved = src
+  ? src.startsWith('/') || src.startsWith('http')
+    ? src
+    : `/diagrams/${src}`
+  : null;
+
+const hasSlot = Astro.slots.has('default');
+---
+
+<figure class="my-5 flex flex-col items-center gap-2 not-prose">
+  <div
+    class="flex items-center justify-center rounded-lg border border-border bg-surface p-4 dark:border-border-dark dark:bg-surface-2-dark"
+  >
+    {
+      resolved ? (
+        <img
+          src={resolved}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          width={width}
+          class="h-auto max-w-full dark:invert dark:brightness-110"
+        />
+      ) : hasSlot ? (
+        <svg
+          viewBox={viewBox ?? '0 0 200 160'}
+          role="img"
+          aria-label={alt}
+          style={`max-width:${maxWidth}`}
+          class="h-auto w-full text-text dark:text-text-dark"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <slot />
+        </svg>
+      ) : null
+    }
+  </div>
+  {
+    caption && (
+      <figcaption class="text-sm text-text-muted dark:text-text-muted-dark">
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>

@@ -1,0 +1,187 @@
+---
+title: "Progression"
+description: "Arithmetic, geometric, and harmonic progressions with their means and key relationships."
+category: "basics"
+topic: "progression"
+order: 6
+---
+
+A progression is a sequence whose terms follow a fixed rule. The three classical progressions (arithmetic, geometric, harmonic) each generate a *mean* (AM, GM, HM) and a closed-form expression for the *n*-th term and partial sum, so you do not have to compute term by term. HP is the reciprocal of an AP, and for positive numbers the three means satisfy *AM ≥ GM ≥ HM*.
+
+## Arithmetic Progression (AP)
+
+An arithmetic progression is a sequence in which each term after the first is obtained by adding a constant *d* (the common difference) to the preceding term. The generic AP is *a, a + d, a + 2d, a + 3d, …* where *a* is the first term. Plotting the terms on a number line gives equally-spaced points.
+
+<Diagram alt="Arithmetic progression on a number line with equal gaps of d" viewBox="0 0 240 90" caption="Successive terms of an AP are equally spaced; each gap equals the common difference d.">
+  <line x1="10" y1="55" x2="230" y2="55" />
+  <circle cx="30" cy="55" r="2.5" fill="currentColor" />
+  <circle cx="80" cy="55" r="2.5" fill="currentColor" />
+  <circle cx="130" cy="55" r="2.5" fill="currentColor" />
+  <circle cx="180" cy="55" r="2.5" fill="currentColor" />
+  <text x="24" y="72" font-size="10" fill="currentColor" stroke="none">a₁</text>
+  <text x="74" y="72" font-size="10" fill="currentColor" stroke="none">a₂</text>
+  <text x="124" y="72" font-size="10" fill="currentColor" stroke="none">a₃</text>
+  <text x="174" y="72" font-size="10" fill="currentColor" stroke="none">a₄</text>
+  <path d="M 32 42 L 78 42" />
+  <path d="M 78 42 L 74 39" />
+  <path d="M 78 42 L 74 45" />
+  <path d="M 82 42 L 128 42" />
+  <path d="M 128 42 L 124 39" />
+  <path d="M 128 42 L 124 45" />
+  <path d="M 132 42 L 178 42" />
+  <path d="M 178 42 L 174 39" />
+  <path d="M 178 42 L 174 45" />
+  <text x="51" y="36" font-size="10" fill="currentColor" stroke="none">d</text>
+  <text x="101" y="36" font-size="10" fill="currentColor" stroke="none">d</text>
+  <text x="151" y="36" font-size="10" fill="currentColor" stroke="none">d</text>
+</Diagram>
+
+**• n<sup>th</sup> term of AP**
+
+The *n*-th term adds the common difference *n - 1* times to the first term. The shift of one reflects that the first term contributes zero copies of *d*.
+
+<Math math="t_{n}=a+(n-1)d" display />
+
+(Where t<sub>n</sub> = n<sup>th</sup> term, a = first term, 1 = last term and d = common difference)
+
+**• Number of term in an AP**
+
+Solving the *n*-th term formula for *n* counts the terms between a known first and last term. Use it when the endpoints of a finite AP are visible but the length is not (for instance, counting multiples of three between two given values).
+
+<Math math="n=\frac{\left(1+a\right)}{d}+1" display />
+
+(Where n = number of terms, a = first term, 1 = last term and d = common difference)
+
+**• Sum of first n terms in AP**
+
+The partial sum is *n* times the average of the first and last terms. Gauss's pairing trick gives the shortcut: pair the first term with the last, the second with the second-to-last, and so on. Each pair sums to *a + l*, and there are *n/2* such pairs. The two forms below differ only in whether the last term is given directly or expressed through *a* and *d*.
+
+<Math math="S_{n}=\left(\frac{n}{2}\right)\left[2a+\left(n+1\right)d\right]" display />
+
+Equivalent form using the last term directly. This is the most compact way to write the partial sum when both endpoints are known:
+
+<Math math="\text{ }\text{ }\text{ }\text{ }=\left(\frac{n}{2}\right)\left[a+1\right]" display />
+
+(Whare a = first term, d = commn difference and 1 = n<sup>th</sup> term = a +(n-1)d)
+
+**• Arithmtic Mean**
+
+If *a, b, c* are in AP, then *b* is the Arithmetic Mean (A.M.) of *a* and *c*. The AM is the centre value that two endpoints determine to form a three-term AP.
+
+The middle term of three numbers in AP is the average of the outer two. The constant-difference condition *b - a = c - b* rearranges to:
+
+<Math math="b=\frac{a+c}{2}" display />
+
+A.M between two numbers *a* and *b*. Any two numbers can be treated as the outer terms of a three-term AP whose centre is their average:
+
+<Math math="\text{ }\text{ }=\frac{a+b}{2}" display />
+
+If a, a<sub>1</sub>, a<sub>2</sub>, ... a<sub>n</sub>, b are in AP we can say that a<sub>1</sub>, a<sub>2</sub>, ... a<sub>n</sub> are the n Arithmetic Means berween a and b.
+
+**• Nots**
+
+Most AP problems simplify when the terms are taken symmetrically around the central term. The common-difference contributions cancel pairwise on summing: for odd counts the *d* terms cancel directly, and for even counts they cancel in symmetric pairs of *±d*, *±3d*, and so on.
+
+<Math math="3\text{ }terms\text{ }: \left(a-d\right), a,\left(a+d\right)" display />
+
+<Math math="4\text{ }terms\text{ }: \left(a-3d\right), \left(a-d\right),\left(a+d\right),\left(a+3d\right)" display />
+
+<Math math="5\text{ }terms\text{ }: \left(a-2d\right), \left(a-d\right),a,\left(a+d\right),\left(a+2d\right)" display />
+
+T<sub>n</sub> = S<sub>n</sub> - S<sub>n-1</sub>
+
+## Geometric Progression (GP)
+
+A geometric progression is a sequence of non-zero numbers in which the ratio of consecutive terms is a fixed constant *r*. AP is built on addition of a fixed *d*; GP is built on multiplication by a fixed *r*. The parallel structure carries through to the *n*-th term, sum, and mean formulas below. Plotting GP terms gives exponential growth or decay.
+
+**• n<sup>th</sup> term of GP**
+
+The *n*-th term multiplies the first term by the common ratio *n - 1* times. The exponent shift mirrors the *(n - 1)d* in the AP case: the first term contributes the ratio zero times.
+
+<Math math="t_{n}=ar^{\left(n-1\right)}" display />
+
+(Where t<sub>n</sub> = n<sup>th</sup>  term, a = first term, r = common ratio and n = number of terms)
+
+**• Sum of first n Terms in GP**
+
+The partial sum is a closed-form geometric series. The two branches differ only in sign arrangement so the numerator stays positive in each regime; they are algebraically equivalent. The derivation is the standard *S - rS* telescoping trick, which collapses all interior terms.
+
+<Math math="Sn = \left\{ \begin{array}{l l} \frac{a\left(r^{n}-1\right)}{r-1} & \quad \text{ }if\text{ }\left(r > 1\right)\\  \frac{a\left(1-r^{n}\right)}{1-r} & \quad \text{ }if\text{ }\left(r < 1\right)\ \end{array} \right." display />
+
+(Where a = the first term, r = common ratio, n = number of terms)
+
+Note: When n = ∞, then
+
+For a convergent infinite GP (ratio strictly between 0 and 1), the series sums to a finite limit. The term *r<sup>n</sup>* goes to zero as *n* grows, so the partial-sum formula collapses to the ratio shown. This is the formula behind repeating-decimal-to-fraction conversion.
+
+<Math math="S_{\infty}=\frac{a}{1-r} \text{ }\left(if\text{ } 0<r<1\right)" display />
+
+**• Geometic Mean**
+
+If three non-zero numbers *a, b, c* are in GP, then *b* is the Geometric Mean (GM) of *a* and *c*. The GM plays the multiplicative role the AM plays additively: it is the value for which the ratios *b/a* and *c/b* match.
+
+The geometric mean of two numbers is the square root of their product. The constant-ratio condition gives *b<sup>2</sup> = ac*:
+
+<Math math="b=\sqrt{ac}" display />
+
+The GM of two arbitrary numbers *a* and *b* follows the same template:
+
+<Math math="b=\sqrt{ab}" display />
+
+(Note that if a and b are of opposite sign, their GM is not defined)
+
+**• Note**
+
+If *a, b, c* are in GP, the following ratio identity holds. It follows from *b/a = c/b*:
+
+<Math math="\frac{a-b}{b-c}=\frac{a}{b}" display />
+
+Most GP problems simplify when the terms are taken in a symmetric multiplicative form. The central term is unaffected, and ratio terms pair as *r* and *1/r* so products simplify.
+
+<Math math="3\text{ }terms\text{ }:\left(\frac{b}{r}\right),a,ar" display />
+
+<Math math="5\text{ }terms\text{ }:\left(\frac{a}{r^{2}}\right),\left(\frac{a}{r}\right),a,ar,ar^{2}" display />
+
+## Harmonic Progression (HP)
+
+A harmonic progression is a sequence of non-zero numbers whose reciprocals form an AP. HP arises in averaging rates (speeds over a fixed distance, parallel resistances, capacitances in series) where the linear quantity is the reciprocal of what you measure directly.
+
+A harmonic progression is defined by the reciprocals of its terms forming an AP:
+
+<Math math="\text{ }\frac{1}{a1},\frac{1}{a2},\frac{1}{a3}, ... \frac{1}{an}\text{ }" display />
+
+are in AP
+
+• If *a, (a+d), (a+2d), …* are in AP, the *n*-th term of the AP is *a + (n-1)d*. So if
+
+<Math math="\text{ }\frac{1}{a},\frac{1}{\left(a+d\right)},\frac{1}{\left(a+2d\right)},...\text{ }" display />
+
+are in HP, the *n*-th term of the HP is the reciprocal of the corresponding AP term. HP has no independent closed form for the partial sum; unlike AP and GP, partial sums of HPs are not generally expressible in elementary closed form.
+
+<Math math="\text{ }HP=\frac{1}{\left[a+\left(n-1\right)d\right]}\text{ }" display />
+
+• If *a, b, c* are in HP, then *b* is the Harmonic Mean (HM) of *a* and *c*. By definition, the HM is the reciprocal of the AM of the reciprocals. For positive inputs it is always less than or equal to both the AM and the GM.
+
+The harmonic mean is twice the product divided by the sum, from inverting *2/b = 1/a + 1/c*:
+
+<Math math="\text{ }b=\frac{\left(2ac\right)}{\left(a+c\right)}\text{ }" display />
+
+• The HM of two arbitrary numbers follows the same template:
+
+<Math math="\text{ }b=\frac{\left(2ab\right)}{\left(a+b\right)}\text{ }" display />
+
+• If *a, b, c* are in HP, the relation reads more cleanly in reciprocals. *1/b* is the average of *1/a* and *1/c*, which is the AP condition on the reciprocals:
+
+<Math math="\text{ }, \text{ }\frac{2}{b}=\frac{1}{a}+\frac{1}{c}" display />
+
+## Relationship between AM, GM and HM of Two Numbers
+
+For any two positive numbers the three means stand in a fixed relationship. The identity below links the three: knowing any two of *AM, GM, HM* determines the third. The chain *AM ≥ GM ≥ HM* (with equality only when the inputs are equal) is the two-number case of the classical inequality of means.
+
+If GM, AM, and HM are the Geometric, Arithmetic, and Harmonic means of two positive numbers, then the GM is the geometric mean of the AM and HM. Squaring gives the symmetric form: *GM<sup>2</sup>* equals their product.
+
+<Math math="GM^{2}= AM \times HM" display />
+
+<Notice type="tip">
+For any two positive numbers, *AM &ge; GM &ge; HM* with equality only when the numbers are equal. This ordering generalizes to *n* numbers and is the basis for many classical inequalities.
+</Notice>

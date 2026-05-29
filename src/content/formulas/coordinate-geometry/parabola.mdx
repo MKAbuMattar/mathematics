@@ -1,0 +1,68 @@
+---
+title: "Parabola"
+description: "Types of parabolas, tangents, normals, focal distance, and angle between tangents."
+category: "coordinate-geometry"
+topic: "parabola"
+order: 3
+---
+
+A parabola is the locus of points equidistant from a fixed point (the focus) and a fixed line (the directrix). The line through the focus perpendicular to the directrix is the axis of symmetry; the parabola crosses it at the vertex, halfway between focus and directrix. The four standard orientations place the vertex at the origin and align the axis with a coordinate axis, differing only in direction. The parameter *a* is the focus-to-vertex distance and controls how tightly the parabola opens.
+
+<Diagram alt="Parabola opening upward with focus and directrix" viewBox="0 0 220 180" caption="Every point on the parabola is equidistant from the focus and the directrix.">
+  <line x1="10" y1="130" x2="210" y2="130" />
+  <line x1="110" y1="10" x2="110" y2="170" />
+  <text x="205" y="126" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="114" y="18" font-size="10" fill="currentColor" stroke="none">y</text>
+  <path d="M 50 30 Q 110 170 170 30" />
+  <line x1="20" y1="155" x2="200" y2="155" stroke-dasharray="5 3" />
+  <text x="150" y="168" font-size="10" fill="currentColor" stroke="none">directrix</text>
+  <circle cx="110" cy="105" r="3" fill="currentColor" />
+  <text x="116" y="102" font-size="10" fill="currentColor" stroke="none">F</text>
+  <circle cx="110" cy="130" r="2" fill="currentColor" />
+  <text x="92" y="124" font-size="10" fill="currentColor" stroke="none">V</text>
+</Diagram>
+
+### Type of Parabola
+
+The four standard parabolas all have their vertex at the origin; they differ in which axis they open along and in which direction the focus lies. The latus rectum is the focal chord perpendicular to the axis, with length *4a* in every case. The directrix lies on the side of the vertex opposite the focus, at distance *a*.
+
+| Parabola | y<sup>2</sup>=4ax | y<sup>2</sup>=-4ax | x<sup>2</sup>=4ay | x<sup>2</sup>=-4ay |
+|---|---|---|---|---|
+| **Vertex** | (0,0) | (0,0) | (0,0) | (0,0) |
+| **Focus** | (a,0) | (-a,0) | (0,a) | (0,-a) |
+| **Axis** | y=0 | y=0 | x=0 | x=0 |
+| **Dirctix** | x=-a | x=a | y=-a | y=a |
+| **Length of Latus Recutum (LR)** | 4a | 4a | 4a | 4a |
+| **End Point of LR** | (a,2a)&(a,-2a) | (-a,2a)&(-a,-2a) | (2a,a)&(-2a,a) | (2a,-a)&(-2a,-a) |
+
+### Tangent To Parabola y<sup>2</sup>=4ax
+
+A parabola has two tangent forms: one from a point of contact, one from a slope. The point form applies the T = 0 substitution *y<sup>2</sup> → y y<sub>1</sub>* and *x → (x + x<sub>1</sub>)/2*, multiplied out. The contact point (x<sub>1</sub>, y<sub>1</sub>) must lie on the parabola, i.e. satisfy *y<sub>1</sub><sup>2</sup> = 4a x<sub>1</sub>*.
+
+<Math math="\left(i\right)\text{ }yy_{1}=2a\left(x+x_{1}\right)\text{ }\left[at\text{ }point\text{ }P{x_{1},y_{1}}\right]" display />
+
+The slope form gives the tangent of any non-zero slope *m*. Substituting *y = mx + c* into the parabola equation and demanding a double root yields *c = a/m*. Each non-zero slope has exactly one tangent; the slope-zero limit is the *x*-axis, which is tangent at the vertex.
+
+<Math math="\left(ii\right)\text{ }y=mx+\frac{a}{m}\text{ }\left[Having\text{ }slope=m\right]" display />
+
+### Normal To Parabola y<sup>2</sup>=4ax
+
+The normal at a contact point is perpendicular to the tangent there and passes through the point. Its slope is the negative reciprocal of the tangent slope *2a / y<sub>1</sub>*, giving *−y<sub>1</sub> / 2a*. The form below is point-slope with this normal slope; it is undefined at the vertex where *y<sub>1</sub> = 0* (the normal there is the *x*-axis).
+
+<Math math="\left(i\right)\text{ }\left(y-y_{1}\right)=\left(\frac{-y_{1}}{2a}\right)\left(x-x_{1}\right)" display />
+
+The slope form parameterises normals by slope *m*. Up to three normals of slope *m* can pass through a single external point, the basis of the theory of conormal points. The cubic dependence on *m* in the formula reflects that count.
+
+<Math math="\left(ii\right)\text{ }y=mx-2am-am^{3}" display />
+
+### Focal Distance
+
+The focal distance is the distance from a point P(x<sub>1</sub>, y<sub>1</sub>) on the parabola to the focus. By the defining locus property, it equals the perpendicular distance from P to the directrix, which for *y<sup>2</sup> = 4ax* (directrix *x = −a*) is *x<sub>1</sub> + a*. The focal distance reads off the *x*-coordinate alone, no square roots required. It is non-negative because *x<sub>1</sub> ≥ 0* on the parabola.
+
+If P(x<sub>1</sub>,y<sub>1</sub>) lies on y<sup>2</sup>=4ax then focal distance = x<sub>1</sub>+a
+
+### Angle Between Two Tangents From P(x<sub>1</sub>,y<sub>1</sub>) to Parabola y<sup>2</sup>=4ax is
+
+From any external point exactly two tangents can be drawn to a parabola; the angle *θ* between them measures the opening of the curve seen from that point. The numerator radical is real precisely when (x<sub>1</sub>, y<sub>1</sub>) lies outside the parabola (*y<sub>1</sub><sup>2</sup> > 4a x<sub>1</sub>*); on the curve the angle collapses to zero, and inside there are no real tangents. The denominator *x<sub>1</sub> + a* is the focal distance, so the formula relates the tangent angle to position relative to the directrix.
+
+<Math math="\tan\theta=\left|\frac{\sqrt{\left(y_{1}^{2}-4ax_{1}\right)}}{\left(x_{1}+a\right)}\right|" display />

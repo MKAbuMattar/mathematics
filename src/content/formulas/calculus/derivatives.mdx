@@ -1,0 +1,213 @@
+---
+title: "Derivatives"
+description: "Derivative definition, notation, properties, common derivatives, higher-order derivatives, and critical points."
+category: "calculus"
+topic: "derivatives"
+order: 2
+---
+
+The derivative measures the instantaneous rate of change of a function. Geometrically it is the slope of the tangent line at a point; analytically it is the limit of a difference quotient. The rules below (constant multiple, sum, product, quotient, chain, power) reduce most differentiation to mechanical pattern application. The table of common derivatives gives the leaves; the rules combine them. The sign of *f'* locates intervals of increase and decrease. The sign of *f''* distinguishes concave-up from concave-down behaviour and locates inflection points.
+
+<Diagram alt="A curve with a tangent line drawn at a point labelled a, with slope f'(a)" viewBox="0 0 240 180" caption="f'(a) is the slope of the tangent line to f at x = a.">
+  <path d="M 20 150 L 220 150" />
+  <path d="M 30 20 L 30 165" />
+  <path d="M 30 140 Q 90 130 130 90 Q 180 35 220 25" />
+  <path d="M 60 130 L 200 50" />
+  <circle cx="130" cy="90" r="2.5" fill="currentColor" />
+  <path d="M 130 150 L 130 90" stroke-dasharray="3 3" />
+  <text x="125" y="163" font-size="10" fill="currentColor" stroke="none">a</text>
+  <text x="138" y="86" font-size="10" fill="currentColor" stroke="none">(a, f(a))</text>
+  <text x="190" y="46" font-size="10" fill="currentColor" stroke="none">slope = f'(a)</text>
+  <text x="222" y="148" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="34" y="22" font-size="10" fill="currentColor" stroke="none">y</text>
+</Diagram>
+
+## Definition
+
+The derivative is the limit of a difference quotient, the slope of the secant as the two points coalesce.
+
+If y = f(x), the derivative is
+
+<Math math="f'\left(x\right)=\lim_{h \rightarrow c}\left(\frac{f\left(x+h\right)-f\left(x\right)}{h}\right)" display />
+
+Notations for the derivative are interchangeable: Lagrange's *f'*, Leibniz's *dy/dx*, operator *D*.
+
+<Math math="f'(x)=y'=\frac{df}{dx}=\frac{dy}{dx}=\frac{d}{dx}\left(f\left(x\right)\right)=Df\left(x\right)" display />
+
+At a point *x = a*, the derivative is written with a vertical bar or as *f'(a)*:
+
+<Math math="f'\left(a\right)=\left.y'\right|_{x=a}=\left.\frac{df}{dx}\right|_{x=a}=\left.\frac{dy}{dx}\right|_{x=a}=Df\left(a\right)" display />
+
+## Interpretation of Derivatives
+
+Three standard interpretations: geometric (tangent slope), analytic (instantaneous rate of change), and physical (velocity).
+
+if y = f(x) then,
+
+1. m = f'(a) is the slope of the tangent line to y = f(x) at x = a and the equation of the tangent line at x = a is given by y = f(a)+f'(a)(x-a).
+
+2. f'(a) is the instantaneous rate of change of f(x) at x = a.
+
+3. If f(x) is the position of an object at time x then f'(a) is the velocity of the object at x = a.
+
+## Basic Properties
+
+Rules for sums, products, quotients, powers, and compositions.
+
+Constants pass through:
+
+<Math math="\left(cf\right)'=cf'\left(x\right)" display />
+
+Sum and difference distribute:
+
+<Math math="\left(f\pm g\right)'=f'\left(x\right)\pm g'\left(x\right)" display />
+
+Product Rule, symmetric in *f* and *g*:
+
+<Math math="\left(fg\right)'=f'g+fg'\text{ }\text{ }\text{ }\text{ }Product\text{ }Rule" display />
+
+Quotient Rule, *g ≠ 0*:
+
+<Math math="\left(\frac{f}{g}\right)'=\left(\frac{f'g-fg'}{g^{2}}\right)\text{ }\text{ }\text{ }\text{ }Quotient\text{ }Rule" display />
+
+A constant has derivative zero:
+
+<Math math="\frac{d}{dx}\left(c\right)=0" display />
+
+Power Rule, any real exponent:
+
+<Math math="\frac{d}{dx}\left(x^{n}\right)=nx^{n-1}\text{ }\text{ }\text{ }\text{ }Power\text{ }Rule" display />
+
+Chain Rule: outer derivative (evaluated at the inner function) times the inner derivative. Used whenever one function appears inside another.
+
+<Math math="\frac{d}{dx}\left(f\left(g\left(x\right)\right)\right)=f'\left(g\left(x\right)\right)g'\left(x\right)\text{ }\text{ }\text{ }\text{ }\text{ }Chain\text{ }Rule" display />
+
+## Common Derivatives
+
+The elementary derivatives. Combined with the rules above they handle most closed-form differentiation.
+
+Identity:
+
+<Math math="\frac{d}{dx}\left(x\right)=1" display />
+
+Sine:
+
+<Math math="\frac{d}{dx}\left(\sin x\right)=\cos x" display />
+
+Cosine:
+
+<Math math="\frac{d}{dx}\left(\cos x\right)=-\sin x" display />
+
+Tangent:
+
+<Math math="\frac{d}{dx}\left(\tan x\right)=\sec^{2} x" display />
+
+Secant:
+
+<Math math="\frac{d}{dx}\left(\sec x\right)=\sec x\tan x" display />
+
+Cosecant:
+
+<Math math="\frac{d}{dx}\left(\csc x\right)=\csc x\cot x" display />
+
+Cotangent:
+
+<Math math="\frac{d}{dx}\left(\cot x\right)=-\csc^{2} x" display />
+
+Arcsine:
+
+<Math math="\frac{d}{dx}\left(\sin^{-1} x\right)=\frac{1}{\sqrt{1-x^{2}}}" display />
+
+Arccosine:
+
+<Math math="\frac{d}{dx}\left(\cos^{-1} x\right)=-\frac{1}{\sqrt{1-x^{2}}}" display />
+
+Arctangent:
+
+<Math math="\frac{d}{dx}\left(\tan^{-1} x\right)=\frac{1}{{1+x^{2}}}" display />
+
+Exponential, base *a*:
+
+<Math math="\frac{d}{dx}\left(a^{x}\right)=a^{x}\ln\left(a\right)" display />
+
+Natural exponential, its own derivative:
+
+<Math math="\frac{d}{dx}\left(e^{x}\right)=e^{x}" display />
+
+Natural log, *x > 0*:
+
+<Math math="\frac{d}{dx}\left(\ln\left(x\right)\right)=\frac{1}{x}\text{ }\text{ }\text{ }\text{ },x>0" display />
+
+Extended to *ln|x|* for *x ≠ 0*:
+
+<Math math="\frac{d}{dx}\left(\ln\left|x\right|\right)=\frac{1}{x}\text{ }\text{ }\text{ }\text{ },x\neq0" display />
+
+Log, base *a*:
+
+<Math math="\frac{d}{dx}\left(\log_{a}{\left(x\right)}\right)=\frac{1}{x\ln{a}}\text{ }\text{ }\text{ }\text{ },x>0" display />
+
+## Higher Order Derivatives
+
+Repeated differentiation produces second, third, and higher derivatives.
+
+The second derivative:
+
+<Math math="\text{ }f''\left(x\right)=f^{\left(2\right)}\left(x\right)=\frac{d^{2}f}{dx^{2}}\text{ }" display />
+
+is the derivative of the first derivative:
+
+<Math math="\text{ }f''\left(x\right)=\left(f'\left(x\right)\right)'\text{ }" display />
+
+The *n*-th derivative:
+
+<Math math="\text{ }f^{\left(n\right)}\left(x\right)=\frac{d^{n}f}{dx^{n}}\text{ }" display />
+
+is defined recursively from the *(n-1)*-th derivative:
+
+<Math math="\text{ }f^{\left(n\right)}\left(x\right)=\left(f^{\left(n-1\right)}\left(x\right)\right)'\text{ }" display />
+
+, i.e. the derivative of the (n-1)<sup>st</sup> derivative, f<sup>(n-1)</sup>(x).
+
+## Others
+
+The first and second derivatives classify behaviour: critical points (where *f'* is zero or undefined), monotonicity (sign of *f'*), concavity (sign of *f''*).
+
+**Critical Points**
+
+x = c is a critical point of f(x) provied either
+
+1. f'(c) = 0
+
+2. f'(c) doesn't exist.
+
+**Increasing/Decreasing**
+
+1. If f'(x) &gt; 0 for all x in an interval *I* then f (x) is increasing on the interval *I*.
+
+2. If f'(x) &lt; 0 for all x in an interval *I* then f (x) is Decreasing on the interval *I*.
+
+3. If f'(x) = 0 for all x in an interval *I* then f (x) is constant on the interval *I*.
+
+**Concave up/Concave down**
+
+1. If f"(x) &gt; 0 for all x in an interval *I* then f (x) is concave up on the interval *I*.
+
+1. If f"(x) &lt; 0 for all x in an interval *I* then f (x) is concave down on the interval *I*.
+
+**Infection Points**
+
+x = c is inflection point of f(x) if the concavity changes at x = c.
+
+<Diagram alt="Two curves side by side: one concave up (cup) and one concave down (cap)" viewBox="0 0 240 180" caption="f''(x) > 0 means concave up; f''(x) < 0 means concave down.">
+  <path d="M 20 150 L 220 150" />
+  <path d="M 30 140 Q 70 30 110 140" />
+  <path d="M 140 30 Q 180 140 220 30" />
+  <text x="55" y="170" font-size="10" fill="currentColor" stroke="none">f''(x) &gt; 0</text>
+  <text x="160" y="170" font-size="10" fill="currentColor" stroke="none">f''(x) &lt; 0</text>
+  <text x="50" y="22" font-size="10" fill="currentColor" stroke="none">concave up</text>
+  <text x="148" y="22" font-size="10" fill="currentColor" stroke="none">concave down</text>
+</Diagram>
+
+<Notice type="tip">
+A critical point is a *candidate* for a maximum or minimum, not a guarantee. Classify it with the second-derivative test (positive → local minimum, negative → local maximum) or a sign change of *f'*.
+</Notice>

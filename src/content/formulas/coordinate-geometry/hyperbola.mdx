@@ -1,0 +1,110 @@
+---
+title: "Hyperbola"
+description: "Types of hyperbolas, eccentricity, foci, tangents, normals, and focal distances."
+category: "coordinate-geometry"
+topic: "hyperbola"
+order: 5
+---
+
+A hyperbola is the locus of points whose distances to two fixed foci have a constant *difference* in absolute value (*2a*), rather than a constant sum as in the ellipse. The curve has two disconnected branches opening away from each other along the transverse axis. Its eccentricity *e* is always greater than 1, and as |x| or |y| grows the branches approach a pair of asymptotes through the centre. The two standard orientations place the transverse axis along the *x*-axis (Type 1) or the *y*-axis (Type 2).
+
+<Diagram alt="Hyperbola with two branches, foci on x-axis, and asymptotes" viewBox="0 0 220 180" caption="Difference of distances to the two foci is constant: 2a.">
+  <line x1="10" y1="90" x2="210" y2="90" />
+  <line x1="110" y1="10" x2="110" y2="170" />
+  <text x="205" y="86" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="114" y="18" font-size="10" fill="currentColor" stroke="none">y</text>
+  <line x1="30" y1="20" x2="190" y2="160" stroke-dasharray="4 3" />
+  <line x1="30" y1="160" x2="190" y2="20" stroke-dasharray="4 3" />
+  <path d="M 80 20 Q 60 90 80 160" />
+  <path d="M 140 20 Q 160 90 140 160" />
+  <circle cx="55" cy="90" r="2.5" fill="currentColor" />
+  <circle cx="165" cy="90" r="2.5" fill="currentColor" />
+  <text x="44" y="104" font-size="10" fill="currentColor" stroke="none">F₁</text>
+  <text x="168" y="104" font-size="10" fill="currentColor" stroke="none">F₂</text>
+</Diagram>
+
+### Types of Hyperbola
+
+The two standard orientations have transverse axes along *x* and *y* respectively.
+
+**Type 1**
+
+A horizontal hyperbola opens left-and-right, with vertices at *(±a, 0)* on the *x*-axis and foci at *(±ae, 0)*. The transverse axis (length *2a*) lies along *x*; the conjugate axis (length *2b*) lies along *y* and does not intersect the curve. The asymptotes are *y = ±(b/a) x*.
+
+<Math math="\frac{x^{2}}{a^{2}}-\frac{x^{2}}{b^{2}}=1" display />
+
+**Type 2**
+
+A vertical hyperbola opens up-and-down, with vertices at *(0, ±b)* on the *y*-axis and foci at *(0, ±be)*. The transverse axis (length *2b*) lies along *y*; the conjugate axis (length *2a*) lies along *x*. The asymptotes are *y = ±(b/a) x*, the same as in Type 1.
+
+<Math math="\frac{y^{2}}{b^{2}}-\frac{x^{2}}{a^{2}}=1" display />
+
+| Hyperbola | Type 1 | Type 2 |
+|---|---|---|
+| **Center** | (0,0) | (0,0) |
+| **Vertices** | A(a,0) A'(a,0) | B(0,b) B'(0,-b) |
+| **Length of Axis** | Transverse = 2a, Conjugate = 2b | Transverse = 2b, Conjugate = 2a |
+| **Equation of Axis** | Transverse axis: y = 0, Conjugate axis: x = 0 | Transverse axis: x = 0, Conjugate axis: y = 0 |
+| **Distance Between Foci** | 2ea | 2be |
+
+**Relation between a,b and e (Type 1)**
+
+The identity *b<sup>2</sup> = a<sup>2</sup>(e<sup>2</sup> − 1)* relates the semi-axes to the eccentricity. *(e<sup>2</sup> − 1)* is positive because *e > 1*, so *b<sup>2</sup>* is positive as required. This is the hyperbolic analogue of the ellipse relation *b<sup>2</sup> = a<sup>2</sup>(1 − e<sup>2</sup>)*, with the sign flipped.
+
+<Math math="b^{2}=a^{2}\left(e^{2}-1\right)" display />
+
+**Relation between a,b and e (Type 2)**
+
+Type 2 swaps *a* and *b*, so the identity becomes *a<sup>2</sup> = b<sup>2</sup>(e<sup>2</sup> − 1)*. Here *b* is the semi-transverse axis and *a* the semi-conjugate. The constraint *e > 1* keeps the right side positive.
+
+<Math math="a^{2}=b^{2}\left(e^{2}-1\right)" display />
+
+**Eccentricity (Type 1)**
+
+Solving *b<sup>2</sup> = a<sup>2</sup>(e<sup>2</sup> − 1)* for *e* gives *e = √(a<sup>2</sup> + b<sup>2</sup>) / a*, strictly greater than 1. Larger eccentricity spreads the asymptotes further from the transverse axis, so the branches diverge more sharply. The product *ae* is the centre-to-focus distance, mirroring the ellipse.
+
+<Math math="e=\frac{\sqrt{a^{2}+b^{2}}}{a}" display />
+
+**Eccentricity (Type 2)**
+
+For Type 2 the semi-transverse axis is *b*, so the formula divides by *b* instead of *a*. The radicand is symmetric in *a* and *b*; only the denominator changes. The result is strictly greater than 1.
+
+<Math math="e=\frac{\sqrt{b^{2}+a^{2}}}{b}" display />
+
+**Foci (Type 1)**
+
+The two foci sit on the transverse axis, symmetric about the centre, at distance *ae* from the origin. Since *e > 1* and the vertices are at *(±a, 0)*, each focus lies further out than the corresponding vertex, outside the curve on the side of the matching branch.
+
+<Math math="S=\left(\pm ae,0\right)" display />
+
+**Foci (Type 2)**
+
+For Type 2 the foci lie on the *y*-axis at *(0, ±be)*, symmetric about the centre. The distance from centre to focus is *be*, exceeding the semi-transverse axis *b* because *e > 1*. Each focus is outside the matching branch.
+
+<Math math="S=\left(0,\pm be\right)" display />
+
+### Tangent to Hyperbola
+
+The tangent forms mirror those of the ellipse, with the sign on the *b<sup>2</sup>* term flipped to match the hyperbola equation. The point form applies T = 0: *x<sup>2</sup> → x x<sub>1</sub>* and *y<sup>2</sup> → y y<sub>1</sub>*. The contact point must satisfy the original equation; otherwise the line is the polar of an external point.
+
+<Math math="\left(i\right)\text{ }\text{ }\frac{\left(xx_{1}\right)}{a^{2}}-\frac{\left(yy_{1}\right)}{b^{2}}=1\text{ }\text{ }\left[at\text{ }P\left(x_{1},y_{1}\right)\right]" display />
+
+The slope form gives tangents of slope *m*; the radicand *a<sup>2</sup>m<sup>2</sup> − b<sup>2</sup>* must be non-negative, so tangents exist only for *|m| ≥ b/a*. The boundary case *|m| = b/a* corresponds to the asymptotes, tangents "at infinity". Slopes between *−b/a* and *b/a* admit no tangent line.
+
+<Math math="\left(ii\right)\text{ }\text{ }y=mx\pm\sqrt{a^{2}m^{2}-b^{2}}\text{ }\text{ }\text{ }\text{ }\left[When\text{ }slope = m\right]" display />
+
+### Normal to Hyperbola
+
+The normal at (x<sub>1</sub>, y<sub>1</sub>) is perpendicular to the tangent and passes through the contact point. The formula is the ellipse normal with both signs flipped: the *y* term gains a plus and the right-hand side becomes *a<sup>2</sup> + b<sup>2</sup>*. The form is undefined when *x<sub>1</sub>* or *y<sub>1</sub>* vanishes; at vertices the normal coincides with the transverse axis.
+
+<Math math="\frac{\left(a^{2}x\right)}{x_{1}}+\frac{b^{2}y}{y_{1}}=a^{2}+b^{2}" display />
+
+### Focal Distance
+
+A point P(x<sub>1</sub>, y<sub>1</sub>) on the hyperbola has two focal distances *SP* and *S'P*, one to each focus, with absolute difference *2a* (the defining locus property). The sign of the difference depends on which branch P sits on. The closed forms below are linear in *x<sub>1</sub>*, so the focal distances compute without square roots once *e* is known.
+
+<Math math="if\text{ }P=\left(x_{1},y_{1}\right)\text{ }then," display />
+
+<Math math="SP=\left|ex_{1}-a\right|" display />
+
+<Math math="S'P=\left|ex_{1}-a\right|" display />

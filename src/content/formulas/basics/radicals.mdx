@@ -1,0 +1,37 @@
+---
+title: "Radicals"
+description: "Radical and root identities: products, quotients, nested roots, and absolute value rules."
+category: "basics"
+topic: "radicals"
+order: 2
+---
+
+Radicals express *n*-th roots, the inverses of *n*-th powers. The identities below convert between radical and exponent notation, split roots across products and quotients, and handle the parity-dependent case when an even root is taken of an even power. Working through fractional exponents pushes the parity question out of the calculation and back to the final principal-root step.
+
+A radical is a unit-fractional exponent. Every exponent rule transfers directly to radicals through this identification, so there is no separate set of root laws. Most identities below are corollaries of the exponent rules read through this bridge.
+
+<Math math="\sqrt[n]{a}=a^{\frac{1}{n}}" display />
+
+The *n*-th root distributes over a product of non-negative factors. This is the radical form of *(ab)<sup>1/n</sup> = a<sup>1/n</sup>b<sup>1/n</sup>* and is how perfect *n*-th powers get pulled out from under the root. Non-negativity matters: applying the rule to two negatives can produce sign errors.
+
+<Math math="\sqrt[n]{a\times b}=\sqrt[n]{a}\times\sqrt[n]{b}" display />
+
+The *n*-th root distributes over a quotient. Read in reverse, it combines two separate radicals into one for rationalising denominators. It also requires non-negative operands for real-valued safety.
+
+<Math math="\sqrt[n]{\frac{a}{b}}=\frac{\sqrt[n]{a}}{\sqrt[n]{b}}" display />
+
+A nested radical collapses by multiplying the indices. The identity follows from *(a<sup>1/n</sup>)<sup>1/m</sup> = a<sup>1/(mn)</sup>* via the power-of-a-power rule. Iterated roots become a single root with a larger index, which is usually easier to handle symbolically.
+
+<Math math="\sqrt[m]{\sqrt[n]{a}}=\sqrt[m\times n]{a}" display />
+
+For an odd index the root undoes the power and preserves the sign. Odd roots of negatives stay real because an odd power of a negative remains negative, so the inverse map is defined for all real inputs. This is the only case where the radical and the power cancel cleanly.
+
+<Math math="\sqrt[n]{a^{n}}=a\text{ }\left(if\text{ }n\text{ }is\text{ }odd\right)" display />
+
+For an even index the principal root is non-negative, so the result is the absolute value. Even powers erase sign information: *(-3)<sup>2</sup> = 9* matches *3<sup>2</sup> = 9*. The inverse cannot recover the original sign and picks the non-negative branch by convention. This is where the *|x|* in simplified even roots of even powers comes from.
+
+<Math math="\sqrt[n]{a^{n}}=\left|a\right|\text{ }\left(if\text{ }n\text{ }is\text{ }even\right)" display />
+
+<Notice type="warning">
+The product and quotient rules assume real, non-negative radicands. Applying them blindly to negatives can produce false equalities such as `sqrt(-1) * sqrt(-1) = sqrt(1) = 1`.
+</Notice>

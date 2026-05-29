@@ -1,0 +1,98 @@
+---
+title: "Coordinate Geometry Basics"
+description: "Distance, section, midpoint, area of a triangle, slope, and equations of lines in the coordinate plane."
+category: "coordinate-geometry"
+topic: "basics"
+order: 1
+---
+
+Coordinate geometry expresses geometric objects algebraically by placing them on a Cartesian grid. Points become ordered pairs, lines become linear equations, and geometric relations (collinearity, perpendicularity, distance, area) become arithmetic identities on coordinates. The formulas below cover the core operations on points and lines in the plane: measuring distances, dividing segments, computing slopes, and writing the equation of a line. Each form is interchangeable, fit to a different set of givens.
+
+### Distance Between Two Points
+
+The distance between P(x<sub>1</sub>,y<sub>1</sub>) and Q(x<sub>2</sub>,y<sub>2</sub>) is the length of the segment joining them. It is the Pythagorean theorem applied to the run *x<sub>2</sub> − x<sub>1</sub>* and the rise *y<sub>2</sub> − y<sub>1</sub>*, the legs of a right triangle whose hypotenuse is the segment. The result is non-negative and symmetric in the two points.
+
+<Math math="\sqrt{\left(x_{2}-x_{2}\right)^{2}+\left(y_{1}-y_{2}\right)^{2}}" display />
+
+<Diagram alt="Right triangle illustrating the distance formula between two points" viewBox="0 0 220 180" caption="The distance formula is the Pythagorean theorem applied to the rise and run between two points.">
+  <line x1="20" y1="150" x2="210" y2="150" />
+  <line x1="30" y1="20" x2="30" y2="170" />
+  <text x="205" y="146" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="34" y="26" font-size="10" fill="currentColor" stroke="none">y</text>
+  <line x1="60" y1="120" x2="170" y2="50" />
+  <line x1="60" y1="120" x2="170" y2="120" stroke-dasharray="4 3" />
+  <line x1="170" y1="120" x2="170" y2="50" stroke-dasharray="4 3" />
+  <circle cx="60" cy="120" r="3" fill="currentColor" />
+  <circle cx="170" cy="50" r="3" fill="currentColor" />
+  <text x="34" y="128" font-size="10" fill="currentColor" stroke="none">P(x₁,y₁)</text>
+  <text x="155" y="44" font-size="10" fill="currentColor" stroke="none">Q(x₂,y₂)</text>
+  <text x="105" y="134" font-size="10" fill="currentColor" stroke="none">x₂−x₁</text>
+  <text x="174" y="90" font-size="10" fill="currentColor" stroke="none">y₂−y₁</text>
+  <text x="100" y="80" font-size="10" fill="currentColor" stroke="none">d</text>
+</Diagram>
+
+### Section Formula
+
+The section formula gives the coordinates of R(x,y) dividing the segment from P(x<sub>1</sub>,y<sub>1</sub>) to Q(x<sub>2</sub>,y<sub>2</sub>) in the ratio *m<sub>1</sub>:m<sub>2</sub>*. Each coordinate is a weighted average of the endpoint coordinates with the weights swapped: *m<sub>1</sub>* multiplies the second point's coordinate and *m<sub>2</sub>* multiplies the first. For internal division both weights are positive; for external division *m<sub>2</sub>* is negative. The formula fails when *m<sub>1</sub> + m<sub>2</sub> = 0*, which corresponds to no finite dividing point.
+
+<Math math="\left(\frac{m_{1}x_{2}+m_{2}x_{1}}{m_{1}+m_{2}},\frac{m_{1}y_{2}+m_{2}y_{1}}{m_{1}+m_{2}}\right)" display />
+
+### Midpoint Formula
+
+The midpoint is the section formula with the ratio fixed at 1:1, so each coordinate is the arithmetic mean of the endpoint coordinates. It is the centre of the segment, equidistant from both endpoints. The formula returns a finite point for any pair of endpoints, distinct or coincident.
+
+<Math math="\left(\frac{x_{1}+x_{2}}{2},\frac{y_{1}+y_{2}}{2}\right)" display />
+
+### Area of a Triangle
+
+The area of the triangle with vertices (x<sub>1</sub>,y<sub>1</sub>), (x<sub>2</sub>,y<sub>2</sub>), (x<sub>3</sub>,y<sub>3</sub>) is half the absolute value of a signed determinant in the coordinates. The expression inside the bars is twice the signed area; the absolute value drops the sign recording vertex orientation (clockwise vs counter-clockwise). The result is zero exactly when the three points are collinear, giving a direct collinearity test.
+
+<Math math="\triangle=\left(\frac{1}{2}\right)\left|x_{1}\left(y_{2}-y_{3}\right)+x_{2}\left(y_{3}-y_{1}\right)+x_{3}\left(y_{1}-y_{2}\right)\right|" display />
+
+### Vertical Line
+
+A line parallel to the *y*-axis at horizontal distance *a* has every point sharing the same *x*-coordinate, so its equation is *x = a*. Its slope is undefined (the run is zero), so no slope-intercept form exists. The analogous horizontal line is *y = b*, with slope zero.
+
+<Math math="x=a" display />
+
+### Slope of a Line
+
+The slope (or gradient) *m* of a non-vertical line is the tangent of the angle *θ* the line makes with the positive *x*-axis, measured counter-clockwise. It gives direction and steepness: positive slope rises left-to-right, negative slope falls, zero slope is horizontal. Slope is undefined when *θ = 90°*, the vertical case.
+
+<Math math="m=\tan\theta" display />
+
+### Parallel Lines
+
+Two non-vertical lines are parallel exactly when they have the same slope. They never meet, or coincide entirely if their intercepts also match. Two vertical lines are parallel by inspection, since slope is undefined for both.
+
+<Math math="ie\text{ }m_{1}=m_{2}" display />
+
+### Perpendicular Lines
+
+Two non-vertical lines are perpendicular exactly when the product of their slopes is *−1*. Each slope is the negative reciprocal of the other. The rule fails when one line is vertical and the other horizontal; that pair is perpendicular by direct inspection, since one slope is undefined.
+
+<Math math="ie.\text{ }m_{1}\times m_{2}=-1" display />
+
+### Line Through the Origin
+
+A line through the origin with slope *m = tan θ* has zero *y*-intercept, so the slope-intercept form reduces to *y = mx*. The slope alone determines the line. This is the building block for the point-slope and two-point forms below.
+
+<Math math="y=mx" display />
+
+### Point-Slope Form
+
+The point-slope form writes a line from one known point (x<sub>1</sub>, y<sub>1</sub>) and slope *m*. It says the slope between (x, y) and (x<sub>1</sub>, y<sub>1</sub>) is constantly *m*. Vertical lines have undefined slope; use *x = x<sub>1</sub>* in that case.
+
+<Math math="\left(y-y_{1}\right)=m\left(x-x_{1}\right)" display />
+
+### Two-Point Form
+
+The two-point form is point-slope with the slope computed in place from the second point: *m = (y<sub>2</sub> − y<sub>1</sub>) / (x<sub>2</sub> − x<sub>1</sub>)*. Use it when two points are given and neither slope nor intercept is known. The form fails when *x<sub>1</sub> = x<sub>2</sub>* (vertical line); use *x = x<sub>1</sub>* there.
+
+<Math math="\left(y-y_{1}\right)=\left(\frac{y_{2}-y_{1}}{x_{2}-x_{1}}\right)\left(x-x_{1}\right)" display />
+
+### Intercept Form
+
+The intercept form uses the *x*-intercept *a* and *y*-intercept *b*, the points where the line crosses the axes. Substituting (a, 0) or (0, b) verifies the equation. It does not apply to lines through the origin (where *a = b = 0*) or to lines parallel to either axis (where one intercept is infinite).
+
+<Math math="\frac{x}{a}+\frac{y}{b}=1" display />

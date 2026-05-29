@@ -1,0 +1,49 @@
+---
+title: "Quadratic Equations"
+description: "Standard form, the quadratic formula, and the role of the discriminant."
+category: "basics"
+topic: "quadratic-equations"
+order: 4
+---
+
+A quadratic equation is a degree-two polynomial equation in a single variable. Every quadratic can be solved by the formula below. The sign of its discriminant (the expression under the radical) tells whether the roots are real or complex without computing them. The formula is the general result of completing the square on the standard form.
+
+The standard form fixes coefficients *a*, *b*, *c* with a non-zero leading coefficient. The condition *a ≠ 0* makes the equation genuinely quadratic; with *a = 0* it collapses to a linear equation and the formula's denominator vanishes.
+
+<Math math="ax^{2}+bx+c=0 \text{ }\left(and\text{ }a\neq 0\right)\text{ }then" display />
+
+The quadratic formula gives both roots from the coefficients directly. The *±* captures the parabola's symmetry about its axis *x = -b/(2a)*: the two roots lie equidistant from this vertical line, offset by the radical term. When the discriminant is computable, the formula is the most direct route to the roots.
+
+<Math math="x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}" display />
+
+The discriminant *b<sup>2</sup> - 4ac* controls how many times the parabola crosses the *x*-axis. The three cases below give two crossings, one tangent touch, or no real crossing.
+
+<Diagram alt="Parabola with two real roots and labeled vertex" viewBox="0 0 220 160" caption="When the discriminant is positive, the parabola crosses the x-axis at two distinct points; the vertex lies below the axis.">
+  <line x1="10" y1="110" x2="210" y2="110" />
+  <line x1="110" y1="10" x2="110" y2="150" />
+  <path d="M 30 30 Q 110 200 190 30" />
+  <circle cx="65" cy="110" r="2.5" fill="currentColor" />
+  <circle cx="155" cy="110" r="2.5" fill="currentColor" />
+  <circle cx="110" cy="140" r="2.5" fill="currentColor" />
+  <text x="60" y="124" font-size="10" fill="currentColor" stroke="none">x₁</text>
+  <text x="150" y="124" font-size="10" fill="currentColor" stroke="none">x₂</text>
+  <text x="116" y="146" font-size="10" fill="currentColor" stroke="none">vertex</text>
+  <text x="200" y="106" font-size="10" fill="currentColor" stroke="none">x</text>
+  <text x="114" y="18" font-size="10" fill="currentColor" stroke="none">y</text>
+</Diagram>
+
+If the discriminant is positive, the parabola crosses the *x*-axis at two distinct points. The radical evaluates to a positive real, so the *±* produces two distinct values, matching the diagram.
+
+<Math math="if\text{ }b^{2}-4ac>0\text{ }then\text{ }two\text{ }real\text{ }solution" display />
+
+If the discriminant is zero, the parabola is tangent to the *x*-axis at one point: a repeated root. The radical vanishes and the *±* collapses to a single value *x = -b/(2a)*, the *x*-coordinate of the vertex.
+
+<Math math="if\text{ }b^{2}-4ac=0\text{ }then\text{ }reqeated\text{ }real\text{ }solution" display />
+
+If the discriminant is negative, the roots are a complex-conjugate pair and the parabola does not meet the *x*-axis. The radical becomes imaginary, and the *±* gives two complex roots that mirror one another across the real axis.
+
+<Math math="if\text{ }b^{2}-4ac<0\text{ }then\text{ }two\text{ }complex\text{ }solution" display />
+
+<Notice type="tip">
+The discriminant *b<sup>2</sup> - 4ac* alone determines the nature of the roots, so you can classify solutions without computing them. The sum of the roots is *-b/a* and the product is *c/a* (Vieta's formulas); this is often faster than the full formula when only those quantities are needed.
+</Notice>

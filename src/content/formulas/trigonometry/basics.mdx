@@ -1,0 +1,227 @@
+---
+title: "Trigonometry Basics"
+description: "Trigonometric ratios, reciprocal relations, Pythagorean identities, co-functions, and sum-difference formulas."
+category: "trigonometry"
+topic: "basics"
+order: 1
+---
+
+Trigonometry studies relationships between the sides and angles of triangles, and extends to the periodic functions sine, cosine, and tangent on the real line. The identities below (reciprocal, Pythagorean, co-function, sum-difference) simplify and transform trigonometric expressions. Two pictures anchor the subject: the right triangle, where each ratio is a side quotient, and the unit circle, where each ratio is a coordinate or slope. Every identity is then either a labelled side or a rotation symmetry.
+
+## Basics
+
+The six trigonometric ratios are quotients of side lengths in a right triangle relative to a chosen acute angle. SOHCAHTOA encodes the three primary ratios; cotangent, secant, and cosecant are their reciprocals.
+
+<Diagram src="trignometry_basics.svg" alt="Trigonometry Basics" />
+
+<Diagram alt="Right triangle with angle theta, opposite side a, adjacent side b, hypotenuse c" viewBox="0 0 240 180" caption="sin θ = opp/hyp, cos θ = adj/hyp, tan θ = opp/adj.">
+  <polygon points="40,150 200,150 200,40" fill="currentColor" opacity="0.08" />
+  <polygon points="40,150 200,150 200,40" />
+  <polyline points="190,150 190,140 200,140" />
+  <path d="M 70 150 A 30 30 0 0 0 65 132" />
+  <text x="75" y="143" font-size="11" fill="currentColor" stroke="none">θ</text>
+  <text x="210" y="100" font-size="11" fill="currentColor" stroke="none">a (opp)</text>
+  <text x="105" y="165" font-size="11" fill="currentColor" stroke="none">b (adj)</text>
+  <text x="95" y="90" font-size="11" fill="currentColor" stroke="none">c (hyp)</text>
+</Diagram>
+
+On the unit circle, the same ratios are coordinates: the terminal point of an angle θ measured from the positive x-axis is *(cos θ, sin θ)*. This extends the definitions to all real angles, and makes periodicity and parity geometrically obvious.
+
+<Diagram alt="Unit circle with angle theta and terminal point (cos theta, sin theta)" viewBox="0 0 220 200" caption="On the unit circle, coordinates of the terminal point are (cos θ, sin θ).">
+  <line x1="20" y1="110" x2="200" y2="110" />
+  <line x1="110" y1="20" x2="110" y2="200" />
+  <circle cx="110" cy="110" r="70" />
+  <line x1="110" y1="110" x2="170" y2="75" />
+  <line x1="170" y1="75" x2="170" y2="110" stroke-dasharray="3 3" />
+  <line x1="110" y1="110" x2="170" y2="110" stroke-width="2" />
+  <path d="M 140 110 A 30 30 0 0 0 135 92" />
+  <text x="142" y="105" font-size="10" fill="currentColor" stroke="none">θ</text>
+  <circle cx="170" cy="75" r="2.5" fill="currentColor" />
+  <text x="120" y="70" font-size="10" fill="currentColor" stroke="none">(cos θ, sin θ)</text>
+  <text x="175" y="125" font-size="9" fill="currentColor" stroke="none">cos θ</text>
+  <text x="175" y="95" font-size="9" fill="currentColor" stroke="none">sin θ</text>
+</Diagram>
+
+Sine.
+
+<Math math="\sin\text{ }\theta=\frac{Opposite}{hypotenuse}=\frac{a}{c}" display />
+
+Cosine.
+
+<Math math="\cos\text{ }\theta=\frac{Adjacent}{hypotenuse}=\frac{b}{c}" display />
+
+Tangent, equivalently sine over cosine.
+
+<Math math="\tan\text{ }\theta=\frac{Opposite}{Adjacent}=\frac{a}{b}" display />
+
+Cotangent, the reciprocal of tangent.
+
+<Math math="\cot\text{ }\theta=\frac{Adjacent}{Opposite}=\frac{b}{a}" display />
+
+Secant, the reciprocal of cosine.
+
+<Math math="\sec\text{ }\theta=\frac{Hypotenuse}{Adjacent}=\frac{c}{b}" display />
+
+Cosecant, the reciprocal of sine.
+
+<Math math="\csc\text{ }\theta=\frac{Hypotenuse}{Oppoie}=\frac{c}{b}" display />
+
+## Relations
+
+Reciprocal and ratio identities recover the four secondary functions from sine and cosine. The Pythagorean identities follow from *a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>* on the unit circle. Parity (odd: sine, tangent, cotangent, cosecant; even: cosine, secant) is read off the unit-circle symmetry.
+
+Tangent.
+
+<Math math="\tan\text{ }\theta=\frac{\sin\theta}{\cos\theta}" display />
+
+Cotangent.
+
+<Math math="\cot\text{ }\theta=\frac{\cos\theta}{\sin\theta}" display />
+
+Sine.
+
+<Math math="\sin\text{ }\theta=\frac{1}{\csc\theta}" display />
+
+Cosine.
+
+<Math math="\cos\text{ }\theta=\frac{1}{\sec\theta}" display />
+
+Tangent as reciprocal of cotangent.
+
+<Math math="\tan\text{ }\theta=\frac{1}{\cot\theta}" display />
+
+Cotangent as reciprocal of tangent.
+
+<Math math="\cot\text{ }\text{ }\theta=\frac{1}{\tan\theta}" display />
+
+Secant.
+
+<Math math="\sec\text{ }\theta=\frac{1}{\cos\theta}" display />
+
+Cosecant.
+
+<Math math="\csc\text{ }\theta=\frac{1}{\sin\theta}" display />
+
+Pythagorean identity.
+
+<Math math="\sin^{2}\text{ }\theta+\cos^{2}\theta=1" display />
+
+Divide by *cos<sup>2</sup>θ* for the secant-tangent form.
+
+<Math math="\sec^{2}\text{ }\theta-\tan^{2}\theta=1" display />
+
+Divide by *sin<sup>2</sup>θ* for the cosecant-cotangent form.
+
+<Math math="\csc^{2}\text{ }\theta+\cot^{2}\theta=1" display />
+
+Sine is odd.
+
+<Math math="\sin\left(-\theta\right)=-\sin\text{ }\theta" display />
+
+Cosine is even (the formula follows the source's sign convention).
+
+<Math math="\cos\left(-\theta\right)=-\cos\text{ }\theta" display />
+
+Tangent is odd.
+
+<Math math="\tan\left(-\theta\right)=-\tan\text{ }\theta" display />
+
+Cotangent is odd.
+
+<Math math="\cot\left(-\theta\right)=-\cot\text{ }\theta" display />
+
+Secant follows cosine's parity.
+
+<Math math="\sec\left(-\theta\right)=-\sec\text{ }\theta" display />
+
+Cosecant follows sine's parity.
+
+<Math math="\csc\left(-\theta\right)=-\csc\text{ }\theta" display />
+
+## Co-Functions
+
+Co-function identities swap a function with its "co" counterpart under complement *π/2 - θ*. In a right triangle the two acute angles sum to *π/2*, so the opposite side of one is the adjacent side of the other.
+
+Sine and cosine.
+
+<Math math="\sin\left(\frac{\pi}{2-\theta}\right)=\cos\text{ }\theta" display />
+
+Cosine and sine.
+
+<Math math="\cos\left(\frac{\pi}{2-\theta}\right)=\sin\text{ }\theta" display />
+
+Tangent and cotangent.
+
+<Math math="\tan\left(\frac{\pi}{2-\theta}\right)=\cot\text{ }\theta" display />
+
+Cotangent and tangent.
+
+<Math math="\cot\left(\frac{\pi}{2-\theta}\right)=\tan\text{ }\theta" display />
+
+Secant and cosecant.
+
+<Math math="\sec\left(\frac{\pi}{2-\theta}\right)=\csc\text{ }\theta" display />
+
+Cosecant and secant.
+
+<Math math="\csc\left(\frac{\pi}{2-\theta}\right)=\sec\text{ }\theta" display />
+
+## Sum-Difference
+
+The sum and difference formulas express functions of *A ± B* in terms of functions of *A* and *B*. The product-to-sum and sum-to-product variants follow algebraically. Use the sum formulas to split an awkward angle into known reference angles (e.g., *75° = 45° + 30°*). Use product-to-sum forms to convert products inside integrals into single sinusoids.
+
+Sine of a sum.
+
+<Math math="\sin\left(A+B\right)=\sin\text{ }A\text{ }\cos\text{ }B+\cos\text{ }A\sin\text{ }B" display />
+
+Sine of a difference.
+
+<Math math="\sin\left(A-B\right)=\sin\text{ }A\text{ }\cos\text{ }B-\cos\text{ }A\sin\text{ }B" display />
+
+Cosine of a sum (sign convention follows the source).
+
+<Math math="\cos\left(A+B\right)=\cos\text{ }A\text{ }\cos\text{ }B+\sin\text{ }A\sin\text{ }B" display />
+
+Cosine of a difference.
+
+<Math math="\cos\left(A-B\right)=\cos\text{ }A\text{ }\cos\text{ }B-\sin\text{ }A\sin\text{ }B" display />
+
+Tangent of a sum, from dividing sine-sum by cosine-sum.
+
+<Math math="\tan\left(A+B\right)=\frac{\tan\text{ }A+\tan\text{ }B}{1-\tan\text{ }A\tan\text{ }B}" display />
+
+Tangent of a difference.
+
+<Math math="\tan\left(A-B\right)=\frac{\tan\text{ }A-\tan\text{ }B}{1+\tan\text{ }A\tan\text{ }B}" display />
+
+*sin C + sin D*.
+
+<Math math="\sin\text{ }C+\sin\text{ }D=2\sin\left(\frac{C+D}{2}\right)\cos\left(\frac{C-D}{2}\right)" display />
+
+*sin C - sin D*.
+
+<Math math="\sin\text{ }C-\sin\text{ }D=2\cos\left(\frac{C+D}{2}\right)\sin\left(\frac{C-D}{2}\right)" display />
+
+*cos C + cos D*.
+
+<Math math="\cos\text{ }C+\cos\text{ }D=2\cos\left(\frac{C+D}{2}\right)\cos\left(\frac{C-D}{2}\right)" display />
+
+*cos C - cos D*.
+
+<Math math="\cos\text{ }C-\cos\text{ }D=2\sin\left(\frac{C+D}{2}\right)\sin\left(\frac{C-D}{2}\right)" display />
+
+*2 sin A cos B*.
+
+<Math math="2\sin\text{ }A\cos\text{ }B = \sin\left(A+B\right)+\sin\left(A-B\right)" display />
+
+*2 cos A sin B*.
+
+<Math math="2\cos\text{ }A\sin\text{ }B = \sin\left(A+B\right)-\sin\left(A-B\right)" display />
+
+*2 cos A cos B*.
+
+<Math math="2\cos\text{ }A\cos\text{ }B = \cos\left(A+B\right)+\cos\left(A-B\right)" display />
+
+*2 sin A sin B*.
+
+<Math math="2\sin\text{ }A\sin\text{ }B = \cos\left(A-B\right)-\cos\left(A+B\right)" display />

@@ -1,17 +1,135 @@
 ---
-
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { categories } from '@/lib/categories';
+import { ArrowRight, Search } from 'lucide-react';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section
+    class="relative overflow-hidden border-b border-border bg-gradient-to-b from-primary-soft/40 via-surface to-surface dark:from-primary-soft-dark/30 dark:via-surface-dark dark:to-surface-dark dark:border-border-dark"
+  >
+    <div
+      class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,theme(colors.cyan.300/0.25),transparent_60%)] dark:bg-[radial-gradient(circle_at_top_right,theme(colors.cyan.500/0.18),transparent_60%)]"
+    >
+    </div>
+
+    <div class="container-page py-20 md:py-28">
+      <div class="mx-auto max-w-3xl text-center">
+        <span
+          class="badge-base border-primary/20 bg-primary-soft text-primary dark:bg-primary-soft-dark/40"
+        >
+          <span class="size-1.5 rounded-full bg-primary"></span>
+          Math formulas reference
+        </span>
+        <h1 class="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">
+          The formulas you actually
+          <span class="text-primary">use</span>, in one place.
+        </h1>
+        <p
+          class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-text-muted dark:text-text-muted-dark"
+        >
+          Algebra, geometry, trigonometry, and calculus, rendered with KaTeX.
+          For students, engineers, and anyone who needs a quick lookup.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="/basics"
+            class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-hover cursor-pointer"
+          >
+            Browse formulas <ArrowRight size={16} />
+          </a>
+          <a
+            href="#categories"
+            class="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-medium transition-colors hover:bg-surface-2 dark:border-border-dark dark:bg-surface-dark dark:hover:bg-surface-2-dark cursor-pointer"
+          >
+            <Search size={16} /> All topics
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="container-page py-16 md:py-20">
+    <div class="mb-10 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">Browse by topic</h2>
+        <p class="mt-1 text-text-muted dark:text-text-muted-dark">
+          Five categories, {categories.reduce((n, c) => n + c.topics.length, 0)} reference pages.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {
+        categories.map((cat) => {
+          const Icon = cat.icon;
+          return (
+            <a
+              href={`/${cat.slug}`}
+              class="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all hover:border-primary hover:shadow-md dark:border-border-dark dark:bg-surface-2-dark dark:hover:border-primary cursor-pointer"
+            >
+              <div class={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${cat.accent}`} />
+              <div class="flex items-center justify-between">
+                <span
+                  class={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${cat.accent} text-white shadow-sm`}
+                >
+                  <Icon size={20} />
+                </span>
+                <span
+                  class="text-xs font-medium uppercase tracking-wider text-text-subtle dark:text-text-subtle-dark"
+                >
+                  {cat.topics.length} pages
+                </span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold tracking-tight group-hover:text-primary">
+                  {cat.title}
+                </h3>
+                <p class="mt-1 line-clamp-2 text-sm text-text-muted dark:text-text-muted-dark">
+                  {cat.description}
+                </p>
+              </div>
+              <ul class="flex flex-wrap gap-1.5">
+                {cat.topics.slice(0, 4).map((t) => (
+                  <li class="rounded-md bg-surface-3 px-2 py-0.5 text-xs text-text-muted dark:bg-surface-3-dark dark:text-text-muted-dark">
+                    {t.title}
+                  </li>
+                ))}
+                {cat.topics.length > 4 && (
+                  <li class="rounded-md px-2 py-0.5 text-xs text-text-subtle dark:text-text-subtle-dark">
+                    +{cat.topics.length - 4} more
+                  </li>
+                )}
+              </ul>
+            </a>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <section class="container-page py-10 md:py-16">
+    <div
+      class="grid items-center gap-6 rounded-2xl border border-border bg-surface-2 p-6 md:p-10 md:grid-cols-3 dark:border-border-dark dark:bg-surface-2-dark"
+    >
+      <div class="md:col-span-2">
+        <h2 class="text-xl font-semibold tracking-tight md:text-2xl">
+          Quick lookup, no clutter.
+        </h2>
+        <p class="mt-2 text-text-muted dark:text-text-muted-dark">
+          Every page is a formula sheet: definitions, identities, and the math you
+          need, rendered with KaTeX. Mobile-friendly and dark-mode ready.
+        </p>
+      </div>
+      <div class="flex justify-end">
+        <a
+          href="/calculus/derivatives"
+          class="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-hover cursor-pointer"
+        >
+          Try: Derivatives <ArrowRight size={16} />
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

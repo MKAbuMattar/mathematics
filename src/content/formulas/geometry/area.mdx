@@ -1,0 +1,91 @@
+---
+title: "Area"
+description: "Area formulas for common 2D shapes: squares, rectangles, parallelograms, trapezoids, circles, ellipses, and triangles."
+category: "geometry"
+topic: "area"
+order: 1
+---
+
+Area measures the extent of a two-dimensional region in square units (square metres, square inches, and so on). The formulas below cover squares, rectangles, parallelograms, trapezoids, circles, ellipses, and triangles, each expressed in terms of the parameters that describe the figure: side, base, height, radius, or semi-axes.
+
+<Diagram alt="Generic rectangle with width and height labels and a unit grid" viewBox="0 0 220 140" caption="Area measures a 2D region in square units.">
+  <defs>
+    <pattern id="area-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.4" />
+    </pattern>
+  </defs>
+  <rect x="20" y="20" width="160" height="80" fill="url(#area-grid)" stroke="currentColor" />
+  <rect x="20" y="20" width="160" height="80" fill="currentColor" opacity="0.08" stroke="none" />
+  <line x1="20" y1="115" x2="180" y2="115" stroke-width="0.8" />
+  <line x1="20" y1="112" x2="20" y2="118" />
+  <line x1="180" y1="112" x2="180" y2="118" />
+  <text x="100" y="128" font-size="10" text-anchor="middle" fill="currentColor" stroke="none">width</text>
+  <line x1="195" y1="20" x2="195" y2="100" stroke-width="0.8" />
+  <line x1="192" y1="20" x2="198" y2="20" />
+  <line x1="192" y1="100" x2="198" y2="100" />
+  <text x="205" y="64" font-size="10" fill="currentColor" stroke="none">height</text>
+</Diagram>
+
+**Square**
+
+<Diagram src="square.svg" alt="Square" />
+
+Four equal sides of length *a*. Area is the side squared:
+
+<Math math="Area=a^{2}" display />
+
+**Rectangle**
+
+<Diagram src="rectangle.svg" alt="Rectangle" />
+
+Sides *a* and *b*. Area is the product of the two sides:
+
+<Math math="Area=ab" display />
+
+**Parallelgram**
+
+<Diagram src="parallelgram.svg" alt="Parallelgram" />
+
+Base *b* and perpendicular height *h* (the distance between the base and its opposite side, not the slanted edge). Area matches a rectangle with the same base and height:
+
+<Math math="Area=bh" display />
+
+**Trapezoid**
+
+<Diagram src="trapezoid.svg" alt="Trapezoid" />
+
+Parallel sides *b1* and *b2*, with *h* the perpendicular distance between them (not the slanted leg). Area is the average of the parallel sides times that height:
+
+<Math math="Area=\left(\frac{1}{2}\right)\left(b1+b2\right)h" display />
+
+**Circle**
+
+<Diagram src="circle.svg" alt="Circle" />
+
+Radius *r* is the distance from centre to edge. Area scales with the square of *r*; doubling the radius quadruples the area:
+
+<Math math="Area=\pi r^{2}" display />
+
+**Ellipse**
+
+<Diagram src="ellipse.svg" alt="Ellipse" />
+
+*t1* and *t2* are the semi-major and semi-minor axes, half the lengths of the two principal diameters. Area is *π* times their product. When the axes are equal this reduces to the circle formula:
+
+<Math math="Area=\pi\left(t1\times t2\right)" display />
+
+**Triangle**
+
+<Diagram src="triangle.svg" alt="Triangle" />
+
+Base *b* and perpendicular height *h* (dropped onto that base, not a slanted side). Area is half the base times the height. Two such triangles tile a parallelogram of area *bh*:
+
+<Math math="Area=\left(\frac{1}{2}\right)bh" display />
+
+**Equilateral Triangle**
+
+<Diagram src="equilateral_triangle.svg" alt="Equilateral Triangle" />
+
+All three sides equal *a*, all angles 60°. Perpendicular height is *a√3/2*, which reduces the general triangle formula to a closed form in *a*:
+
+<Math math="Area=\left(\frac{\sqrt{3}}{4}\right)a^{2}" display />
